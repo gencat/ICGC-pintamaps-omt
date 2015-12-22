@@ -1,0 +1,51 @@
+{
+  "sorra": {
+    "width": 204,
+    "height": 204,
+    "x": 0,
+    "y": 0,
+    "pixelRatio": 1,
+	"sdf": false
+  },
+  "rocalla": {
+     "width": 204,
+    "height": 204,
+    "x": 204,
+    "y": 0,
+    "pixelRatio": 1,
+	"sdf": false
+  },
+  "regals": {
+     "width": 204,
+    "height": 204,
+    "x": 408,
+    "y": 0,
+    "pixelRatio": 1,
+	"sdf": false
+  },
+  "plata": {
+     "width": 204,
+    "height": 204,
+    "x": 612,
+    "y": 0,
+    "pixelRatio": 1,
+	"sdf": false
+  },
+  "papervell": {
+     "width": 204,
+    "height": 204,
+    "x": 816,
+    "y": 0,
+    "pixelRatio": 1,
+	"sdf": false
+  },
+  "herba": {
+     "width": 204,
+    "height": 204,
+    "x": 1020,
+    "y": 0,
+    "pixelRatio": 1,
+	"sdf": false
+  }
+  
+}

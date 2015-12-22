@@ -1,0 +1,37 @@
+{
+ "natural_paper": {
+    "x": 0,
+    "y": 0,
+    "width": 523,
+    "height": 384,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "linedpaper": {
+    "x": 525,
+    "y": 0,
+    "width": 412,
+    "height": 300,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+ "regals": {
+    "width": 204,
+    "height": 204,
+    "x": 0,
+    "y": 0,
+    "pixelRatio": 1,
+	"sdf": false
+  },
+
+  "herba": {
+    "width": 204,
+    "height": 204,
+    "x": 0,
+    "y": 0,
+    "pixelRatio": 1,
+	"sdf": false
+  }
+  
+  
+}
