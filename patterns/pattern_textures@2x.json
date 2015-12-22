@@ -1,16 +1,48 @@
 {
-  "sorra": {
-    "width": 204,
-    "height": 204,
+  "neu": {
+    "width": 512,
+    "height": 512,
     "x": 0,
     "y": 0,
     "pixelRatio": 1,
 	"sdf": false
   },
-  "rocalla": {
-     "width": 204,
-    "height": 204,
-    "x": 204,
+  "plata": {
+     "width": 512,
+    "height": 512,
+    "x": 512,
+    "y": 0,
+    "pixelRatio": 1,
+	"sdf": false
+  },
+  "metallfosc": {
+     "width": 512,
+    "height": 512,
+    "x": 1024,
+    "y": 0,
+    "pixelRatio": 1,
+	"sdf": false
+  },
+  "green": {
+     "width": 512,
+    "height": 512,
+    "x": 1536,
+    "y": 0,
+    "pixelRatio": 1,
+	"sdf": false
+  },
+  "papervell": {
+     "width": 512,
+    "height": 512,
+    "x": 2048,
+    "y": 0,
+    "pixelRatio": 1,
+	"sdf": false
+  },
+  "blaucel": {
+     "width": 512,
+    "height": 512,
+    "x": 2560,
     "y": 0,
     "pixelRatio": 1,
 	"sdf": false

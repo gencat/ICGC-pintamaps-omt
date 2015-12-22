@@ -9,7 +9,9 @@
 <link rel="stylesheet" href="css/vendors/dropzone.min.css">
 <link rel="stylesheet" href="css/vendors/bootstrap-colorpicker.min.css">
 <link href='css/vendors/mapbox-gl.css' rel='stylesheet' />
- <link href="http://allfont.net/allfont.css?fonts=komika-hand" rel="stylesheet" type="text/css" />
+ 
+ <link href="http://allfont.net/allfont.css?fonts=open-sans,roboto-regular,merriweather" rel="stylesheet" type="text/css" />
+ 
 <!--
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.1/mapbox-gl.css' rel='stylesheet' />
 -->
@@ -39,42 +41,39 @@
 <body>
 	<div id="llegenda"> 
 
-		<div>
+		<div class="cap_ll">
 			<div class="titol"><b>Editor d'estils</b></div>
 			
-  
-
-			<!--
-			<div style="float:right;font-size:small"><a alt="Galeria d'estils" href="galeria.html" target="_blank" >Galeria >></a></div>
-		-->
+ 		
+			<div class="mapboxgl-ctrl-group" style="float:right;font-size:small">
+			<button id="bt_random"  title="Colors aleatoris"  class="mapboxgl-ctrl-icon glyphicon glyphicon-random"></button></div>
+	
 		</div>
 		<br>
-		<div class="btn-group extraBT">
-  <button class="btn btn-default btn-xs dropdown-toggle extraBT2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   Fons mapa <span class="caret"></span>
-  </button>
-  <ul id="ul_fonsmap" class="dropdown-menu">
-   <li id="li_color"><a href="#">Color</a></li>
-   <li  id="li_textura"><a href="#">Textura</a></li>
-  </ul>
-</div>
+	<div class="btn-group extraBT">
+		  <button class="btn btn-default btn-xs dropdown-toggle extraBT2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		   Fons mapa <span class="caret"></span>
+		  </button>
+		  <ul id="ul_fonsmap" class="dropdown-menu">
+		  	 <li id="li_color"><a href="#">Color</a></li>
+		  	 <li  id="li_textura"><a href="#">Textura</a></li>
+		  </ul>
+	</div>
 		
 		<div class="btn-group">
-			<!--
-			<div>Fons </div>
-			-->
+			
 			<div id="c_fons" class="input-group">
 				<input type="text" value="" class="form-control" /> <span
 					class="input-group-addon"><i></i></span>
 			</div>
 			
 			<div  id="t_fons">
-				<div title="Regals" id="regals" class="div_estil_1"></div>
-				<div title="Rocalla" id="rocalla" class="div_estil_2"></div>
-				<div title="Sorra" id="sorra" class="div_estil_3"></div>
-				<div title="Plata" id="plata" class="div_estil_4"></div>
-				<div title="Papervell" id="papervell" class="div_estil_5"></div>
-				<div title="Herba" id="herba" class="div_estil_6"></div>
+				<div title="Textura neu" id="neu" class="div_estil_1"></div>
+				<div title="Textura plata" id="plata" class="div_estil_2"></div>
+				<div title="Textura metall fosc" id="metallfosc" class="div_estil_3"></div>
+				<div title="Textura paper vell" id="papervell" class="div_estil_4"></div>
+				<div title="Textura herba" id="green" class="div_estil_5"></div>
+				<div title="Textura cel" id="blaucel" class="div_estil_6"></div>
 			</div>
 			
 			
@@ -189,15 +188,31 @@
 			
 		</div>
 		<br>
+		
+		<div  id="div_topo" class="btn-group extraBT">
+		  <button class="btn btn-default btn-xs dropdown-toggle extraBT2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		   Toponímia <span class="caret"></span>
+		  </button>
+		  <ul id="ul_topomap" class="dropdown-menu">
+		  	 <li id="li_Open Sans"><a style="font-family: 'Open Sans', arial;" href="#">Font: Open Sans</a></li>
+		  	 <li id="li_Merriweather"><a style="font-family: 'Merriweather', arial;" href="#">Font: Merriweather</a></li>
+		  	  <li id="li_Roboto"><a style="font-family: 'Roboto Regular', arial;" href="#">Font: Roboto</a></li>
+		  </ul>
+		  <div style="float:right">
+			<input type="checkbox" id="chk_toponims"  checked="true" aria-label="true">
+			</div>
+	</div>
+		<!--
 		<div  id="div_topo" class="btn-group">		
 			<div style="float:left" class="input-group">Toponímia </div>
 			<div style="float:right">
 			<input type="checkbox" id="chk_toponims"  checked="true" aria-label="true">
 			</div>
-			</span>	
+		-->	
+			
 </div>			
 		</div>
-	</div>
+	
 	<div id='barraCerca'  class="mapboxgl-ctrl-group mapboxgl-ctrl">
 	</div>
 	

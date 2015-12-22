@@ -338,10 +338,7 @@ var styleGL = {
 			"minzoom" : 16,
 			"layout" : {
 				"text-field" : "{z}",
-				"text-font" : [
-					"Open Sans Regular",
-					"Arial Unicode MS Regular"
-				],
+				"text-font" : ["Open Sans Regular","Arial Unicode MS Regular"],
 				"text-size" : 11
 			},
 			"paint" : {

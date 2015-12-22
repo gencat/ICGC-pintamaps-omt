@@ -1,5 +1,5 @@
 {
-  "sorra": {
+  "neu": {
     "width": 204,
     "height": 204,
     "x": 0,
@@ -7,7 +7,7 @@
     "pixelRatio": 1,
 	"sdf": false
   },
-  "rocalla": {
+  "plata": {
      "width": 204,
     "height": 204,
     "x": 204,
@@ -15,7 +15,7 @@
     "pixelRatio": 1,
 	"sdf": false
   },
-  "regals": {
+  "metallfosc": {
      "width": 204,
     "height": 204,
     "x": 408,
@@ -23,7 +23,7 @@
     "pixelRatio": 1,
 	"sdf": false
   },
-  "plata": {
+  "green": {
      "width": 204,
     "height": 204,
     "x": 612,
@@ -39,7 +39,7 @@
     "pixelRatio": 1,
 	"sdf": false
   },
-  "herba": {
+  "blaucel": {
      "width": 204,
     "height": 204,
     "x": 1020,
