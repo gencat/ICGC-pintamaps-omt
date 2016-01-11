@@ -14,6 +14,7 @@ var map;
 var mapStyle = {};
 var socInici = true;
 var pattern_map = false;
+var aplicaZoom=false;
 jQuery(document).ready(function() {
 
 	var estil = '/pintamaps/styles/style_icgc_default.json';
@@ -51,16 +52,16 @@ function processaEstil(estil, nouMapa) {
 
 }
 
-function actualitzaMapa(mapa, aplicaZoom) {
+function actualitzaMapa(mapa) {
 	socInici = true;
 
-	// if(aplicaZoom){
+ if(aplicaZoom){
 	map.setCenter([ parseFloat(mapa.center.lng).toFixed(4),
 			parseFloat(mapa.center.lat).toFixed(4) ]);
 	map.setZoom(mapa.zoom);
 	map.setPitch(mapa.pitch);
 	map.setBearing(mapa.bearing);
-	// }
+	}
 
 	// arriba amb pattern
 	if (mapStyle.styles[7].pattern != "") {
@@ -121,8 +122,9 @@ function randomizeColor() {
 			chroma.random().alpha(Math.random().toFixed(2)).css());
 	$('#c_camins').colorpicker('setValue',
 			chroma.random().alpha(Math.random().toFixed(2)).css());
-	jQuery('#chk_toponims').attr('checked', false);
-	changeTopoLayer(false);
+	
+	//jQuery('#chk_toponims').attr('checked', false);
+	//changeTopoLayer(false);
 }
 
 function creaMapa(mapa) {
@@ -136,19 +138,22 @@ function creaMapa(mapa) {
 			pitch : mapa.pitch, // pitch in degrees
 			bearing : mapa.bearing,
 			minZoom : 7,
-			hash : false,
+			maxZoom: 18,
+			hash : true,
 			style : styleGL
 		});
 
 	} else {
+		
 		map = new mapboxgl.Map({
 			container : 'map',
-			center : [ 2.0644, 41.4670 ],
+			center : [ 2.80685, 41.971525 ],
 			zoom : 14,
 			pitch : 0, // pitch in degrees
 			minZoom : 7,
+			maxZoom: 18,
 			bearing : 0,
-			hash : false,
+			hash : true,
 			style : styleGL
 		});
 
@@ -348,6 +353,15 @@ function addDropFileOptions() {
 			;
 		});
 		drgFromBoto.on('success', function(file, resposta) {
+			
+			
+				var name=file.name;
+			if(name.indexOf('_goto')!=-1){
+				aplicaZoom=true;
+			}else{
+aplicaZoom=false;
+			}
+			
 			drgFromBoto.removeAllFiles(true);
 			resposta = JSON.parse(resposta);
 			if (resposta.STATUS == "OK") {
@@ -376,6 +390,16 @@ function addDropFileOptions() {
 			;
 		});
 		drgFromMapa.on('success', function(file, resposta) {
+			
+			var name=file.name;
+			if(name.indexOf('goto')!=-1){
+				aplicaZoom=true;
+			}else{
+aplicaZoom=false;
+			}
+			
+			
+			
 			drgFromMapa.removeAllFiles(true);
 			resposta = JSON.parse(resposta);
 			if (resposta.STATUS == "OK") {
@@ -413,9 +437,17 @@ function changeFontText(font){
 	
 	//toponimia_cap#toponimia_nucli", 'text-color',10
 	//"text-font" : ["Open Sans Regular","Arial Unicode MS Regular"],
+	
+	if(typeof font == "undefined"){
+		font="Open Sans";	
+	
+	}	
+	//console.info(font);
 	var layers = "toponimia_";
 	var nomsCapes = layers.split('#');
 	var tipusGeometria = "text-font";
+	
+	
 
 	for (var i = 0; i < styleGL.layers.length; i++) {
 		var tema = styleGL.layers[i].id;
@@ -426,12 +458,45 @@ function changeFontText(font){
 				
 				if(arrTXT[0].indexOf(font)==-1){
 				
-						if(arrTXT[0].indexOf("Open Sans")!=-1){arrTXT[0]=arrTXT[0].replace("Open Sans",font);
+					
+				
+					
+						if(arrTXT[0].indexOf("Open Sans")!=-1){
 							
-						}else if(arrTXT[0].indexOf("Merriweather")!=-1){arrTXT[0]=arrTXT[0].replace("Merriweather",font);
+							arrTXT[0]=arrTXT[0].replace("Open Sans",font);
+							
+							if(font.indexOf('Komika')!=-1){
+							//arrTXT[0]=arrTXT[0].replace("Regular","Bold");
+							arrTXT[0]=arrTXT[0].replace("Light","Regular");
+							}
+						
+							
+						}else if(arrTXT[0].indexOf("Merriweather")!=-1){
 							
 							
-						}else if(arrTXT[0].indexOf("Roboto")!=-1){arrTXT[0]=arrTXT[0].replace("Roboto",font);}
+						arrTXT[0]=arrTXT[0].replace("Merriweather",font);
+						
+						if(font.indexOf('Komika')!=-1){
+							//arrTXT[0]=arrTXT[0].replace("Regular","Bold");
+							arrTXT[0]=arrTXT[0].replace("Light","Regular");
+							}
+						
+						
+						
+						
+						}else if(arrTXT[0].indexOf("Komika Hand")!=-1){
+							
+							arrTXT[0]=arrTXT[0].replace("Komika Hand",font);	
+							
+							
+							arrTXT[0]=arrTXT[0].replace("Regular","Light");
+							//arrTXT[0]=arrTXT[0].replace("Bold","Regular");
+							
+							
+						
+						}
+						
+				
 																	
 						map.setLayoutProperty(tema, tipusGeometria, arrTXT);
 						styleGL.layers[i].layout[tipusGeometria] = arrTXT
@@ -906,11 +971,12 @@ function generateMap() {
 	var zoom = map.getZoom();
 	var center = map.getCenter();
 	var bearing = map.getBearing();
+	var pitch= map.getPitch();
 
-	createPrintMap(width, height, dpi, format, unit, zoom, center, bearing);
+	createPrintMap(width, height, dpi, format, unit, zoom, center, bearing, pitch);
 }
 
-function createPrintMap(width, height, dpi, format, unit, zoom, center, bearing) {
+function createPrintMap(width, height, dpi, format, unit, zoom, center, bearing, pitch) {
 	'use strict';
 
 	// Calculate pixel ratio
@@ -948,6 +1014,7 @@ function createPrintMap(width, height, dpi, format, unit, zoom, center, bearing)
 		zoom : zoom,
 		style : styleGL,
 		bearing : bearing,
+		pitch:pitch,
 		interactive : false,
 		attributionControl : false
 	});

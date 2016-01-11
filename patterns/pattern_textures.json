@@ -1,48 +1,48 @@
 {
   "neu": {
-    "width": 204,
-    "height": 204,
+    "width": 256,
+    "height": 256,
     "x": 0,
     "y": 0,
     "pixelRatio": 1,
 	"sdf": false
   },
   "plata": {
-     "width": 204,
-    "height": 204,
-    "x": 204,
+     "width": 256,
+    "height": 256,
+    "x": 256,
     "y": 0,
     "pixelRatio": 1,
 	"sdf": false
   },
   "metallfosc": {
-     "width": 204,
-    "height": 204,
-    "x": 408,
+     "width": 256,
+    "height": 256,
+    "x": 512,
     "y": 0,
     "pixelRatio": 1,
 	"sdf": false
   },
   "green": {
-     "width": 204,
-    "height": 204,
-    "x": 612,
+     "width": 256,
+    "height": 256,
+    "x": 768,
     "y": 0,
     "pixelRatio": 1,
 	"sdf": false
   },
   "papervell": {
-     "width": 204,
-    "height": 204,
-    "x": 816,
+     "width": 256,
+    "height": 256,
+    "x": 1024,
     "y": 0,
     "pixelRatio": 1,
 	"sdf": false
   },
   "blaucel": {
-     "width": 204,
-    "height": 204,
-    "x": 1020,
+     "width": 256,
+    "height": 256,
+    "x": 1280,
     "y": 0,
     "pixelRatio": 1,
 	"sdf": false

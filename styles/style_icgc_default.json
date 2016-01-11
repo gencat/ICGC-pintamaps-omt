@@ -97,8 +97,8 @@
 	"estatToponimia" : true,
 	"fontFamily":"Open Sans",
 	"mapa" : {
-		"center" :{"lng" : 2.0644,
-			"lat" : 41.467046},
+		"center" :{"lng" : 2.80685,
+			"lat" : 41.971525},
 		"zoom" : 13,
 		"pitch" : 0,
 		"bearing" : 0,
