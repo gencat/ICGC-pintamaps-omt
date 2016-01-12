@@ -9,9 +9,9 @@
 <link rel="stylesheet" href="css/vendors/dropzone.min.css">
 <link rel="stylesheet" href="css/vendors/bootstrap-colorpicker.min.css">
 <link href='css/vendors/mapbox-gl.css' rel='stylesheet' />
- 
+
  <link href="http://allfont.net/allfont.css?fonts=open-sans,roboto-regular,merriweather,komika-hand" rel="stylesheet" type="text/css" />
- 
+
 <!--
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.1/mapbox-gl.css' rel='stylesheet' />
 -->
@@ -29,7 +29,7 @@
 <!--
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.1/mapbox-gl.js'></script>
 -->
-  
+
 <script src='js/vendors/mapbox-gl.js'></script>
 
 
@@ -39,15 +39,19 @@
 </style>
 </head>
 <body>
-	<div id="llegenda"> 
+  <div id= "info_vector">
+    <span title="Tancar finstra" id="bt_close" class="glyphicon glyphicon-pushpin"></span>
+    <div id="text_vector"></div>
+    </div>
+	<div id="llegenda">
 
 		<div class="cap_ll">
 			<div class="titol"><b>Editor d'estils</b></div>
-			
- 		
+
+
 			<div class="mapboxgl-ctrl-group" style="float:right;font-size:small">
 			<button id="bt_random"  title="Colors aleatoris"  class="mapboxgl-ctrl-icon glyphicon glyphicon-random"></button></div>
-	
+
 		</div>
 		<br>
 	<div class="btn-group extraBT">
@@ -59,14 +63,14 @@
 		  	 <li  id="li_textura"><a href="#">Textura</a></li>
 		  </ul>
 	</div>
-		
+
 		<div class="btn-group">
-			
+
 			<div id="c_fons" class="input-group">
 				<input type="text" value="" class="form-control" /> <span
 					class="input-group-addon"><i></i></span>
 			</div>
-			
+
 			<div  id="t_fons">
 				<div title="Textura neu" id="neu" class="div_estil_1"></div>
 				<div title="Textura plata" id="plata" class="div_estil_2"></div>
@@ -75,9 +79,9 @@
 				<div title="Textura herba" id="green" class="div_estil_5"></div>
 				<div title="Textura cel" id="blaucel" class="div_estil_6"></div>
 			</div>
-			
-			
-			
+
+
+
 		</div>
 		<br>
 		<div class="btn-group">
@@ -86,7 +90,7 @@
 				<input type="text" value="" class="form-control" /> <span
 					class="input-group-addon"><i></i></span>
 			</div>
-			
+
 		</div>
 		<br>
 		<div class="btn-group">
@@ -95,7 +99,7 @@
 				<input type="text" value="" class="form-control" /> <span
 					class="input-group-addon"><i></i></span>
 			</div>
-		
+
 		</div>
 		<br>
 		<div class="btn-group">
@@ -104,7 +108,7 @@
 				<input type="text" value="" class="form-control" /> <span
 					class="input-group-addon"><i></i></span>
 			</div>
-		
+
 		</div>
 		<br>
 		<div class="btn-group">
@@ -113,7 +117,7 @@
 				<input type="text" value="" class="form-control" /> <span
 					class="input-group-addon"><i></i></span>
 			</div>
-			
+
 		</div>
 		<br>
 		<div class="btn-group">
@@ -122,7 +126,7 @@
 				<input type="text" value="" class="form-control" /> <span
 					class="input-group-addon"><i></i></span>
 			</div>
-			
+
 		</div>
 		<br>
 		<div class="btn-group">
@@ -131,7 +135,7 @@
 				<input type="text" value="" class="form-control" /> <span
 					class="input-group-addon"><i></i></span>
 			</div>
-		
+
 		</div>
 		<br>
 		<div class="btn-group">
@@ -140,7 +144,7 @@
 				<input type="text" value="" class="form-control" /> <span
 					class="input-group-addon"><i></i></span>
 			</div>
-		
+
 		</div>
 		<br>
 		<div class="btn-group">
@@ -185,19 +189,19 @@
 				<input type="text" value="" class="form-control" /> <span
 					class="input-group-addon"><i></i></span>
 			</div>
-			
+
 		</div>
 		<br>
-		
+
 		<div  id="div_topo" class="btn-group extraBT">
 		  <button class="btn btn-default btn-xs dropdown-toggle extraBT2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		   Toponímia <span class="caret"></span>
 		  </button>
 		  <ul id="ul_topomap" class="dropdown-menu">
 		  	 <li id="li_Open Sans"><a style="font-family: 'Open Sans', arial;" href="#">Font: Open Sans</a></li>
-		  	 
+
 		  	 <li id="li_Merriweather"><a style="font-family: 'Merriweather', arial;" href="#">Font: Merriweather</a></li>
-		  	 
+
 		  	  <li id="li_Komika Hand"><a style="font-family: 'Komika Hand', arial;" href="#">Font: Komika Hand</a></li>
 		  </ul>
 		  <div style="float:right">
@@ -205,30 +209,30 @@
 			</div>
 	</div>
 		<!--
-		<div  id="div_topo" class="btn-group">		
+		<div  id="div_topo" class="btn-group">
 			<div style="float:left" class="input-group">Toponímia </div>
 			<div style="float:right">
 			<input type="checkbox" id="chk_toponims"  checked="true" aria-label="true">
 			</div>
-		-->	
-			
-</div>			
+		-->
+
+</div>
 		</div>
-	
+
 	<div id='barraCerca'  class="mapboxgl-ctrl-group mapboxgl-ctrl">
 	</div>
-	
+
 	<div id='barraEines' class="mapboxgl-ctrl-group mapboxgl-ctrl">
 		<button id="bt_export"   title="Desar l'estil del mapa"  class="mapboxgl-ctrl-icon glyphicon glyphicon-cloud-download"></button>
-		<button id="bt_import"   title="Carregar l'estil al mapa"  class="mapboxgl-ctrl-icon glyphicon glyphicon-cloud-upload"></button>	
+		<button id="bt_import"   title="Carregar l'estil al mapa"  class="mapboxgl-ctrl-icon glyphicon glyphicon-cloud-upload"></button>
 		<button id="bt_capture"  title="Capturar mapa"  class="mapboxgl-ctrl-icon glyphicon glyphicon-camera"></button>
 		<!--
-		<button id="bt_publish"  title="Publicar estil" class="mapboxgl-ctrl-icon glyphicon glyphicon-heart-empty"></button>	
-			
+		<button id="bt_publish"  title="Publicar estil" class="mapboxgl-ctrl-icon glyphicon glyphicon-heart-empty"></button>
+
 		-->
-	
+
 	</div>
-	
+
 	<div id='map'></div>
 	<div id="logos">
 		<a target="_blank" title="Institut Cartogràfic i Geològic de Catalunya" href="http://www.icgc.cat" class="logo_footer">
@@ -236,7 +240,7 @@
 		</a>
 	</div>
 	<script>
-	
+
 </script>
 
 <!--- Modals -->
@@ -304,7 +308,7 @@
         <h5 class="modal-title" id="myModalLabel">Capturar mapa</h5>
       </div>
       <div class="modal-body">
-	 
+
 	<form onsubmit="return false;" id="config">
   <fieldset id="config-fields">
   <div class="row">
@@ -317,7 +321,7 @@
         <label class="radio-inline">
           <input type="radio" name="unitOptions" value="in" id="inUnit"> Polzades
         </label>
-        
+
       </div>
     </div>
     <div class="col-sm-5">
@@ -331,7 +335,7 @@
         </label>
       </div>
     </div>
-    
+
   </div>
   <div class="row">
     <div class="col-sm-4">
@@ -363,25 +367,25 @@
     <div id="spinner"></div>
   </div>
 </div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	 </div>
     </div>
@@ -393,6 +397,6 @@
 <script type="text/javascript" src="js/vendors/FileSaver.min.js"></script>
 <script type="text/javascript" src="js/vendors/jspdf.min.js"></script>
 <script src='js/pintamaps.js'></script>
-<script src="/betaserver.google-analytics.js"></script>  
+<script src="/betaserver.google-analytics.js"></script>
 </body>
 </html>

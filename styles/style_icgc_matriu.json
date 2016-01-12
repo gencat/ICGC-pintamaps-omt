@@ -37,14 +37,15 @@ var styleGL = {
 			}
 		},
 
-		
-			
- 
+
+
+
 
 		{
 			"id" : "ombravector_98",
 			"type" : "fill",
-			"source" : "ombravector",
+
+ "source" : "ombravector",
 			"source-layer" : "ombravector",
 			"maxzoom" : 14,
 			"filter" : ["in", "color", 98],
@@ -59,7 +60,8 @@ var styleGL = {
 		}, {
 			"id" : "ombravector_147",
 			"type" : "fill",
-			"source" : "ombravector",
+
+ "source" : "ombravector",
 			"source-layer" : "ombravector",
 			"maxzoom" : 14,
 			"filter" : ["in", "color", 147],
@@ -74,7 +76,8 @@ var styleGL = {
 		}, {
 			"id" : "limitcatibuffer",
 			"type" : "fill",
-			"source" : "catsencer",
+
+ "source" : "catsencer",
 			"source-layer" : "limitcatibuffer",
 			"paint" : {
 				"fill-opacity" : 1,
@@ -83,7 +86,8 @@ var styleGL = {
 		}, {
 			"id" : "buffermarfinsjuridic_pol",
 			"type" : "fill",
-			"source" : "catsencer",
+
+ "source" : "catsencer",
 			"source-layer" : "buffermarfinsjuridic",
 			"paint" : {
 				"fill-opacity" : 1,
@@ -94,7 +98,8 @@ var styleGL = {
 		}, {
 			"id" : "buffermarfinsjuridic_lin",
 			"type" : "line",
-			"source" : "catsencer",
+
+ "source" : "catsencer",
 			"source-layer" : "buffermarfinsjuridic",
 			"paint" : {
 				"line-color" : "#ff0000",
@@ -103,7 +108,8 @@ var styleGL = {
 		}, {
 			"id" : "limitcatibufferoklin",
 			"type" : "line",
-			"source" : "catsencer",
+
+ "source" : "catsencer",
 			"source-layer" : "limitcatibufferoklin",
 			"paint" : {
 				"line-color" : "#88a",
@@ -113,7 +119,8 @@ var styleGL = {
 		}, {
 			"id" : "limcatbufpoligunio_pol",
 			"type" : "fill",
-			"source" : "catsencer",
+
+ "source" : "catsencer",
 			"source-layer" : "limcatbufpoligunio",
 			"paint" : {
 				"fill-opacity" : 0.1,
@@ -122,7 +129,8 @@ var styleGL = {
 		}, {
 			"id" : "limcatbufpoligunio_lin",
 			"type" : "line",
-			"source" : "catsencer",
+
+ "source" : "catsencer",
 			"source-layer" : "limcatbufpoligunio",
 			"paint" : {
 				"line-color" : "#000",
@@ -131,18 +139,20 @@ var styleGL = {
 		}, {
 			"id" : "boscos_cob001",
 			"type" : "fill",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "boscos",
 			"minzoom" : 8,
 			"maxzoom" : 18,
 			"paint" : {
 				"fill-color" : "rgba(151,185,151,0.30)"
-				
+
 			}
 		}, {
 			"id" : "boscos_cob002_poligon",
 			"type" : "fill",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"minzoom" : 11,
 			"source-layer" : "boscos",
 			"filter" : ["==", "cas", "COB002"],
@@ -152,7 +162,8 @@ var styleGL = {
 		}, {
 			"id" : "boscos_cob003",
 			"type" : "fill",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"minzoom" : 11,
 			"source-layer" : "boscos",
 			"filter" : ["==", "cas", "COB003"],
@@ -162,7 +173,8 @@ var styleGL = {
 		}, {
 			"id" : "boscos_cob004",
 			"type" : "fill",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "boscos",
 			"filter" : ["==", "cas", "COB004"],
 			"paint" : {
@@ -171,7 +183,8 @@ var styleGL = {
 		}, {
 			"id" : "bt25mv10al2",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "bt25mv10al2",
 			"minzoom" : 16,
 			"paint" : {
@@ -181,7 +194,8 @@ var styleGL = {
 		}, {
 			"id" : "bt25mv10al2_etiq",
 			"type" : "symbol",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "bt25mv10al2",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "cas", "NIV004"]],
 			"minzoom" : 16,
@@ -199,7 +213,8 @@ var styleGL = {
 		}, {
 			"id" : "bt25mcarrersurbansbu_pol",
 			"type" : "fill",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "bt25mcarrersurbansbu",
 			"minzoom" : 5,
 			"maxzoom" : 14,
@@ -213,7 +228,8 @@ var styleGL = {
 		}, {
 			"id" : "bt25mv10_pp_illpol",
 			"type" : "fill",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "bt25mv10_pp",
 			"minzoom" : 12,
 			"filter" : ["==", "cas", "ILL001"],
@@ -223,7 +239,8 @@ var styleGL = {
 		}, {
 			"id" : "bt25mv10_pp_elupol",
 			"type" : "fill",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"minzoom" : 12,
 			"source-layer" : "bt25mv10_pp",
 			"filter" : ["all", ["==", "$type", "Polygon"], ["in", "cas", "ELU001", "ELU002"]],
@@ -233,7 +250,8 @@ var styleGL = {
 		}, {
 			"id" : "bt25mv10_pp_edi",
 			"type" : "fill",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "bt25mv10_pp",
 			"minzoom" : 12,
 			"filter" : ["all", ["==", "$type", "Polygon"], ["in", "cas", "EDI001", "EDI002", "EDI003", "DIP001"]],
@@ -243,7 +261,8 @@ var styleGL = {
 		}, {
 			"id" : "bt25mv10_pp_mol",
 			"type" : "fill",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "bt25mv10_pp",
 			"filter" : ["all", ["==", "$type", "Polygon"], ["in", "cas", "MOL001", "MOL002", "MOL003", "MOL004", "MOL005", "MOL006", "MOL007", "MOL008", "MOL009", "MOL010", "MOL011"]],
 			"paint" : {
@@ -252,7 +271,8 @@ var styleGL = {
 		}, {
 			"id" : "bt25mv10_pp_ces",
 			"type" : "fill",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "bt25mv10_pp",
 			"minzoom" : 13,
 			"filter" : ["==", "cas", "CES003"],
@@ -262,7 +282,8 @@ var styleGL = {
 		}, {
 			"id" : "bt25mv10pl_aer",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "bt25mv10pl",
 			"minzoom" : 13,
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "cas", "AER001"]],
@@ -273,7 +294,8 @@ var styleGL = {
 		}, {
 			"id" : "bt25mv10pl",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "bt25mv10pl",
 			"minzoom" : 13,
 			"filter" : ["!=", "cas", "AER001"],
@@ -285,7 +307,8 @@ var styleGL = {
 		}, {
 			"id" : "rius_g",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"minzoom" : 11,
 			"source-layer" : "rius",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut2", "G"]],
@@ -305,7 +328,8 @@ var styleGL = {
 		}, {
 			"id" : "rius_t",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"minzoom" : 13,
 			"source-layer" : "rius",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut2", "T"]],
@@ -329,7 +353,8 @@ var styleGL = {
 		}, {
 			"id" : "aigues",
 			"type" : "fill",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "aigues",
 			"paint" : {
 				"fill-color" : "rgba(34,83,197,0.18)"
@@ -337,17 +362,19 @@ var styleGL = {
 		}, {
 			"id" : "aiguesm",
 			"type" : "fill",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "aigues",
 			"filter" : ["all", ["==", "$type", "Polygon"], ["in", "atribut1", "M"]],
 			"paint" : {
 				"fill-color" : "rgba(34,83,197,0.18)"
-				
+
 			}
 		}, {
 			"id" : "autop_notro",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_notro",
 			"filter" : ["all", ["==", "$type", "LineString"], ["!in", "atribut8", "C"], ["!in", "atribut7", "C"]],
 			"layout" : {
@@ -366,7 +393,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_notro_cob",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_notro",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut8", "C"]],
 			"layout" : {
@@ -389,7 +417,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_notro_cons",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_notro",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut7", "C"]],
 			"layout" : {
@@ -412,7 +441,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_v_doble_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_v_doble",
 			"filter" : ["all", ["==", "$type", "LineString"], ["!in", "atribut4", "C"], ["!in", "atribut3", "C"]],
 			"layout" : {
@@ -431,7 +461,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_v_doble_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_v_doble",
 			"layout" : {
 				"line-join" : "bevel"
@@ -449,7 +480,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_v_doble_cobert_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_v_doble",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut4", "C"]],
 			"layout" : {
@@ -472,7 +504,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_v_doble_cobert_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_v_doble",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut4", "C"]],
 			"layout" : {
@@ -495,7 +528,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_v_doble_cons_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_v_doble",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut3", "C"]],
 			"layout" : {
@@ -518,7 +552,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_v_doble_cons_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_v_doble",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut3", "C"]],
 			"layout" : {
@@ -541,7 +576,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_gen_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_gen",
 			"filter" : ["all", ["==", "$type", "LineString"], ["!in", "atribut4", "C"], ["!in", "atribut3", "C"]],
 			"layout" : {
@@ -560,7 +596,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_gen_cob_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_gen",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut4", "C"]],
 			"paint" : {
@@ -580,7 +617,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_gen_cons_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_gen",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut3", "C"]],
 			"paint" : {
@@ -600,7 +638,8 @@ var styleGL = {
 		}, {
 			"id" : "corriols",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "corriols",
 			"minzoom" : 14,
 			"maxzoom" : 18,
@@ -624,7 +663,8 @@ var styleGL = {
 		}, {
 			"id" : "camins",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "camins",
 			"minzoom" : 13,
 			"maxzoom" : 18,
@@ -645,7 +685,8 @@ var styleGL = {
 		}, {
 			"id" : "camins_cobert",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "camins",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut8", "C"]],
 			"layout" : {
@@ -668,7 +709,8 @@ var styleGL = {
 		}, {
 			"id" : "camins_cons",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "camins",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut7", "C"]],
 			"layout" : {
@@ -691,7 +733,8 @@ var styleGL = {
 		}, {
 			"id" : "carrers_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "carrers",
 			"minzoom" : 9,
 			"maxzoom" : 18,
@@ -712,7 +755,8 @@ var styleGL = {
 		}, {
 			"id" : "carrers_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"minzoom" : 9,
 			"maxzoom" : 18,
 			"source-layer" : "carrers",
@@ -733,7 +777,8 @@ var styleGL = {
 		}, {
 			"id" : "carrers_cobert_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"minzoom" : 9,
 			"maxzoom" : 18,
 			"source-layer" : "carrers",
@@ -758,7 +803,8 @@ var styleGL = {
 		}, {
 			"id" : "carrers_cons_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"minzoom" : 9,
 			"maxzoom" : 18,
 			"source-layer" : "carrers",
@@ -783,7 +829,8 @@ var styleGL = {
 		}, {
 			"id" : "nocatalog_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "nocatalog",
 			"filter" : ["all", ["==", "$type", "LineString"], ["!in", "atribut8", "C"], ["!in", "atribut7", "C"]],
 			"layout" : {
@@ -802,7 +849,8 @@ var styleGL = {
 		}, {
 			"id" : "nocatalog_cobert_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "nocatalog",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut8", "C"]],
 			"layout" : {
@@ -825,7 +873,8 @@ var styleGL = {
 		}, {
 			"id" : "nocatalog_cons_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "nocatalog",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut7", "C"]],
 			"layout" : {
@@ -848,7 +897,8 @@ var styleGL = {
 		}, {
 			"id" : "nocatalog_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "nocatalog",
 			"filter" : ["all", ["==", "$type", "LineString"], ["!in", "atribut8", "C"], ["!in", "atribut7", "C"]],
 			"layout" : {
@@ -867,7 +917,8 @@ var styleGL = {
 		}, {
 			"id" : "convencio",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "convencio",
 			"filter" : ["all", ["==", "$type", "LineString"], ["!in", "atribut8", "C"], ["!in", "atribut7", "C"]],
 			"layout" : {
@@ -886,7 +937,8 @@ var styleGL = {
 		}, {
 			"id" : "convencio_cob",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "convencio",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut8", "C"]],
 			"layout" : {
@@ -909,7 +961,8 @@ var styleGL = {
 		}, {
 			"id" : "convencio_cons",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "convencio",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut7", "C"]],
 			"layout" : {
@@ -932,7 +985,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixu_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixu",
 			"filter" : ["all", ["==", "$type", "LineString"], ["!in", "atribut8", "C"], ["!in", "atribut7", "C"]],
 			"layout" : {
@@ -951,7 +1005,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixu_cob",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixu",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut8", "C"]],
 			"layout" : {
@@ -974,7 +1029,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixu_cons",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixu",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut7", "C"]],
 			"layout" : {
@@ -997,7 +1053,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixd_generic_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixd",
 			"filter" : ["all", ["==", "$type", "LineString"], ["!in", "atribut8", "C"], ["!in", "atribut7", "C"]],
 			"layout" : {
@@ -1016,7 +1073,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixd_generic_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixd",
 			"filter" : ["all", ["==", "$type", "LineString"], ["!in", "atribut8", "C"], ["!in", "atribut7", "C"]],
 			"layout" : {
@@ -1035,7 +1093,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixd_cob_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixd",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut8", "C"]],
 			"layout" : {
@@ -1058,7 +1117,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixd_cob_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixd",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut8", "C"]],
 			"layout" : {
@@ -1081,7 +1141,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixd_cons_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixd",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut7", "C"]],
 			"layout" : {
@@ -1104,7 +1165,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixd_cons_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixd",
 			"filter" : ["all", ["==", "$type", "LineString"], ["in", "atribut7", "C"]],
 			"layout" : {
@@ -1127,7 +1189,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixd_elev_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixd_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1145,7 +1208,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixd_elev_fil1",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixd_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1163,7 +1227,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixd_elev_fil2",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixd_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1181,7 +1246,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixu_elev_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixu_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1199,7 +1265,8 @@ var styleGL = {
 		}, {
 			"id" : "autop_tro_eixu_elev_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "autop_tro_eixu_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1217,7 +1284,8 @@ var styleGL = {
 		}, {
 			"id" : "convencio_elev_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "convencio_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1235,7 +1303,8 @@ var styleGL = {
 		}, {
 			"id" : "convencio_elev_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "convencio_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1253,7 +1322,8 @@ var styleGL = {
 		}, {
 			"id" : "nocatalog_elev_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "nocatalog_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1271,7 +1341,8 @@ var styleGL = {
 		}, {
 			"id" : "nocatalog_elev_fil1",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "nocatalog_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1289,7 +1360,8 @@ var styleGL = {
 		}, {
 			"id" : "nocatalog_elev_fil2",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "nocatalog_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1307,7 +1379,8 @@ var styleGL = {
 		}, {
 			"id" : "camins_elev_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "camins_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1325,7 +1398,8 @@ var styleGL = {
 		}, {
 			"id" : "camins_elev_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "camins_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1343,7 +1417,8 @@ var styleGL = {
 		}, {
 			"id" : "carrers_elev_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "carrers_elev",
 			"minzoom" : 9,
 			"maxzoom" : 18,
@@ -1363,7 +1438,8 @@ var styleGL = {
 		}, {
 			"id" : "carrers_elev_fil1",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "carrers_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1381,7 +1457,8 @@ var styleGL = {
 		}, {
 			"id" : "carrers_elev_fil2",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "carrers_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1399,7 +1476,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_v_doble_elev_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_v_doble_elev",
 			"filter" : ["all", ["==", "$type", "LineString"], ["!in", "atribut4", "C"], ["!in", "atribut3", "C"]],
 			"layout" : {
@@ -1418,7 +1496,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_v_doble_elev_fil1",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_v_doble_elev",
 			"filter" : ["all", ["==", "$type", "LineString"], ["!in", "atribut4", "C"], ["!in", "atribut3", "C"]],
 			"layout" : {
@@ -1437,7 +1516,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_v_doble_elev_fil2",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_v_doble_elev",
 			"layout" : {
 				"line-join" : "bevel"
@@ -1455,7 +1535,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_gen_elev_lin",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_gen_elev",
 			"paint" : {
 				"line-color" : {
@@ -1470,7 +1551,8 @@ var styleGL = {
 		}, {
 			"id" : "ferrocarril_gen_elev_fil",
 			"type" : "line",
-			"source" : "catsencer",
+			"interactive" : true,
+ "source" : "catsencer",
 			"source-layer" : "ferrocarril_gen_elev",
 			"paint" : {
 				"line-color" : {
@@ -1485,7 +1567,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_10000",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"visibility" : "none",
@@ -1513,7 +1596,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_10100",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "10100"],
@@ -1540,7 +1624,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_10104",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "10104"],
@@ -1567,7 +1652,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_10105",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "10105"],
@@ -1594,7 +1680,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_10106",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "10106"],
@@ -1621,7 +1708,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_10201",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "10201"],
@@ -1648,7 +1736,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_10201",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "10202"],
@@ -1675,7 +1764,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_10203",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "10203"],
@@ -1702,7 +1792,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_10301",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "10301"],
@@ -1729,7 +1820,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_21600",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "21600"],
@@ -1756,7 +1848,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_21700",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "21700"],
@@ -1783,7 +1876,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_30304",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "30304"],
@@ -1810,7 +1904,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_30503",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "30503"],
@@ -1837,7 +1932,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_30504",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "30504"],
@@ -1864,7 +1960,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_30505",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "30505"],
@@ -1891,7 +1988,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_30507",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "30507"],
@@ -1918,7 +2016,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40101",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40101"],
@@ -1945,7 +2044,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40204",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40204"],
@@ -1972,7 +2072,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40302",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40302"],
@@ -1999,7 +2100,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40401",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40401"],
@@ -2026,7 +2128,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40402",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40402"],
@@ -2053,7 +2156,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40502",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40502"],
@@ -2080,7 +2184,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40505",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40505"],
@@ -2107,7 +2212,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40601",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40601"],
@@ -2134,7 +2240,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40702",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40702"],
@@ -2161,7 +2268,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40703",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40703"],
@@ -2188,7 +2296,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40705",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40705"],
@@ -2215,7 +2324,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40804",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40804"],
@@ -2242,7 +2352,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40805",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40805"],
@@ -2269,7 +2380,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40809",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40809"],
@@ -2296,7 +2408,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40820",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40820"],
@@ -2323,7 +2436,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40903",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40903"],
@@ -2350,7 +2464,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_40905",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "40905"],
@@ -2377,7 +2492,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_41002",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "41002"],
@@ -2404,7 +2520,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_50203",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "50203"],
@@ -2431,7 +2548,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_50701",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "50701"],
@@ -2458,7 +2576,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_50901",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "50901"],
@@ -2485,7 +2604,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_50908",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "50908"],
@@ -2512,7 +2632,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_51002",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "51002"],
@@ -2538,7 +2659,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_51007",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "51007"],
@@ -2564,7 +2686,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_51008",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "51008"],
@@ -2590,7 +2713,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_60103",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "60103"],
@@ -2616,7 +2740,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_60104",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "60104"],
@@ -2642,7 +2767,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_60301",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "60301"],
@@ -2668,7 +2794,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_60302",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "60302"],
@@ -2694,7 +2821,8 @@ var styleGL = {
 		}, {
 			"id" : "toponimia_60303",
 			"type" : "symbol",
-			"source" : "toponimia5k",
+			"interactive" : true,
+ "source" : "toponimia5k",
 			"source-layer" : "toponimia5k",
 			"interactive" : true,
 			"filter" : ["==", "codi_top", "60303"],
