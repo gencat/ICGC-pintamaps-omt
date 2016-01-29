@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title>Basic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://spatialserver.github.io/Leaflet.MapboxVectorTile/lib/Leaflet/leaflet-0.7.3/leaflet.css"/>
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 99%;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script src="http://spatialserver.github.io/Leaflet.MapboxVectorTile/lib/jQuery/jQuery-2.1.1.min.js"></script>
+<script src="http://spatialserver.github.io/Leaflet.MapboxVectorTile/lib/Leaflet/leaflet-0.7.3/leaflet-src.js"></script>
+<script src="http://spatialserver.github.io/Leaflet.MapboxVectorTile/dist/Leaflet.MapboxVectorTile.js"></script>
+<script>
+var debug = {};
+
+var map = L.map('map').setView([42.1,2.5], 10); // africa
+
+L.tileLayer('http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  maxZoom: 18,
+  id: 'examples.map-i86knfo3'
+}).addTo(map);
+
+
+var mvtSource = new L.TileLayer.MVTSource({
+  url: "http://localhost/tileservervt/tileserver.php/catsencervt/{z}/{x}/{y}.pbf",
+  debug: false,
+  maxZoom: 18,
+  clickableLayers: ["boscos_cob001"],
+  getIDForLayerFeature: function(feature) {
+    return feature.properties.id;
+  },
+
+  /**
+   * The filter function gets called when iterating though each vector tile feature (vtf). You have access
+   * to every property associated with a given feature (the feature, and the layer). You can also filter
+   * based of the context (each tile that the feature is drawn onto).
+   *
+   * Returning false skips over the feature and it is not drawn.
+   *
+   * @param feature
+   * @returns {boolean}
+   */
+  filter: function(feature, context) {
+   //console.info(feature.layer.name);
+   var name=feature.layer.name;
+	if (name.indexOf('bt25mcarrersurbansbu')!=-1) {
+	 console.info(name);
+      return true;
+    }
+    return false;
+  },
+
+  style: function (feature) {
+    var style = {};
+
+    var type = feature.type;
+	 console.info(type);
+    switch (type) {
+      case 1: //'Point'
+        style.color = 'rgba(49,79,79,1)';
+        style.radius = 5;
+        style.selected = {
+          color: 'rgba(255,255,0,0.5)',
+          radius: 6
+        };
+        break;
+      case 2: //'LineString'
+        style.color = 'rgba(161,217,155,0.8)';
+        style.size = 3;
+        style.selected = {
+          color: 'rgba(255,25,0,0.5)',
+          size: 4
+        };
+        break;
+      case 3: //'Polygon'
+        style.color = fillColor;
+        style.outline = {
+          color: strokeColor,
+          size: 0
+        };
+        style.selected = {
+          color: 'rgba(255,140,0,0.3)',
+          outline: {
+            color: 'rgba(255,140,0,1)',
+            size: 2
+          }
+        };
+        break;
+    }
+    return style;
+  }
+
+});
+debug.mvtSource = mvtSource;
+
+//Globals that we can change later.
+var fillColor = 'rgba(0,149,0,0.4)';
+var strokeColor = 'rgba(20,20,20,0)';
+
+//Add layer
+map.addLayer(mvtSource);
+</script>
+</body>
+</html>

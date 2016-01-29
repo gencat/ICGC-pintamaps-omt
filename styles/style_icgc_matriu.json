@@ -5,25 +5,25 @@ var styleGL = {
 			"type" : "vector",
 			"tiles" : ["http://localhost/tileservervt/tileserver.php/catsencervt_v1/{z}/{x}/{y}.pbf"],
 			"maxzoom" : 15,
-			"attribution" : "CC-BY: <a href='http://www.icgc.cat'>Institut Cartogràfic i Geològic de Catalunya</a>"
+			"attribution" : '<a  href="http://betaportal.icgc.cat" target="_blank">BETAPORTAL:Veure més prototips</a> | <a  href="http://www.icgc.cat" target="_blank">Dades: Institut Cartogràfic i Geològic de Catalunya CC-BY 4.0</a>'
 		},
 		"toponimia" : {
 			"type" : "vector",
 			"tiles" : ["http://localhost/tileservervt/tileserver.php/toponimiaunclas/{z}/{x}/{y}.pbf"],
 			"maxzoom" : 15,
-			"attribution" : "CC-BY: <a href='http://www.icgc.cat'>Institut Cartogràfic i Geològic de Catalunya</a>"
+			"attribution" : '<a  href="http://betaportal.icgc.cat" target="_blank">BETAPORTAL:Veure més prototips</a> | <a  href="http://www.icgc.cat" target="_blank">Dades: Institut Cartogràfic i Geològic de Catalunya CC-BY 4.0</a>'
 		},
 		"toponimia5k" : {
 			"type" : "vector",
 			"tiles" : ["http://localhost/tileservervt/tileserver.php/toponimia5k/{z}/{x}/{y}.pbf"],
 			"maxzoom" : 15,
-			"attribution" : "CC-BY: <a href='http://www.icgc.cat'>Institut Cartogràfic i Geològic de Catalunya</a>"
+			"attribution" : '<a  href="http://betaportal.icgc.cat" target="_blank">BETAPORTAL:Veure més prototips</a> | <a  href="http://www.icgc.cat" target="_blank">Dades: Institut Cartogràfic i Geològic de Catalunya CC-BY 4.0</a>'
 		},
 		"ombravector" : {
 			"type" : "vector",
 			"tiles" : ["http://localhost/tileservervt/tileserver.php/ombravector/{z}/{x}/{y}.pbf"],
 			"maxzoom" : 15,
-			"attribution" : "CC-BY: <a href='http://www.icgc.cat'>Institut Cartogràfic i Geològic de Catalunya</a>"
+			"attribution" : '<a  href="http://betaportal.icgc.cat" target="_blank">BETAPORTAL:Veure més prototips</a> | <a  href="http://www.icgc.cat" target="_blank">Dades: Institut Cartogràfic i Geològic de Catalunya CC-BY 4.0</a>'
 		}
 	},
 	"sprite" : "http://localhost/pintamaps/patterns/pattern_textures",

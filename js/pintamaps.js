@@ -24,6 +24,23 @@ jQuery(document).ready(function() {
 	}
 
 	processaEstil(estil, true);
+	
+	
+	
+	  $("input[name=optradio]:radio").click(function() { 
+	  
+	  estil = '/pintamaps/styles/'+$(this).val()+'.json';
+		
+		aplicaZoom=true;
+		processaEstil(estil, false);
+	  
+	  });
+	
+	
+	
+	
+	
+	
 
 }); // fi inici
 
@@ -76,7 +93,6 @@ function actualitzaMapa(mapa) {
 		$('#c_edi').colorpicker('setValue', mapStyle.styles[0].color);
 		$('#c_illes').colorpicker('setValue', mapStyle.styles[1].color);
 		$('#c_polurbans').colorpicker('setValue', mapStyle.styles[2].color);
-
 		$('#c_car').colorpicker('setValue', mapStyle.styles[3].color);
 		$('#c_bos').colorpicker('setValue', mapStyle.styles[4].color);
 		$('#c_rocam').colorpicker('setValue', mapStyle.styles[5].color);
@@ -173,66 +189,80 @@ function actualitzaMapa(mapa) {
 			zoom.innerHTML = "ZL: " + map.getZoom().toFixed(1) + " | ";
 		});
 
+	styleGL.layers.forEach(function (layer) {
+	         layer.interactive = true;
+	     });
 
 		map.on('mousemove', function (e) {
 
 			if($('#info_vector').is(":visible")&& !$('#bt_close').is(":visible")){
 
+				map.featuresAt(e.point, {radius:2}, function (err, features) {
+					if (err) throw err;
 
+					taulaFeatures(features);
+
+				});
+
+
+
+			}
+
+		});
+
+		map.on('dblclick', function (e) {
+			map.setZoom( map.getZoom() );
 			map.featuresAt(e.point, {radius:2}, function (err, features) {
 				if (err) throw err;
+
+				if($('#info_vector').is(":visible")){
+					jQuery('#bt_close').show();
+				}	else{
+					jQuery('#info_vector').show();
+
+				}
+
 
 				taulaFeatures(features)
 
 			});
+		});
 
 
+		jQuery('#bt_close').on('click',function(){
 
-					}
+			jQuery('#bt_close').hide();
+			jQuery('#info_vector').hide();
 
 		});
 
-		map.on('click', function (e) {
-			map.featuresAt(e.point, {radius:2}, function (err, features) {
-				if (err) throw err;
+var featureTMP=null;
 
-	if($('#info_vector').is(":visible")){
-		jQuery('#bt_close').show();
-}	else{
-	jQuery('#info_vector').show();
+		function taulaFeatures(features){
 
+				if(featureTMP !=null){
+
+				}
+
+			var html=[];
+if(features.length){
+			$.each(features, function( index, feature ) {
+
+				html.push('<ul class="list-group">');
+				html.push('<li>ID Capa:<b>'+feature.layer.id+'</b></li>');
+				html.push('<li>Origen:<b>'+feature.layer["source-layer"]+'</b></li>');
+				html.push('<li>Cas:<b>'+feature.properties.cas+'</b></li>');
+				html.push('<li>ID vector:<b>'+feature.properties.ogc_fid+'</b></li>');
+
+//console.info(feature.layer.paint["fill_color"]=[0.25,0.25,0.25,0.25]);
+
+					html.push('</ul>');
+			});
 	}
+			document.getElementById('text_vector').innerHTML =html.join("");
 
 
-				taulaFeatures(features)
-
-			});
-		});
-
-jQuery('#bt_close').on('click',function(){
-
-	jQuery('#bt_close').hide();
-				jQuery('#info_vector').hide();
-
-});
-
-function taulaFeatures(features){
-
-	var html=[];
-	$.each(features, function( index, feature ) {
-
-	html.push('<ul class="list-group">');
-	html.push('<li>ID Capa:<b>'+feature.layer.id+'</b></li>');
-	html.push('<li>Origen:<b>'+feature.layer["source-layer"]+'</b></li>');
-	html.push('<li>Cas:<b>'+feature.properties.cas+'</b></li>');
-	html.push('<li>ID vector:<b>'+feature.properties.ogc_fid+'</b></li>');
-
-	html.push('</ul>');
-	});
-document.getElementById('text_vector').innerHTML =html.join("");
-
-
-}
+		}
 
 
 

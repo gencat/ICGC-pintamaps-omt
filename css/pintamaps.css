@@ -32,6 +32,22 @@ i {
 	z-index: 100;
 }
 
+
+#div_estils_pre{
+	
+bottom: 20%;
+    font-size: 13px;
+    opacity: 0.83;
+    overflow: auto;
+    padding: 5px 10px 1px;
+    position: absolute;
+    right: 10px;
+    z-index: 100;
+}	
+
+
+
+
 #menu {
 	background-color: #f2f2f2;
 	height: 300px;
@@ -102,6 +118,118 @@ i {
 	z-index: 100;
 }
 
+#social{
+
+
+position: absolute;
+	right: 8%;
+	top: 10px;
+	width: auto;
+	z-index: 100;
+	
+	
+}	
+
+@media (max-width: 800px){
+	
+	#barraCerca{
+
+	font-size: 9px !important;
+	opacity: 0.8;
+	overflow: visible;
+	position: absolute;
+	right: 20%;
+	top: 13px;
+	width: auto;
+	z-index: 100;
+	display:block;
+	}
+	
+	.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 158px !important;
+}
+
+
+#social{
+
+
+position: absolute;
+	right: 8%;
+	top: 10px;
+	width: auto;
+	z-index: 100;
+	
+	
+}	
+	
+}	
+
+
+@media  (max-width: 500px){
+	
+	#barraCerca{
+		font-size: 70% !important;
+		opacity: 0.8;
+		overflow: visible;
+		position: absolute;
+		right: 10%;
+		top: 13px;
+		width: auto;
+		z-index: 100;
+		display:none;
+	}
+	
+	#social{
+
+
+position: absolute;
+	right: 20%;
+	top: 10px;
+	width: auto;
+	z-index: 100;
+	
+	
+}	
+	
+	#llegenda {
+		background-color: #f2f2f2;
+		border-radius: 4px;
+		bottom: 10px;
+		font-size: 66%;
+		left: 10px;
+		max-height: 95%;
+		opacity: 0.83;
+		overflow: auto;
+		padding: 10px;
+		position: absolute;
+		top: 10px;
+		width: 20%;
+		z-index: 100;
+	}
+	
+	
+	#div_estils_pre {
+    bottom: 20%;
+    font-size: 40%;
+    opacity: 0.83;
+    overflow: auto;
+    padding: 5px 10px 1px;
+    position: absolute;
+    right: 10px;
+    z-index: 100;
+}
+	
+	
+	.mapboxgl-ctrl-attrib a {
+    color: #1f436b !important;
+    font-size: 40% !important;
+    text-decoration: underline !important;
+}
+	
+	
+}	
+
+
 
 .bq_fons {
 	background-color: #E7E7CB;
@@ -126,6 +254,7 @@ i {
 	margin-top: 0px;
 	width: 15px;
 }
+
 
 .bq_car {
 	background-color: #DBBC76;
@@ -376,6 +505,20 @@ i {
 	line-height: 1.42857;
 }
 
+
+
+.extraBT3{
+	background-color: #FFFFFF;
+	border: 0 solid #ccc !important;
+	color: #333;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	font-weight: bold !important;
+	line-height: 1.42857;
+}
+
+
+
 #t_fons {
 	height: 30px;
 	text-align: center;
@@ -426,7 +569,11 @@ i {
 
 }
 
+#ul_estilmap li a{
 
+	font-weight: bold;
+
+}
 
 button:active{
 
@@ -471,4 +618,8 @@ button:active{
 	overflow: hidden;
 }
 
+.mapboxgl-ctrl-attrib a {
+    color: #1f436b !important;
+    font-size: 90% !important;
+    text-decoration: underline !important;
 }
