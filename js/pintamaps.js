@@ -9,21 +9,39 @@
 */
 
 // mapboxgl.accessToken = 'pk.your-own-code-here-for-online-maps';
-mapboxgl.accessToken = 'pk.eyJ1IjoicmFmcm9zZXQiLCJhIjoiZW5HT0w2cyJ9.7S3z1vSbUQFJz1pSBKp0bg';
+//mapboxgl.accessToken = 'pk.eyJ1IjoicmFmcm9zZXQiLCJhIjoiZW5HT0w2cyJ9.7S3z1vSbUQFJz1pSBKp0bg';
 var map;
 var mapStyle = {};
 var socInici = true;
 var pattern_map = false;
 var aplicaZoom=false;
+var estil;
 jQuery(document).ready(function() {
 
-	var estil = '/pintamaps/styles/style_icgc_default.json';
-
+	estil = '/pintamaps/styles/style_icgc_default.json';
+	
+	
 	if (jQuery.url('?style')) {
-		estil = '/pintaservice/styles/users/' + jQuery.url('?style') + ".json";
-	}
+		//estil = '/pintaservice/styles/users/' + jQuery.url('?style') + ".json";
+		estil = '/pintamaps/styles/' + jQuery.url('?style') + '.json';
+			
+			setTimeout('processIndirecte()',2000);
 
-	processaEstil(estil, true);
+	}else if(jQuery.url('?url_style')) {
+		
+		estil= jQuery.url('?url_style') ;
+		
+			setTimeout('processIndirecte()',2000);
+		
+	}	
+		
+		processaEstil(estil, true);
+		
+	
+
+	
+	
+	
 	
 	
 	
@@ -44,7 +62,19 @@ jQuery(document).ready(function() {
 
 }); // fi inici
 
+
+function processIndirecte(){
+	
+	var estil_d=estil;
+	aplicaZoom=true;
+	processaEstil(estil_d, false);
+	
+	
+}	
+
 function processaEstil(estil, nouMapa) {
+
+
 
 	$.getJSON(estil).done(function(nou_estil, textStatus) {
 
@@ -533,9 +563,15 @@ if(features.length){
 			//"text-font" : ["Open Sans Regular","Arial Unicode MS Regular"],
 
 			if(typeof font == "undefined"){
-				font="Open Sans";
+				font="OpenSans-";
 
 			}
+			
+			font=font.replace("Open Sans","OpenSans-");
+			font=font.replace("Komika Hand","Komika-Hand-");
+			font=font.replace("Komika Hand","Komika-Hand-");
+			font=font.replace("Merriweather","Merriweather-");
+			
 			//console.info(font);
 			var layers = "toponimia_";
 			var nomsCapes = layers.split('#');
@@ -555,22 +591,22 @@ if(features.length){
 
 
 
-							if(arrTXT[0].indexOf("Open Sans")!=-1){
+							if(arrTXT[0].indexOf("OpenSans-")!=-1){
 
-								arrTXT[0]=arrTXT[0].replace("Open Sans",font);
+								arrTXT[0]=arrTXT[0].replace("OpenSans-",font);
 
-								if(font.indexOf('Komika')!=-1){
+								if(font.indexOf('Komika-')!=-1){
 									//arrTXT[0]=arrTXT[0].replace("Regular","Bold");
 									arrTXT[0]=arrTXT[0].replace("Light","Regular");
 								}
 
 
-							}else if(arrTXT[0].indexOf("Merriweather")!=-1){
+							}else if(arrTXT[0].indexOf("Merriweather-")!=-1){
 
 
-								arrTXT[0]=arrTXT[0].replace("Merriweather",font);
+								arrTXT[0]=arrTXT[0].replace("Merriweather-",font);
 
-								if(font.indexOf('Komika')!=-1){
+								if(font.indexOf('Komika-')!=-1){
 									//arrTXT[0]=arrTXT[0].replace("Regular","Bold");
 									arrTXT[0]=arrTXT[0].replace("Light","Regular");
 								}
@@ -578,9 +614,9 @@ if(features.length){
 
 
 
-							}else if(arrTXT[0].indexOf("Komika Hand")!=-1){
+							}else if(arrTXT[0].indexOf("Komika-Hand")!=-1){
 
-								arrTXT[0]=arrTXT[0].replace("Komika Hand",font);
+								arrTXT[0]=arrTXT[0].replace("Komika-Hand-",font);
 
 
 								arrTXT[0]=arrTXT[0].replace("Regular","Light");

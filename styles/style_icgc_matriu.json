@@ -3,31 +3,31 @@ var styleGL = {
 	"sources" : {
 		"catsencer" : {
 			"type" : "vector",
-			"tiles" : ["http://localhost/tileservervt/tileserver.php/catsencervt_v1/{z}/{x}/{y}.pbf"],
+			"tiles" : ["http://betaserver.icgc.cat/tileservervt/tileserver.php/catsencervt_v1/{z}/{x}/{y}.pbf"],
 			"maxzoom" : 15,
 			"attribution" : '<a  href="http://betaportal.icgc.cat" target="_blank">BETAPORTAL:Veure més prototips</a> | <a  href="http://www.icgc.cat" target="_blank">Dades: Institut Cartogràfic i Geològic de Catalunya CC-BY 4.0</a>'
 		},
 		"toponimia" : {
 			"type" : "vector",
-			"tiles" : ["http://localhost/tileservervt/tileserver.php/toponimiaunclas/{z}/{x}/{y}.pbf"],
+			"tiles" : ["http://betaserver.icgc.cat/tileservervt/tileserver.php/toponimiaunclas/{z}/{x}/{y}.pbf"],
 			"maxzoom" : 15,
 			"attribution" : '<a  href="http://betaportal.icgc.cat" target="_blank">BETAPORTAL:Veure més prototips</a> | <a  href="http://www.icgc.cat" target="_blank">Dades: Institut Cartogràfic i Geològic de Catalunya CC-BY 4.0</a>'
 		},
 		"toponimia5k" : {
 			"type" : "vector",
-			"tiles" : ["http://localhost/tileservervt/tileserver.php/toponimia5k/{z}/{x}/{y}.pbf"],
+			"tiles" : ["http://betaserver.icgc.cat/tileservervt/tileserver.php/toponimia5k/{z}/{x}/{y}.pbf"],
 			"maxzoom" : 15,
 			"attribution" : '<a  href="http://betaportal.icgc.cat" target="_blank">BETAPORTAL:Veure més prototips</a> | <a  href="http://www.icgc.cat" target="_blank">Dades: Institut Cartogràfic i Geològic de Catalunya CC-BY 4.0</a>'
 		},
 		"ombravector" : {
 			"type" : "vector",
-			"tiles" : ["http://localhost/tileservervt/tileserver.php/ombravector/{z}/{x}/{y}.pbf"],
+			"tiles" : ["http://betaserver.icgc.cat/tileservervt/tileserver.php/ombravector/{z}/{x}/{y}.pbf"],
 			"maxzoom" : 15,
 			"attribution" : '<a  href="http://betaportal.icgc.cat" target="_blank">BETAPORTAL:Veure més prototips</a> | <a  href="http://www.icgc.cat" target="_blank">Dades: Institut Cartogràfic i Geològic de Catalunya CC-BY 4.0</a>'
 		}
 	},
-	"sprite" : "http://localhost/pintamaps/patterns/pattern_textures",
-	"glyphs" : "mapbox://fonts/rafroset/{fontstack}/{range}.pbf",
+	"sprite" : "http://betaserver.icgc.cat/pintamaps/patterns/pattern_textures",
+	"glyphs" :"http://betaserver.icgc.cat/glyphs/{fontstack}/{range}.pbf",
 	"layers" : [{
 			"id" : "background",
 			"type" : "background",
@@ -201,7 +201,7 @@ var styleGL = {
 			"minzoom" : 16,
 			"layout" : {
 				"text-field" : "{z}",
-				"text-font" : ["Open Sans Regular", "Arial Unicode MS Regular"],
+				"text-font" : ["OpenSans-Regular", "Arial Unicode MS Regular"],
 				"text-size" : 11
 			},
 			"paint" : {
@@ -1581,7 +1581,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Regular"],
+				"text-font" : ["OpenSans-Regular"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[9, 10], [10, 12], [11, 14], [12, 15], [13, 16], [14, 18], [15, 22]]
@@ -1609,7 +1609,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Bold"],
+				"text-font" : ["OpenSans-Bold"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[6, 10], [7, 10], [8, 11], [9, 12], [10, 13], [11, 14], [12, 15], [13, 16], [14, 18], [15, 22]]
@@ -1637,7 +1637,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"visibility" : "visible",
 				"symbol-placement" : "point",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[12, 11], [13, 13], [14, 15], [15, 18]]
@@ -1665,7 +1665,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[12, 11], [13, 13], [14, 15], [15, 18], [16, 24]]
@@ -1693,7 +1693,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[13, 13], [14, 15], [15, 18], [16, 24]]
@@ -1721,7 +1721,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[13, 13], [14, 15], [15, 18], [16, 24]]
@@ -1749,7 +1749,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "line",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[17, 10], [18, 16]]
@@ -1777,7 +1777,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Regular"],
+				"text-font" : ["OpenSans-Regular"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[16, 10], [17, 14], [18, 18]]
@@ -1805,7 +1805,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[16, 11], [17, 18], [18, 22]]
@@ -1833,7 +1833,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[15, 15], [16, 21], [17, 30], [18, 42]]
@@ -1861,7 +1861,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[16, 21], [17, 30], [18, 42]]
@@ -1889,7 +1889,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Regular"],
+				"text-font" : ["OpenSans-Regular"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[15, 16], [16, 18], [17, 20], [18, 22]]
@@ -1917,7 +1917,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "line",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Ligth"],
+				"text-font" : ["OpenSans-Ligth"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[17, 10], [18, 18]]
@@ -1945,7 +1945,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "line",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Ligth"],
+				"text-font" : ["OpenSans-Ligth"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[17, 10], [18, 18]]
@@ -1973,7 +1973,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "line",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Ligth"],
+				"text-font" : ["OpenSans-Ligth"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[17, 14], [18, 20]]
@@ -2001,7 +2001,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "line",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Regular"],
+				"text-font" : ["OpenSans-Regular"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[17, 14], [18, 20]]
@@ -2029,7 +2029,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[17, 20], [18, 24]]
@@ -2057,7 +2057,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[17, 20], [18, 24]]
@@ -2085,7 +2085,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[17, 20], [18, 24]]
@@ -2113,7 +2113,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[16, 18], [17, 20], [18, 24]]
@@ -2141,7 +2141,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[16, 18], [17, 20], [18, 24]]
@@ -2169,7 +2169,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[18, 24]]
@@ -2197,7 +2197,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[18, 24]]
@@ -2225,7 +2225,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[16, 18], [17, 20], [18, 22]]
@@ -2253,7 +2253,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[16, 18], [17, 20], [18, 22]]
@@ -2281,7 +2281,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[16, 18], [17, 20], [18, 22]]
@@ -2309,7 +2309,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[16, 18], [17, 20], [18, 22]]
@@ -2337,7 +2337,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[18, 20]]
@@ -2365,7 +2365,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[18, 20]]
@@ -2393,7 +2393,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[18, 20]]
@@ -2421,7 +2421,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[18, 20]]
@@ -2449,7 +2449,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[18, 20]]
@@ -2477,7 +2477,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"visibility" : "visible",
 				"symbol-placement" : "point",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[16, 18], [17, 20], [18, 22]]
@@ -2505,7 +2505,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Light"],
+				"text-font" : ["OpenSans-Light"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[16, 18], [17, 20], [18, 22]]
@@ -2533,7 +2533,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Italic"],
+				"text-font" : ["OpenSans-Italic"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[14, 12], [15, 15], [16, 18], [17, 21], [18, 24]]
@@ -2561,7 +2561,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Italic"],
+				"text-font" : ["OpenSans-Italic"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[17, 18], [18, 24]]
@@ -2589,7 +2589,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Italic"],
+				"text-font" : ["OpenSans-Italic"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[17, 18], [18, 24]]
@@ -2617,7 +2617,7 @@ var styleGL = {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
 				"visibility" : "visible",
-				"text-font" : ["Open Sans Italic"],
+				"text-font" : ["OpenSans-Italic"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[17, 18], [18, 24]]
@@ -2644,7 +2644,7 @@ var styleGL = {
 			"layout" : {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
-				"text-font" : ["Open Sans Italic"],
+				"text-font" : ["OpenSans-Italic"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[14, 12], [15, 15], [16, 18], [17, 21], [18, 24]]
@@ -2671,7 +2671,7 @@ var styleGL = {
 			"layout" : {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
-				"text-font" : ["Open Sans Italic"],
+				"text-font" : ["OpenSans-Italic"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[14, 12], [15, 15], [16, 18], [17, 21], [18, 24]]
@@ -2698,7 +2698,7 @@ var styleGL = {
 			"layout" : {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "line",
-				"text-font" : ["Open Sans Italic"],
+				"text-font" : ["OpenSans-Italic"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[14, 12], [15, 15], [16, 18], [17, 21], [18, 24]]
@@ -2725,7 +2725,7 @@ var styleGL = {
 			"layout" : {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "point",
-				"text-font" : ["Open Sans Italic"],
+				"text-font" : ["OpenSans-Italic"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[14, 14], [15, 16], [16, 18], [17, 20], [18, 22]]
@@ -2752,7 +2752,7 @@ var styleGL = {
 			"layout" : {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "line",
-				"text-font" : ["Open Sans Italic"],
+				"text-font" : ["OpenSans-Italic"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[13, 12], [14, 12], [15, 16], [16, 18], [17, 20], [18, 22]]
@@ -2779,7 +2779,7 @@ var styleGL = {
 			"layout" : {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "line",
-				"text-font" : ["Open Sans Italic"],
+				"text-font" : ["OpenSans-Italic"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[13, 12], [14, 14], [15, 16], [16, 18], [17, 20], [18, 22]]
@@ -2806,7 +2806,7 @@ var styleGL = {
 			"layout" : {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "line",
-				"text-font" : ["Open Sans Italic"],
+				"text-font" : ["OpenSans-Italic"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[13, 12], [14, 14], [15, 16], [16, 18], [17, 20], [18, 22]]
@@ -2833,7 +2833,7 @@ var styleGL = {
 			"layout" : {
 				"text-field" : "{text_top}",
 				"symbol-placement" : "line",
-				"text-font" : ["Open Sans Italic"],
+				"text-font" : ["OpenSans-Italic"],
 				"text-size" : {
 					"base" : 1,
 					"stops" : [[13, 12], [14, 14], [15, 16], [16, 18], [17, 20], [18, 22]]
