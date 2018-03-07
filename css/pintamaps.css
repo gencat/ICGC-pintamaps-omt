@@ -45,9 +45,6 @@ bottom: 20%;
     z-index: 100;
 }	
 
-
-
-
 #menu {
 	background-color: #f2f2f2;
 	height: 300px;
@@ -98,7 +95,7 @@ bottom: 20%;
 
 	position: absolute;
 	right: 10px;
-	top: 142px;
+	top: 175px;
 	width: 30px;
 	z-index: 100;
 

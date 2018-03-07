@@ -16,1207 +16,254 @@ var socInici = true;
 var pattern_map = false;
 var aplicaZoom=false;
 var estil;
+
 jQuery(document).ready(function() {
+	estil = './styles/mtc25mnotopomaputnik_7.json';
+	//estil = './styles/blavos.json';
+	processaEstil(estil, true);
+});
+// fi inici
 
-	estil = '/pintamaps/styles/style_icgc_default.json';
-	
-	
-	if (jQuery.url('?style')) {
-		//estil = '/pintaservice/styles/users/' + jQuery.url('?style') + ".json";
-		estil = '/pintamaps/styles/' + jQuery.url('?style') + '.json';
-			
-			setTimeout('processIndirecte()',2000);
+function crearColorsButtons(groups, estil){
+	for (const key of Object.keys(groups)) {
+		crearBotonColor(key, groups[key], estil);
+    }
+}
 
-	}else if(jQuery.url('?url_style')) {
-		
-		estil= jQuery.url('?url_style') ;
-		
-			setTimeout('processIndirecte()',2000);
-		
-	}	
-		
-		processaEstil(estil, true);
-		
+function crearBotonColor(id, obj, estil){
+	let options = {
+		customClass : 'colorpicker-2x',
+		sliders : {
+			saturation : {
+				maxLeft : 150,
+				maxTop : 150
+			},
+			hue : {
+				maxTop : 150
+			},
+			alpha : {
+				maxTop : 150
+			}
+		},
+		align : 'left',
+		format : 'rgba'
+	};
 	
+	jQuery('<div class="btn-group"><div>'+obj.label+'</div><div id="'+id+'" class="input-group"><input type="text" value="" class="form-control" /> <span class="input-group-addon"><i></i></span></div></div><br>').appendTo('#llegenda');
 
-	
-	
-	
-	
-	
-	
-	  $("input[name=optradio]:radio").click(function() { 
-	  
-	  estil = '/pintamaps/styles/'+$(this).val()+'.json';
-		
-		aplicaZoom=true;
-		processaEstil(estil, false);
-	  
-	  });
-	
-	
-	
-	
-	
-	
+	var element = obj.elements[0]; 
+	color = getColorFromEstil(element.id, element.color, estil);
 
-}); // fi inici
+	$.extend(options, {
+		color : color
+	});
 
+	$('#'+id).colorpicker(options).on('changeColor.colorpicker',
+	function(event) {
+		changeEstilColorGruop(event.target.id, event.color);
+	});
+}
 
-function processIndirecte(){
-	
-	var estil_d=estil;
-	aplicaZoom=true;
-	processaEstil(estil_d, false);
-	
-	
-}	
+function getColorFromEstil(id, path, estil){
+	let layers = estil.layers;
+	let obj = layers.find(o => o.id === id);
+	let color = _.get(obj,path);
+	return color;
+}
+
+function changeEstilColorGruop(id, color){
+	var group = group_styles[id];
+	let layers = mapStyle.layers;
+	group.elements.forEach(element => {
+		let obj = layers.find(o => o.id === element.id);
+		_.set(obj, element.color, color.toString());
+		var property = element.color.split(".").pop();
+		map.setPaintProperty(element.id, property, color.toString());
+	});
+}
+
+function updateBotonColors(estil, groups){
+	let layers = estil.layers;
+	for (const key of Object.keys(groups)) {
+		let group = groups[key].elements[0];
+		let color = getColorFromEstil(group.id,group.color,estil);
+		$('#ul_fonsmap').colorpicker('setValue', color);
+	}
+}
 
 function processaEstil(estil, nouMapa) {
-
-
-
 	$.getJSON(estil).done(function(nou_estil, textStatus) {
-
 		if (nouMapa) {
-
 			mapStyle = nou_estil;
-
-			creaMapa(mapStyle.mapa);
+			creaMapa(mapStyle);
+			crearColorsButtons(group_styles, mapStyle);
 		} else {
-
 			mapStyle = nou_estil;
-
-			actualitzaMapa(mapStyle.mapa, false);
-
+			actualitzaMapa(mapStyle);
 		}
-
 	}).fail(function(jqxhr, settings, exception) {
 		alert("Fitxer no carregat");
 		console.warn(exception);
-
 	});
-
 }
 
-function actualitzaMapa(mapa) {
-	socInici = true;
+function creaMapa(estil) {
+	map = new mapboxgl.Map({
+		container : 'map',
+		minZoom : 7,
+		maxZoom: 15.99,
+		hash : true,
+		style : estil
+	});
+	var nav = new mapboxgl.NavigationControl();
+    map.addControl(nav, 'top-right');
+    /*
+    map.addControl(new MapboxInspect({
+        showInspectMap: true
+    }));
+    */
+    
 
-	if(aplicaZoom){
-		map.setCenter([ parseFloat(mapa.center.lng).toFixed(4),
-			parseFloat(mapa.center.lat).toFixed(4) ]);
-			map.setZoom(mapa.zoom);
-			map.setPitch(mapa.pitch);
-			map.setBearing(mapa.bearing);
-		}
+	var controldiv = document.getElementsByClassName("mapboxgl-ctrl-bottom-right")[0];
+	var zoom = document.createElement("div");
+	zoom.setAttribute("class", "control-zoom");
+	controldiv.appendChild(zoom);
+	map.on('moveend', function() {
+		zoom.innerHTML = "ZL: " + map.getZoom().toFixed(1) + " | ";
+	});
+	addControlsExternFunctionality();
+	updateBotonColors(estil, group_styles);
+}
 
-		// arriba amb pattern
-		if (mapStyle.styles[7].pattern != "") {
-			actDesMenuFonsMapa('textura');
-			pattern_map = true;
-			changePatternMapFons(7, mapStyle.styles[7].pattern);
-		} else {
-			actDesMenuFonsMapa('color');
-			pattern_map = false;
-		}
+function actualitzaMapa(estil){
+	map.setStyle(estil,{diff: false});
+	map.setCenter(estil.center);
+	map.setZoom(estil.zoom);
+	map.setPitch(estil.pitch);
+	map.setBearing(estil.bearing);
+    updateBotonColors(estil, group_styles);
+}
 
-		$('#c_edi').colorpicker('setValue', mapStyle.styles[0].color);
-		$('#c_illes').colorpicker('setValue', mapStyle.styles[1].color);
-		$('#c_polurbans').colorpicker('setValue', mapStyle.styles[2].color);
-		$('#c_car').colorpicker('setValue', mapStyle.styles[3].color);
-		$('#c_bos').colorpicker('setValue', mapStyle.styles[4].color);
-		$('#c_rocam').colorpicker('setValue', mapStyle.styles[5].color);
-		$('#c_platges').colorpicker('setValue', mapStyle.styles[6].color);
-		$('#c_fons').colorpicker('setValue', mapStyle.styles[7].color);
-		$('#c_rius').colorpicker('setValue', mapStyle.styles[8].color);
-		$('#c_aigues').colorpicker('setValue', mapStyle.styles[9].color);
-		$('#c_ferrocarrils').colorpicker('setValue', mapStyle.styles[10].color);
-		$('#c_carrers').colorpicker('setValue', mapStyle.styles[11].color);
-		$('#c_camins').colorpicker('setValue', mapStyle.styles[12].color);
-		jQuery('#chk_toponims').attr('checked', mapStyle.estatToponimia);
-		changeTopoLayer(mapStyle.estatToponimia);
-		changeFontText(mapStyle.fontFamily);
 
-		// setStylesMap();
-	}
+function addControlsExternFunctionality(){
+	jQuery('.mapboxgl-ctrl-top-right div:first').append(
+		'<button id="bt_pitch" title="Perspectiva" class="mapboxgl-ctrl-icon glyphicon glyphicon-road"></button>');
 
-	function randomizeColor() {
-
-		$('#c_edi').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-		$('#c_illes').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-		$('#c_polurbans').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-		$('#c_car').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-		$('#c_bos').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-		$('#c_rocam').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-		$('#c_platges').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-		$('#c_fons').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-		$('#c_rius').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-		$('#c_aigues').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-		$('#c_ferrocarrils').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-		$('#c_carrers').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-		$('#c_camins').colorpicker('setValue',
-		chroma.random().alpha(Math.random().toFixed(2)).css());
-
-		//jQuery('#chk_toponims').attr('checked', false);
-		//changeTopoLayer(false);
-	}
-
-	function creaMapa(mapa) {
-
-		if (mapa) {
-
-			map = new mapboxgl.Map({
-				container : 'map',
-				center : mapa.center,
-				zoom : mapa.zoom,
-				pitch : mapa.pitch, // pitch in degrees
-				bearing : mapa.bearing,
-				minZoom : 7,
-				maxZoom: 18,
-				hash : true,
-				style : styleGL
-			});
-
-		} else {
-
-			map = new mapboxgl.Map({
-				container : 'map',
-				center : [ 2.80685, 41.971525 ],
-				zoom : 14,
-				pitch : 0, // pitch in degrees
-				minZoom : 7,
-				maxZoom: 18,
-				bearing : 0,
-				hash : true,
-				style : styleGL
-			});
-
-		}
-
-		map.off('style.error', map.onError);
-		map.off('source.error', map.onError);
-		map.off('tile.error', map.onError);
-		map.addControl(new mapboxgl.Navigation());
-
-		var controldiv = document
-		.getElementsByClassName("mapboxgl-ctrl-bottom-right")[0];
-		var zoom = document.createElement("div");
-		zoom.setAttribute("class", "control-zoom");
-		controldiv.appendChild(zoom);
-		map.on('moveend', function() {
-			zoom.innerHTML = "ZL: " + map.getZoom().toFixed(1) + " | ";
+	jQuery('#bt_pitch').on('click', function() {
+		var pitch = parseInt(map.getPitch());
+		pitch == 60 ? pitch = 0 : pitch = pitch + 30;
+		map.easeTo({
+			'pitch' : pitch
 		});
+	});
 
-	styleGL.layers.forEach(function (layer) {
-	         layer.interactive = true;
-	     });
+    jQuery('.mapboxgl-ctrl-top-right div:first').append(
+		'<button id="bt_toponims" title="Toponims" class="mapboxgl-ctrl-icon glyphicon glyphicon-tag"></button>');
 
-		map.on('mousemove', function (e) {
+	jQuery('#bt_toponims').on('click', function() {
+        var topomins_i = _.intersectionBy(mapStyle.layers, TOPO_FLOTANT, 'id');
+        if(topomins_i.length === 0){
+            mapStyle.layers = mapStyle.layers.concat(TOPO_FLOTANT);
+        }else{
+            _.pullAllBy(mapStyle.layers, TOPO_FLOTANT, 'id');
+        }
+        actualitzaMapa(mapStyle);
+	});
 
-			if($('#info_vector').is(":visible")&& !$('#bt_close').is(":visible")){
-
-				map.featuresAt(e.point, {radius:2}, function (err, features) {
-					if (err) throw err;
-
-					taulaFeatures(features);
-
-				});
-
-
-
-			}
-
+	jQuery('#bt_export').on('click', function() {
+		console.log(map.getStyle());
+		mapStyle.center.lng = map.getCenter().lng;
+		mapStyle.center.lat = map.getCenter().lat;
+		mapStyle.zoom = map.getZoom();
+		mapStyle.pitch = map.getPitch();
+		mapStyle.bearing = map.getBearing();
+		console.log(mapStyle);
+		var msg = JSON.stringify(mapStyle);
+		var data = "text/json;charset=utf-8," + encodeURIComponent(msg);
+		var a = document.createElement('a');
+		a.href = 'data:' + data;
+		a.download = 'estil_mapa.json';
+		a.title = 'Descarregar estil';
+		a.className = 'verd glyphicon glyphicon-cloud-download';
+		jQuery('#div_exportar').html(a);
+		var container = document.getElementById('div_exportar');
+		$('#md_export').modal({
+			show : true
 		});
+	});
 
-		map.on('dblclick', function (e) {
-			map.setZoom( map.getZoom() );
-			map.featuresAt(e.point, {radius:2}, function (err, features) {
-				if (err) throw err;
-
-				if($('#info_vector').is(":visible")){
-					jQuery('#bt_close').show();
-				}	else{
-					jQuery('#info_vector').show();
-
-				}
-
-
-				taulaFeatures(features)
-
-			});
+	jQuery('#bt_import').on('click', function() {
+		$('#md_import').modal({
+			show : true
 		});
+    });   
 
+	addDropFileOptions();
+}
 
-		jQuery('#bt_close').on('click',function(){
-
-			jQuery('#bt_close').hide();
-			jQuery('#info_vector').hide();
-
-		});
-
-var featureTMP=null;
-
-		function taulaFeatures(features){
-
-				if(featureTMP !=null){
-
-				}
-
-			var html=[];
-if(features.length){
-			$.each(features, function( index, feature ) {
-
-				html.push('<ul class="list-group">');
-				html.push('<li>ID Capa:<b>'+feature.layer.id+'</b></li>');
-				html.push('<li>Origen:<b>'+feature.layer["source-layer"]+'</b></li>');
-				html.push('<li>Cas:<b>'+feature.properties.cas+'</b></li>');
-				html.push('<li>ID vector:<b>'+feature.properties.ogc_fid+'</b></li>');
-
-//console.info(feature.layer.paint["fill_color"]=[0.25,0.25,0.25,0.25]);
-
-					html.push('</ul>');
-			});
-	}
-			document.getElementById('text_vector').innerHTML =html.join("");
-
-
+function addDropFileOptions() {
+	var drgFromMapa = null;
+	var drgFromBoto = null;
+	var drOpcionsMapa = {
+		url : '/pintaservice/up.php',
+		paramName : "file",
+		maxFilesize : 1, // MB
+		method : 'post',
+		accept : function(file, done) {
 		}
-
-
-
-
-		jQuery('.mapboxgl-ctrl-top-right div:first')
-		.append(
-			'<button id="bt_pitch" title="Perspectiva" class="mapboxgl-ctrl-icon glyphicon glyphicon-road"></button>');
-			preparaColorCapes();
-			preparaControlCerca();
-			setupEventsButtons();
-			addDropFileOptions();
-			preparaFormPrint();
-
-		}
-
-		var options = {
-			customClass : 'colorpicker-2x',
-			sliders : {
-				saturation : {
-					maxLeft : 150,
-					maxTop : 150
-				},
-				hue : {
-					maxTop : 150
-				},
-				alpha : {
-					maxTop : 150
-				}
-			},
-			align : 'left',
-			format : 'rgba'
-		};
-
-		function actDesMenuFonsMapa(_text) {
-			if (_text.indexOf('textura') != -1) {
-				jQuery('#c_fons').hide();
-				jQuery('#t_fons').show();
-				pattern_map = true;
+	};
+	var opcionsBoto = drOpcionsMapa;
+	opcionsBoto.clickable = true;
+	if (drgFromBoto == null) {
+		drgFromBoto = new window.Dropzone("#div_upload_estil", opcionsBoto);
+		drgFromBoto.on("addedfile", function(file, xhr) {
+			drgFromBoto.uploadFile(drgFromBoto.files[0]);
+		});
+		drgFromBoto.on('success', function(file, resposta) {
+			console.log(file);
+			console.log(resposta);
+			drgFromBoto.removeAllFiles(true);
+			resposta = JSON.parse(resposta);
+			if (resposta.STATUS == "OK") {
+				$('#md_import').modal('hide');
+				processaEstil(resposta.STYLE, false);
 			} else {
-				jQuery('#c_fons').show();
-				jQuery('#t_fons').hide();
-				pattern_map = false;
-				$('#c_fons').colorpicker('setValue', mapStyle.styles[7].color);
-
+				$('#md_import').modal('hide');
+				alert("Error al carregar l'arxiu");
 			}
-		}
+		});
+		drgFromBoto.on('error', function(file, errorMessage) {
+			drgFromBoto.removeAllFiles(true);
+			$('#md_import').modal('hide');
+			alert("Error al carregar l'arxiu");
+		});
+	}
 
-		function setupEventsButtons() {
-
-			jQuery('#ul_fonsmap li').on('click', function() {
-
-				var _li = this.id;
-				actDesMenuFonsMapa(_li);
-
-			});
-
-			jQuery('#ul_topomap li').on('click', function() {
-
-				var _li = this.id;
-				_li=_li.replace("li_","");
-
-				changeFontText(_li);
-
-			});
-
-
-
-
-			jQuery('#t_fons div').on('click', function(e) {
-
-				var pattern = this.id;
-				pattern_map = true;
-				changePatternMapFons(7, this.id);
-
-			});
-
-			jQuery('#bt_pitch').on('click', function() {
-				var pitch = parseInt(map.getPitch());
-				pitch == 60 ? pitch = 0 : pitch = pitch + 30;
-				map.easeTo({
-					'pitch' : pitch
-				});
-
-			});
-
-			jQuery('#bt_export').on('click', function() {
-
-				mapStyle.mapa.center.lng = map.getCenter().lng;
-				mapStyle.mapa.center.lat = map.getCenter().lat;
-				mapStyle.mapa.zoom = map.getZoom();
-				mapStyle.mapa.pitch = map.getPitch();
-				mapStyle.mapa.bearing = map.getBearing();
-
-				var msg = JSON.stringify(mapStyle);
-				var data = "text/json;charset=utf-8," + encodeURIComponent(msg);
-				var a = document.createElement('a');
-				a.href = 'data:' + data;
-				a.download = 'estil_mapa.json';
-				a.title = 'Descarregar estil';
-				a.className = 'verd glyphicon glyphicon-cloud-download';
-				jQuery('#div_exportar').html(a);
-				var container = document.getElementById('div_exportar');
-
-				$('#md_export').modal({
-					show : true
-				});
-			});
-
-			jQuery('#bt_import').on('click', function() {
-				$('#md_import').modal({
-					show : true
-				});
-			});
-
-			jQuery('#bt_capture').on('click', function() {
-				$('#md_print').modal({
-					show : true
-				});
-			});
-
-			jQuery('#chk_toponims').on('click', function() {
-
-				var actiu = this.checked;
-
-				changeTopoLayer(actiu);
-
-			});
-
-		}
-
-		function preparaControlCerca() {
-
-			var select = SelectMunicipis.createSelect();
-			jQuery('#barraCerca').append(select);
-			$(select).addClass("selectpicker").selectpicker({
-				liveSearch : true
-			});
-
-		}
-
-		function changeTopoLayer(actiu) {
-			for (i = 0; i < styleGL.layers.length; i++) {
-				var tema = styleGL.layers[i].id;
-
-				if (tema.indexOf('toponim') != -1) {
-
-					if (actiu) {
-						map.setLayoutProperty(tema, 'visibility', 'visible');
-						styleGL.layers[i].layout.visibility = 'visible';
-					} else {
-						map.setLayoutProperty(tema, 'visibility', 'none');
-						styleGL.layers[i].layout.visibility = 'none';
-
-					}
-
-				}
-
+	var opcionsMapa = drOpcionsMapa;
+	opcionsMapa.clickable = false;
+	if (drgFromMapa == null) {
+		drgFromMapa = new window.Dropzone("#map", opcionsMapa);
+		drgFromMapa.on("addedfile", function(file, xhr) {
+			drgFromMapa.uploadFile(drgFromMapa.files[0]);
+		});
+		drgFromMapa.on('success', function(file, resposta) {
+			var name=file.name;
+			if(name.indexOf('goto')!=-1){
+				aplicaZoom=true;
+			}else{
+				aplicaZoom=false;
 			}
-
-			mapStyle.estatToponimia = actiu;
-		}
-
-		var drgFromMapa = null;
-		var drgFromBoto = null;
-		var drOpcionsMapa = {
-			url : '/pintaservice/up.php',
-			paramName : "file",
-			maxFilesize : 1, // MB
-			method : 'post',
-			accept : function(file, done) {
-			}
-		};
-		function addDropFileOptions() {
-
-			var opcionsBoto = drOpcionsMapa;
-			opcionsBoto.clickable = true;
-
-			if (drgFromBoto == null) {
-				drgFromBoto = new window.Dropzone("#div_upload_estil", opcionsBoto);
-				drgFromBoto.on("addedfile", function(file, xhr) {
-					drgFromBoto.uploadFile(drgFromBoto.files[0]);
-					;
-				});
-				drgFromBoto.on('success', function(file, resposta) {
-
-
-					var name=file.name;
-					if(name.indexOf('_goto')!=-1){
-						aplicaZoom=true;
-					}else{
-						aplicaZoom=false;
-					}
-
-					drgFromBoto.removeAllFiles(true);
-					resposta = JSON.parse(resposta);
-					if (resposta.STATUS == "OK") {
-						$('#md_import').modal('hide');
-						processaEstil(resposta.STYLE, false);
-					} else {
-						$('#md_import').modal('hide');
-						alert("Error al carregar l'arxiu");
-					}
-				});
-				drgFromBoto.on('error', function(file, errorMessage) {
-					drgFromBoto.removeAllFiles(true);
-					$('#md_import').modal('hide');
-					alert("Error al carregar l'arxiu");
-				});
-
-			}
-
-			var opcionsMapa = drOpcionsMapa;
-			opcionsMapa.clickable = false;
-
-			if (drgFromMapa == null) {
-				drgFromMapa = new window.Dropzone("#map", opcionsMapa);
-				drgFromMapa.on("addedfile", function(file, xhr) {
-					drgFromMapa.uploadFile(drgFromMapa.files[0]);
-					;
-				});
-				drgFromMapa.on('success', function(file, resposta) {
-
-					var name=file.name;
-					if(name.indexOf('goto')!=-1){
-						aplicaZoom=true;
-					}else{
-						aplicaZoom=false;
-					}
-
-
-
-					drgFromMapa.removeAllFiles(true);
-					resposta = JSON.parse(resposta);
-					if (resposta.STATUS == "OK") {
-
-						processaEstil(resposta.STYLE, false);
-					} else {
-
-						alert("Error al carregar l'arxiu");
-					}
-				});
-				drgFromMapa.on('error', function(file, errorMessage) {
-					drgFromMapa.removeAllFiles(true);
-
-					alert("Error al carregar l'arxiu");
-				});
-
-			}
-
-		}
-
-		function setStylesMap() {
-
-			var ls = mapStyle.styles.length
-
-			for (var v = 0; v < ls; v++) {
-				changeColorLayer(null, v);
-
-			}
-
-		}
-
-
-
-		function changeFontText(font){
-
-			//toponimia_cap#toponimia_nucli", 'text-color',10
-			//"text-font" : ["Open Sans Regular","Arial Unicode MS Regular"],
-
-			if(typeof font == "undefined"){
-				font="OpenSans-";
-
-			}
-			
-			font=font.replace("Open Sans","OpenSans-");
-			font=font.replace("Komika Hand","Komika-Hand-");
-			font=font.replace("Komika Hand","Komika-Hand-");
-			font=font.replace("Merriweather","Merriweather-");
-			
-			//console.info(font);
-			var layers = "toponimia_";
-			var nomsCapes = layers.split('#');
-			var tipusGeometria = "text-font";
-
-
-
-			for (var i = 0; i < styleGL.layers.length; i++) {
-				var tema = styleGL.layers[i].id;
-
-				for (var j = 0; j < nomsCapes.length; j++) {
-					if (tema.indexOf(nomsCapes[j]) != -1) {
-						var arrTXT=map.getLayoutProperty(tema, tipusGeometria);
-
-						if(arrTXT[0].indexOf(font)==-1){
-
-
-
-
-							if(arrTXT[0].indexOf("OpenSans-")!=-1){
-
-								arrTXT[0]=arrTXT[0].replace("OpenSans-",font);
-
-								if(font.indexOf('Komika-')!=-1){
-									//arrTXT[0]=arrTXT[0].replace("Regular","Bold");
-									arrTXT[0]=arrTXT[0].replace("Light","Regular");
-								}
-
-
-							}else if(arrTXT[0].indexOf("Merriweather-")!=-1){
-
-
-								arrTXT[0]=arrTXT[0].replace("Merriweather-",font);
-
-								if(font.indexOf('Komika-')!=-1){
-									//arrTXT[0]=arrTXT[0].replace("Regular","Bold");
-									arrTXT[0]=arrTXT[0].replace("Light","Regular");
-								}
-
-
-
-
-							}else if(arrTXT[0].indexOf("Komika-Hand")!=-1){
-
-								arrTXT[0]=arrTXT[0].replace("Komika-Hand-",font);
-
-
-								arrTXT[0]=arrTXT[0].replace("Regular","Light");
-								//arrTXT[0]=arrTXT[0].replace("Bold","Regular");
-
-
-
-							}
-
-
-
-							map.setLayoutProperty(tema, tipusGeometria, arrTXT);
-							styleGL.layers[i].layout[tipusGeometria] = arrTXT
-							mapStyle.fontFamily = font;
-							break;
-						}
-					}
-				}
-
-			} // fi
-
-		}
-
-		function changePatternMapFons(index, pattern) {
-
-			if (pattern == false) {
-				pattern = "";
-			}
-
-			var fons = mapStyle.styles[index].layers;
-
-			var tipusGeometria = "background-pattern";
-
-			for (var i = 0; i < styleGL.layers.length; i++) {
-				var tema = styleGL.layers[i].id;
-
-				if (tema.indexOf(fons) != -1) {
-
-					styleGL.layers[i].paint[tipusGeometria] = pattern;
-
-
-
-					mapStyle.styles[index].pattern = pattern;
-					map.setPaintProperty(tema, tipusGeometria, pattern);
-					map.repaint;
-					break;
-				}
-
-			} // fi
-
-		}
-
-		function changeColorLayer(event, index) {
-
-			var colorRGBA;
-			var layers = mapStyle.styles[index].layers;
-			var nomsCapes = layers.split('#');
-			var tipusGeometria = mapStyle.styles[index].properties;
-
-			for (var i = 0; i < styleGL.layers.length; i++) {
-				var tema = styleGL.layers[i].id;
-
-				for (var j = 0; j < nomsCapes.length; j++) {
-					if (tema.indexOf(nomsCapes[j]) != -1) {
-
-						if (event) {
-							colorRGBA = 'rgba(' + event.color.toRGB().r + ','
-							+ event.color.toRGB().g + ','
-							+ event.color.toRGB().b + ','
-							+ event.color.toRGB().a + ')'
-						} else {
-							colorRGBA = mapStyle.styles[index].color;
-						}
-
-						map.setPaintProperty(tema, tipusGeometria, colorRGBA);
-						styleGL.layers[i].paint[tipusGeometria] = colorRGBA
-						mapStyle.styles[index].color = colorRGBA;
-						break;
-					}
-				}
-
-			} // fi
-
-		}
-
-		function preparaColorCapes() {
-			socInici = true;
-			// Edificacions
-
-			$.extend(options, {
-				color : mapStyle.styles[0].color
-			});
-
-			$('#c_edi').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					changeColorLayer(event, 0)
-				}
-				;
-			});
-
-			// Illes
-			$.extend(options, {
-				color : mapStyle.styles[1].color
-			});
-			$('#c_illes').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					changeColorLayer(event, 1)
-				}
-				;
-			});
-
-			// Polígons urbans buffer
-			$.extend(options, {
-				color : mapStyle.styles[2].color
-			});
-
-			$('#c_polurbans').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					changeColorLayer(event, 2)
-				}
-				;
-			});
-
-			// Carreteres
-			$.extend(options, {
-				color : mapStyle.styles[3].color
-			});
-			$('#c_car').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					changeColorLayer(event, 3)
-				}
-				;
-			});
-
-			// Vegetació
-			$.extend(options, {
-				color : mapStyle.styles[4].color
-			});
-			$('#c_bos').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					changeColorLayer(event, 4)
-				}
-				;
-			});
-
-			// Rocam
-			$.extend(options, {
-				color : mapStyle.styles[5].color
-			});
-			$('#c_rocam').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					changeColorLayer(event, 5)
-				}
-				;
-			});
-
-			// Platges
-			$.extend(options, {
-				color : mapStyle.styles[6].color
-			});
-
-			$('#c_platges').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					changeColorLayer(event, 6)
-				}
-				;
-
-			});
-
-			// Fons
-			$.extend(options, {
-				color : mapStyle.styles[7].color
-			});
-
-			$('#c_fons').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					if (!pattern_map) {
-						changeColorLayer(event, 7);
-						changePatternMapFons(7, false);
-					}
-				}
-				;
-			});
-
-			// Rius
-			$.extend(options, {
-				color : mapStyle.styles[8].color
-			});
-
-			$('#c_rius').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					changeColorLayer(event, 8)
-				}
-				;
-			});
-
-			// Masses d'aigua
-			$.extend(options, {
-				color : mapStyle.styles[9].color
-			});
-
-			$('#c_aigues').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					changeColorLayer(event, 9)
-				}
-				;
-			});
-
-			// Toponimia
-			/*
-			* $.extend(options, {color:mapStyle.styles[10]});
-			* $('#c_toponimia').colorpicker(options).on('changeColor.colorpicker',
-			* function(event){ if(socInici){changeColorLayer(event,
-			* "toponimia_cap#toponimia_nucli", 'text-color',10); });
-			*/
-			// Ferrocarrils
-			$.extend(options, {
-				color : mapStyle.styles[10].color
-			});
-			$('#c_ferrocarrils').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					changeColorLayer(event, 10)
-				}
-				;
-
-			});
-
-			// Carrers
-			$.extend(options, {
-				color : mapStyle.styles[11].color
-			});
-			$('#c_carrers').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					changeColorLayer(event, 11)
-				}
-				;
-			});
-
-			// Camins i corriols
-			$.extend(options, {
-				color : mapStyle.styles[12].color
-			});
-			$('#c_camins').colorpicker(options).on('changeColor.colorpicker',
-			function(event) {
-				if (socInici) {
-					changeColorLayer(event, 12)
-				}
-				;
-			});
-
-			// console.info(mapStyle.styles[10]);
-			jQuery('#chk_toponims').attr('checked', mapStyle.estatToponimia);
-
-
-
-
-			jQuery('#bt_random').on('click',randomizeColor);
-
-		}
-
-		// functions print
-		var maxSize;
-		if (map) {
-			var canvas = map.getCanvas();
-			var gl = canvas.getContext('experimental-webgl');
-			maxSize = gl.getParameter(gl.MAX_RENDERBUFFER_SIZE);
-		}
-
-		var errors = {
-			width : {
-				state : false,
-				msg : 'Amplada ha de ser un número positiu!',
-				grp : 'widthGroup'
-			},
-			height : {
-				state : false,
-				grp : 'heightGroup'
-			},
-			dpi : {
-				state : false,
-				msg : 'DPI ha de ser un número positiu!',
-				grp : 'dpiGroup'
-			}
-		};
-
-		function handleErrors() {
-			'use strict';
-			var errorMsgElem = document.getElementById('error-message');
-			var anError = false;
-			var errorMsg;
-			for ( var e in errors) {
-				e = errors[e];
-				if (e.state) {
-					if (anError) {
-						errorMsg += ' ' + e.msg;
-					} else {
-						errorMsg = e.msg;
-						anError = true;
-					}
-					document.getElementById(e.grp).classList.add('has-error');
-				} else {
-					document.getElementById(e.grp).classList.remove('has-error');
-				}
-			}
-			if (anError) {
-				errorMsgElem.innerHTML = errorMsg;
-				errorMsgElem.style.display = 'block';
+			drgFromMapa.removeAllFiles(true);
+			resposta = JSON.parse(resposta);
+			if (resposta.STATUS == "OK") {
+				processaEstil(resposta.STYLE, false);
 			} else {
-				errorMsgElem.style.display = 'none';
+				alert("Error al carregar l'arxiu");
 			}
-		}
-
-		function isError() {
-			'use strict';
-			for ( var e in errors) {
-				if (errors[e].state) {
-					return true;
-				}
-			}
-			return false;
-		}
-
-		function preparaFormPrint() {
-
-			jQuery('#widthInput')
-			.on(
-				'change',
-				function(e) {
-
-
-					'use strict';
-					var val = Number(e.target.value);
-					var dpi = Number(jQuery('#dpiInput').val());
-					if (val > 0) {
-						if (val * dpi > maxSize) {
-							errors.width.state = true;
-							errors.width.msg = 'El valor màxim de l´amplada és '
-							+ maxSize
-							+ 'px, però l´amplada entrada és '
-							+ (val * dpi) + 'px.';
-						} else if (val * window.devicePixelRatio * 96 > maxSize) {
-							errors.width.state = true;
-							errors.width.msg = 'l´amplada és massa gran!';
-						} else {
-							errors.width.state = false;
-							// document.getElementById('map').style.width =
-							// toPixels(val);
-							// map.resize();
-						}
-					} else {
-						errors.width.state = true;
-						errors.height.msg = 'l´amplada ha de ser un número positiu!';
-					}
-					handleErrors();
-				});
-
-				jQuery('#heightInput')
-				.on(
-					'change',
-					function(e) {
-						// form.heightInput.addEventListener('change',
-						// function(e) {
-						'use strict';
-
-						var val = Number(e.target.value);
-
-						var dpi = Number(jQuery('#dpiInput').val());
-
-						if (val > 0) {
-							if (val * dpi > maxSize) {
-								errors.height.state = true;
-								errors.height.msg = 'El valor màxim de l´alçada és '
-								+ maxSize
-								+ 'px, però l´alçada entrada és '
-								+ (val * dpi) + 'px.';
-							} else if (val * window.devicePixelRatio * 96 > maxSize) {
-								errors.height.state = true;
-								errors.height.msg = 'l´alçada és massa gran!';
-							} else {
-								errors.height.state = false;
-								// document.getElementById('map').style.height =
-								// toPixels(val);
-								// map.resize();
-							}
-						} else {
-							errors.height.state = true;
-							errors.height.msg = 'l´alçada ha de ser un número positiu!';
-						}
-						handleErrors();
-					});
-
-					jQuery('#dpiInput').on('change', function(e) {
-						// form.dpiInput.addEventListener('change', function(e) {
-						'use strict';
-						var val = Number(e.target.value);
-						if (val > 0) {
-							errors.dpi.state = false;
-							var event = document.createEvent('HTMLEvents');
-							// event.initEvent('change', true, true);
-							// form.widthInput.dispatchEvent(event);
-							// form.heightInput.dispatchEvent(event);
-						} else {
-							errors.dpi.state = true;
-						}
-						handleErrors();
-					});
-
-					jQuery('#mmUnit').on('change', function(e) {
-
-						jQuery('#widthInput').val(jQuery('#widthInput').val() * 25.4);
-						jQuery('#heightInput').val(jQuery('#heightInput').val() * 25.4);
-					});
-
-					jQuery('#inUnit').on('change', function(e) {
-						// form.inUnit.addEventListener('change', function() {
-						'use strict';
-						jQuery('#widthInput').val(jQuery('#widthInput').val() / 25.4);
-						jQuery('#heightInput').val(jQuery('#heightInput').val() / 25.4);
-					});
-
-					/*
-					* if($('input[name=unitOptions]:checked', '#config').val()=='mm'){
-					*
-					* jQuery('#widthInput').val(jQuery('#widthInput').val() *25.4) ;
-					* jQuery('#heightInput').val(jQuery('#heightInput').val() * 25.4) ; }
-					*/
-					/*
-					* if (jQuery('#unitOptions').val() == 'mm') { jQuery('#widthInput').val() *=
-					* 25.4; jQuery('#heightInput').val() *= 25.4; }
-					*/
-
-				}
-
-				function toPixels(length) {
-					'use strict';
-					var unit = $('input[name=unitOptions]:checked', '#config').val();
-					var conversionFactor = 96;
-					if (unit == 'mm') {
-						conversionFactor /= 25.4;
-					}
-
-					return conversionFactor * length + 'px';
-				}
-
-				jQuery('#generate-btn').on('click', generateMap);
-
-				// document.getElementById('generate-btn').addEventListener('click',
-				// generateMap);
-
-				function generateMap() {
-					'use strict';
-
-					if (isError()) {
-						openErrorModal('Configuració invàlida.');
-						return;
-					}
-
-					document.getElementById('spinner').style.display = 'inline-block';
-					document.getElementById('generate-btn').classList.add('disabled');
-
-					var width = Number(jQuery('#widthInput').val());
-					var height = Number(jQuery('#heightInput').val());
-
-					var dpi = Number(jQuery('#dpiInput').val());
-
-					var format = $('input[name=outputOptions]:checked', '#config').val();
-
-					var unit = $('input[name=unitOptions]:checked', '#config').val();
-
-					var zoom = map.getZoom();
-					var center = map.getCenter();
-					var bearing = map.getBearing();
-					var pitch= map.getPitch();
-
-					createPrintMap(width, height, dpi, format, unit, zoom, center, bearing, pitch);
-				}
-
-				function createPrintMap(width, height, dpi, format, unit, zoom, center, bearing, pitch) {
-					'use strict';
-
-					// Calculate pixel ratio
-
-					/*
-					* console.info(width); console.info(height); console.info(dpi);
-					* console.info(format); console.info(unit); console.info(zoom);
-					* console.info(center); console.info( bearing);
-					*/
-
-					var actualPixelRatio = window.devicePixelRatio;
-					Object.defineProperty(window, 'devicePixelRatio', {
-						get : function() {
-							return dpi / 96
-						}
-					});
-
-					// Create map container
-					var hidden = document.createElement('div');
-					hidden.className = 'hidden-map';
-					document.body.appendChild(hidden);
-					var container = document.createElement('div');
-					container.style.width = toPixels(width);
-					container.style.height = toPixels(height);
-
-					// console.info( container.style.width);
-					// console.info( container.style.height);
-
-					hidden.appendChild(container);
-
-					// Render map
-					var renderMap = new mapboxgl.Map({
-						container : container,
-						center : center,
-						zoom : zoom,
-						style : styleGL,
-						bearing : bearing,
-						pitch:pitch,
-						interactive : false,
-						attributionControl : false
-					});
-					renderMap.once('load', function() {
-						if (format == 'png') {
-							renderMap.getCanvas().toBlob(function(blob) {
-								saveAs(blob, 'captura_mapa.png');
-							});
-						} else {
-							var pdf = new jsPDF({
-								orientation : width > height ? 'l' : 'p',
-								unit : unit,
-								format : [ width, height ],
-								compress : true
-							});
-
-							pdf.addImage(renderMap.getCanvas().toDataURL('image/jpeg', 0.95),
-							'jpeg', 0, 0, width, height);
-							pdf.save('captura_mapa.pdf');
-						}
-
-						renderMap.remove();
-						hidden.parentNode.removeChild(hidden);
-						Object.defineProperty(window, 'devicePixelRatio', {
-							get : function() {
-								return actualPixelRatio
-							}
-						});
-						document.getElementById('spinner').style.display = 'none';
-						document.getElementById('generate-btn').classList.remove('disabled');
-					});
-				}
-
-				// Funcions captura tecles
-				var keys = [];
-
-				window.executeHotkeyTest = function(callback, keyValues) {
-					if (typeof callback !== "function")
-					throw new TypeError("Expected callback as first argument");
-					if (typeof keyValues !== "object"
-					&& (!Array.isArray || Array.isArray(keyValues)))
-					throw new TypeError("Expected array as second argument");
-
-					var allKeysValid = true;
-
-					for (var i = 0; i < keyValues.length; ++i)
-					allKeysValid = allKeysValid && keys[keyValues[i]];
-
-					if (allKeysValid)
-					callback();
-				};
-
-				window.addGlobalHotkey = function(callback, keyValues) {
-					if (typeof keyValues === "number")
-					keyValues = [ keyValues ];
-
-					var fnc = function(cb, val) {
-						return function(e) {
-							keys[e.keyCode] = true;
-							executeHotkeyTest(cb, val);
-						};
-					}(callback, keyValues);
-					window.addEventListener('keydown', fnc);
-					return fnc;
-				};
-
-				window.addEventListener('keyup', function(e) {
-					keys[e.keyCode] = false;
-				});
-
-				addGlobalHotkey(function() {
-
-					randomizeColor();
-
-				}, [ 17, 13 ]);
+		});
+		drgFromMapa.on('error', function(file, errorMessage) {
+			drgFromMapa.removeAllFiles(true);
+			alert("Error al carregar l'arxiu");
+		});
+	}
+}
