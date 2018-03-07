@@ -19,7 +19,6 @@ var estil;
 
 jQuery(document).ready(function() {
 	estil = './styles/mtc25mnotopomaputnik_7.json';
-	//estil = './styles/blavos.json';
 	processaEstil(estil, true);
 });
 // fi inici

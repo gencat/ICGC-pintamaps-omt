@@ -1,6 +1,10 @@
- {
+{
   "version": 8,
   "name": "mtc25mnotopo",
+  "center": [2.80685, 41.971525],
+  "zoom": 12.5,
+  "bearing": 29,
+  "pitch": 50,
   "metadata": {
     "mapbox:autocomposite": false,
     "mapbox:type": "template",
@@ -11,12 +15,22 @@
     "mtc25mcatoff": {
       "type": "vector",
       "tiles": [
-        "http://betaserver.icgc.cat/tileserver3/tileserver.php/mtc25mcatoffusos/{z}/{x}/{y}.pbf"
+        "http://betaserver.icgc.cat/tileserver3/tileserver.php/mtc25mcatoff_7a13/{z}/{x}/{y}.pbf"
       ],
       "minZoom": 0,
       "maxZoom": 13,
       "minzoom": 7,
       "maxzoom": 13
+    },
+    "usos": {
+      "type": "vector",
+      "tiles": [
+        "http://betaserver.icgc.cat/tileserver3/tileserver.php/usos_bt25m/{z}/{x}/{y}.pbf"
+      ],
+      "minZoom": 0,
+      "maxZoom": 14,
+      "minzoom": 7,
+      "maxzoom": 14
     }
   },
   "sprite": "http://betaserver.icgc.cat/vectortiles/sprites/maki",
@@ -32,7 +46,7 @@
     {
       "id": "usos_prats",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_prats",
       "paint": {
         "fill-color": "rgba(255, 255, 229, 1)",
@@ -43,7 +57,7 @@
     {
       "id": "usos_aiguamolls",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "aiguamolls",
       "paint": {
         "fill-color": "rgba(201, 230, 249, 1)",
@@ -54,7 +68,7 @@
     {
       "id": "usos_arrossars",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_arrossars",
       "paint": {
         "fill-color": "rgba(144, 192, 217, 1)",
@@ -65,7 +79,7 @@
     {
       "id": "usos_molleresmunt",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_mulleresmunt",
       "paint": {
         "fill-color": "rgba(234, 255, 216, 1)",
@@ -76,7 +90,7 @@
     {
       "id": "usos_fruitersseca",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_fruitersseca",
       "paint": {
         "fill-color": "rgba(187, 174, 118, 0.9)",
@@ -87,7 +101,7 @@
     {
       "id": "usos_fruitersreg",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_fruitersreg",
       "paint": {
         "fill-color": "rgba(11, 90, 45, 1)",
@@ -98,7 +112,7 @@
     {
       "id": "usos_vinya",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_vinya",
       "paint": {
         "fill-color": "rgba(227, 210, 216, 0.9)",
@@ -109,7 +123,7 @@
     {
       "id": "usos_conreusseca",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_conreusseca",
       "paint": {
         "fill-color": "rgba(222, 203, 133, 0.9)",
@@ -120,7 +134,7 @@
     {
       "id": "usos_conreusreg",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_conreusreg",
       "paint": {
         "fill-color": "rgba(81, 158, 68, 1)",
@@ -131,7 +145,7 @@
     {
       "id": "usos_plantacions",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_plantacions",
       "paint": {
         "fill-color": "rgba(68, 204, 138, 1)",
@@ -142,7 +156,7 @@
     {
       "id": "usos_bosquines",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_bosquines",
       "paint": {
         "fill-color": "rgba(229, 255, 216, 1)",
@@ -153,7 +167,7 @@
     {
       "id": "usos_mixtos",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_mixtos",
       "paint": {
         "fill-color": "rgba(110, 193, 45, 1)",
@@ -164,7 +178,7 @@
     {
       "id": "usos_caducifolis",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_caducifolis",
       "paint": {
         "fill-color": "rgba(141, 240, 133, 1)",
@@ -175,7 +189,7 @@
     {
       "id": "usos_aciculifolis",
       "type": "fill",
-      "source": "mtc25mcatoff",
+      "source": "usos",
       "source-layer": "usos_aciculifolis",
       "paint": {
         "fill-color": "rgba(141, 214, 133, 1)",
@@ -15578,6 +15592,116 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_en_c_p_via_preferent_en_c_p_3_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "via_preferent_en_c_p_3_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#383838",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.6
+            ],
+            [
+              8,
+              1.3
+            ],
+            [
+              9,
+              2.01
+            ],
+            [
+              10,
+              2.71
+            ],
+            [
+              11,
+              3.42
+            ],
+            [
+              12,
+              4.12
+            ],
+            [
+              13,
+              4.83
+            ],
+            [
+              14,
+              5.53
+            ],
+            [
+              15,
+              6.24
+            ],
+            [
+              16,
+              6.94
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        },
+        "line-dasharray": [
+          1
+        ]
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_en_c_p_via_preferent_en_c_p_3_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -22161,6 +22285,113 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_enllac_autovia_groc_perfil_27_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_autovia_groc_27_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#4C4C4C",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_enllac_autovia_blau_cel_perfil_26_lin",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -23286,6 +23517,113 @@
             [
               16,
               9.92
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_autovia_groc_perfil_25_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_autovia_groc_25_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#4C4C4C",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1.02
+            ],
+            [
+              8,
+              2.23
+            ],
+            [
+              9,
+              3.44
+            ],
+            [
+              10,
+              4.65
+            ],
+            [
+              11,
+              5.86
+            ],
+            [
+              12,
+              7.07
+            ],
+            [
+              13,
+              8.28
+            ],
+            [
+              14,
+              9.49
+            ],
+            [
+              15,
+              10.7
+            ],
+            [
+              16,
+              11.91
             ]
           ]
         },
@@ -25195,6 +25533,97 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_enllac_xarxa_local_23_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_xarxa_local_23_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.34
+            ],
+            [
+              10,
+              0.86
+            ],
+            [
+              11,
+              1.38
+            ],
+            [
+              12,
+              1.9
+            ],
+            [
+              13,
+              2.41
+            ],
+            [
+              14,
+              2.93
+            ],
+            [
+              15,
+              3.45
+            ],
+            [
+              16,
+              3.97
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_enllac_xarxa_local_23_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -25279,6 +25708,188 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_enllac_x_local_doble_calcada_33_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_x_local_doble_calcada_33_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#FFCC00",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.43
+            ],
+            [
+              10,
+              1.07
+            ],
+            [
+              11,
+              1.72
+            ],
+            [
+              12,
+              2.37
+            ],
+            [
+              13,
+              3.02
+            ],
+            [
+              14,
+              3.66
+            ],
+            [
+              15,
+              4.31
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_enllac_x_local_doble_calcada_33_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_x_local_doble_calcada_33_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#FFCC00",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.41
+            ],
+            [
+              10,
+              1.03
+            ],
+            [
+              11,
+              1.65
+            ],
+            [
+              12,
+              2.27
+            ],
+            [
+              13,
+              2.9
+            ],
+            [
+              14,
+              3.52
+            ],
+            [
+              15,
+              4.14
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -25377,6 +25988,97 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_enllac_xarxa_comarcal_22_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_xarxa_comarcal_22_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.34
+            ],
+            [
+              10,
+              0.86
+            ],
+            [
+              11,
+              1.38
+            ],
+            [
+              12,
+              1.9
+            ],
+            [
+              13,
+              2.41
+            ],
+            [
+              14,
+              2.93
+            ],
+            [
+              15,
+              3.45
+            ],
+            [
+              16,
+              3.97
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_enllac_xarxa_comarcal_22_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -25461,6 +26163,188 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_enllac_x_comarcal_doble_calcada_32_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_x_comarcal_doble_calcada_32_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#3DCC32",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.43
+            ],
+            [
+              10,
+              1.07
+            ],
+            [
+              11,
+              1.72
+            ],
+            [
+              12,
+              2.37
+            ],
+            [
+              13,
+              3.02
+            ],
+            [
+              14,
+              3.66
+            ],
+            [
+              15,
+              4.31
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_enllac_x_comarcal_doble_calcada_32_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_x_comarcal_doble_calcada_32_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#3DCC32",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.41
+            ],
+            [
+              10,
+              1.03
+            ],
+            [
+              11,
+              1.65
+            ],
+            [
+              12,
+              2.27
+            ],
+            [
+              13,
+              2.9
+            ],
+            [
+              14,
+              3.52
+            ],
+            [
+              15,
+              4.14
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -25559,6 +26443,97 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_enllac_xarxa_basica_21_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_xarxa_basica_21_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.43
+            ],
+            [
+              10,
+              1.07
+            ],
+            [
+              11,
+              1.72
+            ],
+            [
+              12,
+              2.37
+            ],
+            [
+              13,
+              3.02
+            ],
+            [
+              14,
+              3.66
+            ],
+            [
+              15,
+              4.31
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_enllac_xarxa_basica_21_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -25650,6 +26625,188 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_enllac_x_basica_doble_calcada_31_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_x_basica_doble_calcada_31_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#E52D2D",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.43
+            ],
+            [
+              10,
+              1.07
+            ],
+            [
+              11,
+              1.72
+            ],
+            [
+              12,
+              2.37
+            ],
+            [
+              13,
+              3.02
+            ],
+            [
+              14,
+              3.66
+            ],
+            [
+              15,
+              4.31
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_enllac_x_basica_doble_calcada_31_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_x_basica_doble_calcada_31_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#E52D2D",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.41
+            ],
+            [
+              10,
+              1.03
+            ],
+            [
+              11,
+              1.65
+            ],
+            [
+              12,
+              2.27
+            ],
+            [
+              13,
+              2.9
+            ],
+            [
+              14,
+              3.52
+            ],
+            [
+              15,
+              4.14
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_enllac_x_basica_doble_calcada_31_lin_3",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -25734,6 +26891,113 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_enllac_via_preferent_20_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_via_preferent_20_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#383838",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -25848,6 +27112,327 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_enllac_autovia_groc_27_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_autovia_groc_27_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#4C4C4C",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_enllac_autovia_groc_27_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_autovia_groc_27_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#FFFF80",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.17
+            ],
+            [
+              8,
+              0.37
+            ],
+            [
+              9,
+              0.57
+            ],
+            [
+              10,
+              0.77
+            ],
+            [
+              11,
+              0.98
+            ],
+            [
+              12,
+              1.18
+            ],
+            [
+              13,
+              1.38
+            ],
+            [
+              14,
+              1.58
+            ],
+            [
+              15,
+              1.78
+            ],
+            [
+              16,
+              1.98
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_enllac_autovia_blau_cel_26_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_autovia_blau_cel_26_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#80CCFF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_enllac_autovia_blau_cel_26_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -25948,6 +27533,220 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_enllac_autovia_19_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_autovia_19_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#0066FF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_enllac_autovia_19_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_autovia_19_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#0066FF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.41
+            ],
+            [
+              8,
+              0.89
+            ],
+            [
+              9,
+              1.38
+            ],
+            [
+              10,
+              1.86
+            ],
+            [
+              11,
+              2.34
+            ],
+            [
+              12,
+              2.83
+            ],
+            [
+              13,
+              3.31
+            ],
+            [
+              14,
+              3.79
+            ],
+            [
+              15,
+              4.28
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -26062,6 +27861,220 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_enllac_autopista_18_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_autopista_18_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#0066FF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_enllac_autopista_18_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_enllac_autopista_18_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#0066FF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.41
+            ],
+            [
+              8,
+              0.89
+            ],
+            [
+              9,
+              1.38
+            ],
+            [
+              10,
+              1.86
+            ],
+            [
+              11,
+              2.34
+            ],
+            [
+              12,
+              2.83
+            ],
+            [
+              13,
+              3.31
+            ],
+            [
+              14,
+              3.79
+            ],
+            [
+              15,
+              4.28
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_enllac_autopista_18_lin_3",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -26169,6 +28182,113 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_xarxa_local_17_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_xarxa_local_17_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_xarxa_local_17_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -26269,6 +28389,113 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_xarxa_local_doble_calcada_16_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_xarxa_local_doble_calcada_16_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.6
+            ],
+            [
+              8,
+              1.3
+            ],
+            [
+              9,
+              2.01
+            ],
+            [
+              10,
+              2.71
+            ],
+            [
+              11,
+              3.42
+            ],
+            [
+              12,
+              4.12
+            ],
+            [
+              13,
+              4.83
+            ],
+            [
+              14,
+              5.53
+            ],
+            [
+              15,
+              6.24
+            ],
+            [
+              16,
+              6.94
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -26490,6 +28717,113 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_xarxa_comarcal_15_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_xarxa_comarcal_15_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.51
+            ],
+            [
+              8,
+              1.11
+            ],
+            [
+              9,
+              1.72
+            ],
+            [
+              10,
+              2.32
+            ],
+            [
+              11,
+              2.93
+            ],
+            [
+              12,
+              3.53
+            ],
+            [
+              13,
+              4.14
+            ],
+            [
+              14,
+              4.74
+            ],
+            [
+              15,
+              5.35
+            ],
+            [
+              16,
+              5.95
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_xarxa_comarcal_15_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -26590,6 +28924,113 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_xarxa_comarcal_doble_calcada_14_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_xarxa_comarcal_doble_calcada_14_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.68
+            ],
+            [
+              8,
+              1.49
+            ],
+            [
+              9,
+              2.29
+            ],
+            [
+              10,
+              3.1
+            ],
+            [
+              11,
+              3.91
+            ],
+            [
+              12,
+              4.71
+            ],
+            [
+              13,
+              5.52
+            ],
+            [
+              14,
+              6.32
+            ],
+            [
+              15,
+              7.13
+            ],
+            [
+              16,
+              7.94
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -26811,6 +29252,113 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_xarxa_basica_13_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_xarxa_basica_13_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.68
+            ],
+            [
+              8,
+              1.49
+            ],
+            [
+              9,
+              2.29
+            ],
+            [
+              10,
+              3.1
+            ],
+            [
+              11,
+              3.91
+            ],
+            [
+              12,
+              4.71
+            ],
+            [
+              13,
+              5.52
+            ],
+            [
+              14,
+              6.32
+            ],
+            [
+              15,
+              7.13
+            ],
+            [
+              16,
+              7.94
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_xarxa_basica_13_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -26911,6 +29459,113 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_xarxa_basica_doble_calcada_12_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_xarxa_basica_doble_calcada_12_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#E52D2D",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1.02
+            ],
+            [
+              8,
+              2.23
+            ],
+            [
+              9,
+              3.44
+            ],
+            [
+              10,
+              4.65
+            ],
+            [
+              11,
+              5.86
+            ],
+            [
+              12,
+              7.07
+            ],
+            [
+              13,
+              8.28
+            ],
+            [
+              14,
+              9.49
+            ],
+            [
+              15,
+              10.7
+            ],
+            [
+              16,
+              11.91
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -27132,6 +29787,113 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_via_preferent_11_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_via_preferent_11_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#383838",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.85
+            ],
+            [
+              8,
+              1.86
+            ],
+            [
+              9,
+              2.87
+            ],
+            [
+              10,
+              3.87
+            ],
+            [
+              11,
+              4.88
+            ],
+            [
+              12,
+              5.89
+            ],
+            [
+              13,
+              6.9
+            ],
+            [
+              14,
+              7.91
+            ],
+            [
+              15,
+              8.91
+            ],
+            [
+              16,
+              9.92
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_via_preferent_11_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -27232,6 +29994,113 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_via_preferent_doble_calcada_10_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_via_preferent_doble_calcada_10_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#383838",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.85
+            ],
+            [
+              8,
+              1.86
+            ],
+            [
+              9,
+              2.87
+            ],
+            [
+              10,
+              3.87
+            ],
+            [
+              11,
+              4.88
+            ],
+            [
+              12,
+              5.89
+            ],
+            [
+              13,
+              6.9
+            ],
+            [
+              14,
+              7.91
+            ],
+            [
+              15,
+              8.91
+            ],
+            [
+              16,
+              9.92
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -27453,6 +30322,434 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_autovia_groc_25_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_autovia_groc_25_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#4C4C4C",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1.02
+            ],
+            [
+              8,
+              2.23
+            ],
+            [
+              9,
+              3.44
+            ],
+            [
+              10,
+              4.65
+            ],
+            [
+              11,
+              5.86
+            ],
+            [
+              12,
+              7.07
+            ],
+            [
+              13,
+              8.28
+            ],
+            [
+              14,
+              9.49
+            ],
+            [
+              15,
+              10.7
+            ],
+            [
+              16,
+              11.91
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_autovia_groc_25_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_autovia_groc_25_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#FFFF80",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.51
+            ],
+            [
+              8,
+              1.11
+            ],
+            [
+              9,
+              1.72
+            ],
+            [
+              10,
+              2.32
+            ],
+            [
+              11,
+              2.93
+            ],
+            [
+              12,
+              3.53
+            ],
+            [
+              13,
+              4.14
+            ],
+            [
+              14,
+              4.74
+            ],
+            [
+              15,
+              5.35
+            ],
+            [
+              16,
+              5.95
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_autovia_groc_25_lin_3",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_autovia_groc_25_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#4C4C4C",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.07
+            ],
+            [
+              8,
+              0.15
+            ],
+            [
+              9,
+              0.23
+            ],
+            [
+              10,
+              0.31
+            ],
+            [
+              11,
+              0.39
+            ],
+            [
+              12,
+              0.47
+            ],
+            [
+              13,
+              0.55
+            ],
+            [
+              14,
+              0.63
+            ],
+            [
+              15,
+              0.71
+            ],
+            [
+              16,
+              0.79
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_autovia_blau_cel_24_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_autovia_blau_cel_24_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#80CCFF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1.02
+            ],
+            [
+              8,
+              2.23
+            ],
+            [
+              9,
+              3.44
+            ],
+            [
+              10,
+              4.65
+            ],
+            [
+              11,
+              5.86
+            ],
+            [
+              12,
+              7.07
+            ],
+            [
+              13,
+              8.28
+            ],
+            [
+              14,
+              9.49
+            ],
+            [
+              15,
+              10.7
+            ],
+            [
+              16,
+              11.91
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_autovia_blau_cel_24_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -27660,6 +30957,113 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_normal_autovia_9_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_autovia_9_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#0066FF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1.02
+            ],
+            [
+              8,
+              2.23
+            ],
+            [
+              9,
+              3.44
+            ],
+            [
+              10,
+              4.65
+            ],
+            [
+              11,
+              5.86
+            ],
+            [
+              12,
+              7.07
+            ],
+            [
+              13,
+              8.28
+            ],
+            [
+              14,
+              9.49
+            ],
+            [
+              15,
+              10.7
+            ],
+            [
+              16,
+              11.91
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -27881,6 +31285,113 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_normal_autopista_8_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "normal_autopista_8_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#0066FF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.6
+            ],
+            [
+              8,
+              2.19
+            ],
+            [
+              9,
+              3.77
+            ],
+            [
+              10,
+              5.36
+            ],
+            [
+              11,
+              6.95
+            ],
+            [
+              12,
+              8.53
+            ],
+            [
+              13,
+              10.12
+            ],
+            [
+              14,
+              11.71
+            ],
+            [
+              15,
+              13.29
+            ],
+            [
+              16,
+              14.88
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_normal_autopista_8_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -28095,6 +31606,97 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_sobre_enllac_xarxa_local_7_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_xarxa_local_7_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.34
+            ],
+            [
+              10,
+              0.86
+            ],
+            [
+              11,
+              1.38
+            ],
+            [
+              12,
+              1.9
+            ],
+            [
+              13,
+              2.41
+            ],
+            [
+              14,
+              2.93
+            ],
+            [
+              15,
+              3.45
+            ],
+            [
+              16,
+              3.97
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_sobre_enllac_xarxa_local_7_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -28179,6 +31781,188 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_sobre_enllac_x_local_doble_calcada_30_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_x_local_doble_calcada_30_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#FFCC00",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.43
+            ],
+            [
+              10,
+              1.07
+            ],
+            [
+              11,
+              1.72
+            ],
+            [
+              12,
+              2.37
+            ],
+            [
+              13,
+              3.02
+            ],
+            [
+              14,
+              3.66
+            ],
+            [
+              15,
+              4.31
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_sobre_enllac_x_local_doble_calcada_30_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_x_local_doble_calcada_30_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#FFCC00",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.41
+            ],
+            [
+              10,
+              1.03
+            ],
+            [
+              11,
+              1.65
+            ],
+            [
+              12,
+              2.27
+            ],
+            [
+              13,
+              2.9
+            ],
+            [
+              14,
+              3.52
+            ],
+            [
+              15,
+              4.14
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -28277,6 +32061,97 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_sobre_enllac_xarxa_comarcal_6_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_xarxa_comarcal_6_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.34
+            ],
+            [
+              10,
+              0.86
+            ],
+            [
+              11,
+              1.38
+            ],
+            [
+              12,
+              1.9
+            ],
+            [
+              13,
+              2.41
+            ],
+            [
+              14,
+              2.93
+            ],
+            [
+              15,
+              3.45
+            ],
+            [
+              16,
+              3.97
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_sobre_enllac_xarxa_comarcal_6_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -28361,6 +32236,188 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_sobre_enllac_x_comarcal_doble_calcada_29_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_x_comarcal_doble_calcada_29_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#3DCC32",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.43
+            ],
+            [
+              10,
+              1.07
+            ],
+            [
+              11,
+              1.72
+            ],
+            [
+              12,
+              2.37
+            ],
+            [
+              13,
+              3.02
+            ],
+            [
+              14,
+              3.66
+            ],
+            [
+              15,
+              4.31
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_sobre_enllac_x_comarcal_doble_calcada_29_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_x_comarcal_doble_calcada_29_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#3DCC32",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.41
+            ],
+            [
+              10,
+              1.03
+            ],
+            [
+              11,
+              1.65
+            ],
+            [
+              12,
+              2.27
+            ],
+            [
+              13,
+              2.9
+            ],
+            [
+              14,
+              3.52
+            ],
+            [
+              15,
+              4.14
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -28459,6 +32516,97 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_sobre_enllac_xarxa_basica_5_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_xarxa_basica_5_lin",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0.43
+            ],
+            [
+              10,
+              1.07
+            ],
+            [
+              11,
+              1.72
+            ],
+            [
+              12,
+              2.37
+            ],
+            [
+              13,
+              3.02
+            ],
+            [
+              14,
+              3.66
+            ],
+            [
+              15,
+              4.31
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_sobre_enllac_xarxa_basica_5_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -28543,6 +32691,113 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_sobre_enllac_x_basica_doble_calcada_28_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_x_basica_doble_calcada_28_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#E52D2D",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -28650,6 +32905,113 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_sobre_enllac_via_preferent_4_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_via_preferent_4_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#383838",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -28871,6 +33233,113 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_sobre_enllac_autovia_blau_cel_34_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_autovia_blau_cel_34_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#80CCFF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.41
+            ],
+            [
+              8,
+              0.89
+            ],
+            [
+              9,
+              1.38
+            ],
+            [
+              10,
+              1.86
+            ],
+            [
+              11,
+              2.34
+            ],
+            [
+              12,
+              2.83
+            ],
+            [
+              13,
+              3.31
+            ],
+            [
+              14,
+              3.79
+            ],
+            [
+              15,
+              4.28
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_sobre_enllac_autovia_blau_cel_34_lin_3",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -28977,7 +33446,221 @@
       },
       "line-cap": "round"
     },
-   {
+    {
+      "id": "vials_sobre_i_normal_sobre_enllac_autovia_3_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_autovia_3_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#0066FF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_sobre_enllac_autovia_3_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_autovia_3_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#0066FF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.41
+            ],
+            [
+              8,
+              0.89
+            ],
+            [
+              9,
+              1.38
+            ],
+            [
+              10,
+              1.86
+            ],
+            [
+              11,
+              2.34
+            ],
+            [
+              12,
+              2.83
+            ],
+            [
+              13,
+              3.31
+            ],
+            [
+              14,
+              3.79
+            ],
+            [
+              15,
+              4.28
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_sobre_enllac_autovia_3_lin_3",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -29078,6 +33761,220 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_sobre_enllac_autopista_2_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_autopista_2_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#0066FF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_sobre_enllac_autopista_2_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_enllac_autopista_2_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#0066FF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.41
+            ],
+            [
+              8,
+              0.89
+            ],
+            [
+              9,
+              1.38
+            ],
+            [
+              10,
+              1.86
+            ],
+            [
+              11,
+              2.34
+            ],
+            [
+              12,
+              2.83
+            ],
+            [
+              13,
+              3.31
+            ],
+            [
+              14,
+              3.79
+            ],
+            [
+              15,
+              4.28
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -29192,6 +34089,113 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_sobre_i_normal_sobre_xarxa_local_1_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_xarxa_local_1_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_sobre_i_normal_sobre_xarxa_local_1_lin_2",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -29292,6 +34296,113 @@
             [
               16,
               1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_sobre_i_normal_sobre_xarxa_comarcal_0_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "sobre_xarxa_comarcal_0_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#000000",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.51
+            ],
+            [
+              8,
+              1.11
+            ],
+            [
+              9,
+              1.72
+            ],
+            [
+              10,
+              2.32
+            ],
+            [
+              11,
+              2.93
+            ],
+            [
+              12,
+              3.53
+            ],
+            [
+              13,
+              4.14
+            ],
+            [
+              14,
+              4.74
+            ],
+            [
+              15,
+              5.35
+            ],
+            [
+              16,
+              5.95
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
             ]
           ]
         }
@@ -31535,7 +36646,114 @@
       },
       "line-cap": "round"
     },
-   {
+    {
+      "id": "vials_prioritaris_enllac_enllac_xarxa_local_doble_calcada_10_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "enllac_xarxa_local_doble_calcada_10_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#FFCC00",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.41
+            ],
+            [
+              8,
+              0.89
+            ],
+            [
+              9,
+              1.38
+            ],
+            [
+              10,
+              1.86
+            ],
+            [
+              11,
+              2.34
+            ],
+            [
+              12,
+              2.83
+            ],
+            [
+              13,
+              3.31
+            ],
+            [
+              14,
+              3.79
+            ],
+            [
+              15,
+              4.28
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_prioritaris_enllac_enllac_xarxa_local_doble_calcada_10_lin_3",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -31912,6 +37130,113 @@
             [
               16,
               4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_prioritaris_enllac_enllac_xarxa_comarcal_doble_calcada_9_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "enllac_xarxa_comarcal_doble_calcada_9_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#3DCC32",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.41
+            ],
+            [
+              8,
+              0.89
+            ],
+            [
+              9,
+              1.38
+            ],
+            [
+              10,
+              1.86
+            ],
+            [
+              11,
+              2.34
+            ],
+            [
+              12,
+              2.83
+            ],
+            [
+              13,
+              3.31
+            ],
+            [
+              14,
+              3.79
+            ],
+            [
+              15,
+              4.28
+            ],
+            [
+              16,
+              4.76
             ]
           ]
         },
@@ -32392,6 +37717,113 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_prioritaris_enllac_enllac_xarxa_basica_doble_calcada_8_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "enllac_xarxa_basica_doble_calcada_8_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#E52D2D",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.41
+            ],
+            [
+              8,
+              0.89
+            ],
+            [
+              9,
+              1.38
+            ],
+            [
+              10,
+              1.86
+            ],
+            [
+              11,
+              2.34
+            ],
+            [
+              12,
+              2.83
+            ],
+            [
+              13,
+              3.31
+            ],
+            [
+              14,
+              3.79
+            ],
+            [
+              15,
+              4.28
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_prioritaris_enllac_enllac_xarxa_basica_doble_calcada_8_lin_3",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -32661,6 +38093,220 @@
             [
               16,
               3.97
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_prioritaris_enllac_enllac_autovia_groga_7_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "enllac_autovia_groga_7_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#4C4C4C",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.43
+            ],
+            [
+              8,
+              0.93
+            ],
+            [
+              9,
+              1.43
+            ],
+            [
+              10,
+              1.94
+            ],
+            [
+              11,
+              2.44
+            ],
+            [
+              12,
+              2.94
+            ],
+            [
+              13,
+              3.45
+            ],
+            [
+              14,
+              3.95
+            ],
+            [
+              15,
+              4.46
+            ],
+            [
+              16,
+              4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_prioritaris_enllac_enllac_autovia_groga_7_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "enllac_autovia_groga_7_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#FFFF80",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.17
+            ],
+            [
+              8,
+              0.37
+            ],
+            [
+              9,
+              0.57
+            ],
+            [
+              10,
+              0.77
+            ],
+            [
+              11,
+              0.98
+            ],
+            [
+              12,
+              1.18
+            ],
+            [
+              13,
+              1.38
+            ],
+            [
+              14,
+              1.58
+            ],
+            [
+              15,
+              1.78
+            ],
+            [
+              16,
+              1.98
             ]
           ]
         },
@@ -33196,6 +38842,113 @@
             [
               16,
               4.96
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_prioritaris_enllac_enllac_autopista_0_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "enllac_autopista_0_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#0066FF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.41
+            ],
+            [
+              8,
+              0.89
+            ],
+            [
+              9,
+              1.38
+            ],
+            [
+              10,
+              1.86
+            ],
+            [
+              11,
+              2.34
+            ],
+            [
+              12,
+              2.83
+            ],
+            [
+              13,
+              3.31
+            ],
+            [
+              14,
+              3.79
+            ],
+            [
+              15,
+              4.28
+            ],
+            [
+              16,
+              4.76
             ]
           ]
         },
@@ -36779,6 +42532,113 @@
       "line-cap": "round"
     },
     {
+      "id": "vials_prioritaris_enllac_autovia_2on_nivell_14_lin_2",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "enllac_autovia_2on_nivell_14_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#0066FF",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.41
+            ],
+            [
+              8,
+              0.89
+            ],
+            [
+              9,
+              1.38
+            ],
+            [
+              10,
+              1.86
+            ],
+            [
+              11,
+              2.34
+            ],
+            [
+              12,
+              2.83
+            ],
+            [
+              13,
+              3.31
+            ],
+            [
+              14,
+              3.79
+            ],
+            [
+              15,
+              4.28
+            ],
+            [
+              16,
+              4.76
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
       "id": "vials_prioritaris_enllac_autovia_2on_nivell_14_lin_3",
       "type": "line",
       "source": "mtc25mcatoff",
@@ -36834,6 +42694,220 @@
             [
               16,
               1.98
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_prioritaris_carril_bus_vao_enllac_16_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "carril_bus_vao_enllac_16_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#CC4019",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.17
+            ],
+            [
+              8,
+              0.37
+            ],
+            [
+              9,
+              0.57
+            ],
+            [
+              10,
+              0.77
+            ],
+            [
+              11,
+              0.98
+            ],
+            [
+              12,
+              1.18
+            ],
+            [
+              13,
+              1.38
+            ],
+            [
+              14,
+              1.58
+            ],
+            [
+              15,
+              1.78
+            ],
+            [
+              16,
+              1.98
+            ]
+          ]
+        },
+        "line-opacity": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              16,
+              1
+            ]
+          ]
+        }
+      },
+      "line-cap": "round"
+    },
+    {
+      "id": "vials_prioritaris_carril_bus_vao_15_lin",
+      "type": "line",
+      "source": "mtc25mcatoff",
+      "source-layer": "carril_bus_vao_15_lin",
+      "minzoom": 7,
+      "maxzoom": 16,
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": "#CC4019",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [
+              7,
+              0.15
+            ],
+            [
+              8,
+              0.33
+            ],
+            [
+              9,
+              0.51
+            ],
+            [
+              10,
+              0.68
+            ],
+            [
+              11,
+              0.86
+            ],
+            [
+              12,
+              1.04
+            ],
+            [
+              13,
+              1.22
+            ],
+            [
+              14,
+              1.39
+            ],
+            [
+              15,
+              1.57
+            ],
+            [
+              16,
+              1.75
             ]
           ]
         },
