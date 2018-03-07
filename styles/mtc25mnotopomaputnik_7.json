@@ -1,6 +1,10 @@
  {
   "version": 8,
   "name": "mtc25mnotopo",
+  "center": [2.80685, 41.971525],
+  "zoom": 12.5,
+  "bearing": 29,
+  "pitch": 50,
   "metadata": {
     "mapbox:autocomposite": false,
     "mapbox:type": "template",
@@ -13,8 +17,6 @@
       "tiles": [
         "http://betaserver.icgc.cat/tileserver3/tileserver.php/mtc25mcatoffusos/{z}/{x}/{y}.pbf"
       ],
-      "minZoom": 0,
-      "maxZoom": 13,
       "minzoom": 7,
       "maxzoom": 13
     }
