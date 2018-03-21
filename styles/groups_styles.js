@@ -8,484 +8,6 @@ var group_styles = {
             }
         ]
     },
-    "ul_altres_blau": {
-        "label": "Altres elements d'aigua",
-        "elements": [
-            {
-                "id": "hidrografia_linia_canal_damplada_igual_o_superior_a_3_metres_2_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "bassa_piscina_circular",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "bassa_piscina_rectangular",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "font_surgencia",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "bassa_o_diposit_descobert_piscina_a_escala_5_pol",
-                "color": "paint.fill-color"
-            }
-        ]
-    },
-    "ul_altres_energia": {
-        "label": "Altres elements d'energia",
-        "elements": [
-            {
-                "id": "energia_i_telecomunicacions_linia_centre_productor_i_transformador_d_energia_0_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "energia_i_telecomunicacions_linia_conduccio_de_combustible_3_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "energia_i_telecomunicacions_linia_linia_electrica_2_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "energia_i_telecomunicacions_linia_parc_eolic_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "receptor_emissor",
-                "color": "paint.text-color"
-            }
-        ]
-    },
-    "ul_altres_gris": {
-        "label": "Altres elements genèrics",
-        "elements": [
-            {
-                "id": "aeroports_area_d_aterratge_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "aeroports_pista_d_aeroport_aerodrom_0_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "aeroports_pista_d_aeroport_detall_2_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_10_11mtc_poblament_linia_aeroports_2_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "ajuntament",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "altres_extraccions",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "altres_extraccions_abandonades",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "arbre_destacat",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "area_descans",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "area_servei",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "astronomic",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "CAP",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "castell",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "cementiri",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "combustible_circular",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "combustible_rectangular",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "consell_comarcal",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "cova",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "diposit_cobert_circular",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "diposit_cobert_rectangular",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "diposit_sitja_cobert_circular",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "diposit_sitja_cobert_rectangular",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "edif_religiosa_aillada",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "estacio_fiducial",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "far",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "heliport",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "mareograf",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "mina",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "mina_abandonada",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "pedrera",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "pedrera_abandonada",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "pic",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "pk",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "punt_quilometric",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "refugi",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "restres_historicoarqueo",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "vertex",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "xemeneia",
-                "color": "paint.text-color"
-            }
-        ]
-    },
-    "ul_vials_altres": {
-        "label": "Altres vials",
-        "elements": [
-            {
-                "id": "altres_vials_i_camins_prioritaris_vial_pavimentat_4_metres_prioritaris_0_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_prioritaris_vial_pavimentat_entre_4_i_2_5_metres_prioritaris_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_o_cami_pavimentat_4_m_en_c_p_7_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_o_cami_pavimentat_4_m_en_tunel_8_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_pavimentat_2_5_metres_2_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_pavimentat_4_metres_perfil_0_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_pavimentat_entre_4_i_2_5_metres_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_pavimentat_entre_4_i_2_5_metres_tunel_9_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_prioritaris_vial_pavimentat_4_metres_prioritaris_0_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_o_cami_pavimentat_4_m_en_c_p_7_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_o_cami_pavimentat_4_m_en_tunel_8_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_pavimentat_4_metres_0_lin_2",
-                "color": "paint.line-color"
-            }
-        ]
-    },
-    "ul_vials_blau": {
-        "label": "Autopistes",
-        "elements": [
-            {
-                "id": "vials_en_c_p_enllac_autovia_en_c_p_11_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_c_p_enllac_autopista_en_c_p_10_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_tunel_enllac_autovia_blau_cel_en_tunel_14_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_tunel_enllac_autovia_tunel_10_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_tunel_enllac_autopista_tunel_12_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_enllac_autovia_2on_nivell_14_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_enllac_enllac_autovia_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_enllac_enllac_autovia_blau_cel_11_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_enllac_enllac_autopista_0_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_sobre_enllac_autovia_blau_cel_perfil_34_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_sobre_enllac_autovia_perfil_3_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_sobre_enllac_autopista_perfil_2_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_enllac_autovia_blau_cel_perfil_26_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_enllac_autovia_perfil_19_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_enllac_autopista_perfil_18_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_c_p_autovia_en_c_p_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_7mtc_vials_autovia_autovia_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_8mtc_vials_autovia_autovia_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_tunel_autovia_blau_cel_en_tunel_13_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_tunel_autovia_en_tunel_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_autovia_3_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_autovia_blau_cel_17_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_autovia_blau_cel_perfil_24_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_autovia_perfil_9_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_c_p_autopista_en_c_p_0_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_7mtc_vials_autopista_Autopista_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_7mtc_vials_autopista_tunel_autopista túnel_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_8mtc_vials_autopista_Autopista_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_8mtc_vials_autopista_tunel_autopista túnel_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_tunel_autopista_en_tunel_0_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_autopista_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_autopista_perfil_8_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_7mtc_vials_autopista_Autopista_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_7mtc_vials_autopista_tunel_autopista túnel_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_8mtc_vials_autopista_Autopista_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_8mtc_vials_autopista_tunel_autopista túnel_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_c_p_autovia_en_c_p_1_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_autovia_3_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_autovia_blau_cel_17_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_autovia_9_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_autovia_blau_cel_24_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_c_p_autopista_en_c_p_0_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_autopista_1_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_autopista_8_lin_3",
-                "color": "paint.line-color"
-            }
-        ]
-    },
-    "ul_cami_cami": {
-        "label": "Camins",
-        "elements": [
-            {
-                "id": "altres_vials_i_camins_prioritaris_vial_o_cami_no_pavimentat_4_metres_prioritaris_2_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_prioritaris_vial_o_cami_no_pavimentat_entre_4_i_2_5_metres_prioritaris_4_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_o_cami_no_pavimentat_2_5_metres_5_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_o_cami_no_pavimentat_4_metres_perfil_3_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_o_cami_no_pavimentat_entre_4_i_2_5_m_tunel_6_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_o_cami_no_pavimentat_entre_4_i_2_5_metres_4_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_prioritaris_vial_o_cami_no_pavimentat_4_metres_prioritaris_2_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "altres_vials_i_camins_vial_o_cami_no_pavimentat_4_metres_3_lin_2",
-                "color": "paint.line-color"
-            }
-        ]
-    },
     "ul_construccio_gris": {
         "label": "Construccions",
         "elements": [
@@ -644,266 +166,6 @@ var group_styles = {
             {
                 "id": "z_9_10mtc_poblament_poligon_z_9_10_mtc_poblament_poligon_0_pol",
                 "color": "paint.fill-color"
-            }
-        ]
-    },
-    "ul_corbes_corbes": {
-        "label": "Corbes de nivell",
-        "elements": [
-            {
-                "id": "corbes_nivell_corba_de_nivell_mestra_0_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "corbes_nivell_corba_de_nivell_mestra_de_depressio_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "corbes_nivell_corba_de_nivell_mestra_en_gelera_2_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "corbes_nivell_corba_de_nivell_senzilla_3_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "corbes_nivell_corba_de_nivell_senzilla_de_depressio_4_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "corbes_nivell_corba_de_nivell_senzilla_en_gelera_5_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "corbes_nivell_desmunt_6_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "corbes_nivell_terraple_7_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "cota",
-                "color": "paint.text-color"
-            }
-        ]
-    },
-    "ul_espaisnat_blau": {
-        "label": "Espais naturals aquatics",
-        "elements": [
-            {
-                "id": "limits_espais_naturals_protegits_pein_mari_4_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_espais_naturals_protegits_pn_mari_3_lin",
-                "color": "paint.line-color"
-            }
-        ]
-    },
-    "ul_espaisnat_verd": {
-        "label": "Espais naturals de muntanya",
-        "elements": [
-            {
-                "id": "limits_espais_naturals_protegits_altres_parcs_5_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_espais_naturals_protegits_parc_nacional_6_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_espais_naturals_protegits_pein_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_espais_naturals_protegits_pn_0_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_espais_naturals_protegits_zona_exclosa_2_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_espais_naturals_protegits_zona_periferica_parc_nacional_7_lin",
-                "color": "paint.line-color"
-            }
-        ]
-    },
-    "ul_ferrocata_ferrocata": {
-        "label": "Ferrocarrils",
-        "elements": [
-            {
-                "id": "xarxa_ferroviaria_altres_ferrocarrils_9_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_altres_ferrocarrils_en_c_p_10_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_altres_ferrocarrils_en_tunel_11_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_ferrocarril_de_la_generalitat_fgc_3_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_ferrocarril_de_la_generalitat_fgc_en_c_p_4_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_ferrocarril_de_la_generalitat_fgc_en_tunel_5_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_14_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_en_c_p_15_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_en_tunel_16_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_pati_de_vies_altres_ferrocarrils_17_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_pati_de_vies_d_fgc_13_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_pati_de_vies_de_renfe_12_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_prioritaris_altres_ferrocarrils_prioritari_3_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_prioritaris_ferrocarril_de_la_generalitat_fgc_prioritari_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_prioritaris_tren_de_gran_velocitat_prioritari_0_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_prioritaris_xarxa_renfe_prioritari_2_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_tramvia_18_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_tramvia_en_tunel_19_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_0_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_en_c_p_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_en_tunel_2_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_xarxa_renfe_6_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_xarxa_renfe_en_c_p_7_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_xarxa_renfe_en_tunel_8_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_7mtc_vials_tgv_TGV_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_8mtc_vials_ferrocarril_top_Ferrocarril_top_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_8mtc_vials_tgv_TGV_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_altres_ferrocarrils_en_tunel_11_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_14_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_en_c_p_15_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_en_tunel_16_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_prioritaris_tren_de_gran_velocitat_prioritari_0_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_tramvia_en_tunel_19_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_0_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_en_c_p_1_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_en_tunel_2_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_14_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_en_c_p_15_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_en_tunel_16_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_prioritaris_tren_de_gran_velocitat_prioritari_0_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_0_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_en_c_p_1_lin_3",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_en_tunel_2_lin_3",
-                "color": "paint.line-color"
             }
         ]
     },
@@ -1128,51 +390,6 @@ var group_styles = {
             }
         ]
     },
-    "ul_limits_limits": {
-        "label": "Línits administratius",
-        "elements": [
-            {
-                "id": "limits_administratius_comarca_aprovat_2_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_administratius_comarca_en_proces_4_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_administratius_comarca_pendent_daprovacio_3_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_administratius_comunitat_autonoma_1_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_administratius_estat_administratius_0_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_administratius_municipi_aprovat_5_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_administratius_municipi_en_proces_7_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "limits_administratius_municipi_pendent_daprovacio_6_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_7_8mtc_limits_linia_limit_autonomic_Límit_autonomic_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_7_8mtc_limits_linia_limit_estat_Límit_estat_lin",
-                "color": "paint.line-color"
-            }
-        ]
-    },
     "ul_massesaigua_massesaigua": {
         "label": "Masses d'aigua",
         "elements": [
@@ -1278,52 +495,183 @@ var group_styles = {
             }
         ]
     },
-    "ul_areaestract_areaestract": {
-        "label": "Pedreres i abocadors",
+    "ul_vials_blau": {
+        "label": "Autopistes",
         "elements": [
             {
-                "id": "usos_i_cobertes_del_sol_linia_abocador_1_lin",
+                "id": "vials_en_c_p_enllac_autovia_en_c_p_11_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "usos_i_cobertes_del_sol_linia_runes_mineres_2_lin",
+                "id": "vials_en_c_p_enllac_autopista_en_c_p_10_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "usos_i_cobertes_del_sol_linia_abocador_1_lin_2",
+                "id": "vials_en_tunel_enllac_autovia_blau_cel_en_tunel_14_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "usos_i_cobertes_del_sol_linia_abocador_1_lin_3",
+                "id": "vials_en_tunel_enllac_autovia_tunel_10_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "usos_i_cobertes_del_sol_linia_runes_mineres_2_lin_3",
+                "id": "vials_en_tunel_enllac_autopista_tunel_12_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "extraccions_1_pol",
-                "color": "paint.fill-color"
-            }
-        ]
-    },
-    "ul_usos_sorrals": {
-        "label": "Sorrals",
-        "elements": [
-            {
-                "id": "hidrografia_linia_pattern_rambla_13_lin",
+                "id": "vials_prioritaris_enllac_autovia_2on_nivell_14_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "litoral_linia_pattern_platja_7_lin",
+                "id": "vials_prioritaris_enllac_enllac_autovia_1_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "z_10_11mtc_hidrografia_linia_pattern_rambla_13_lin",
+                "id": "vials_prioritaris_enllac_enllac_autovia_blau_cel_11_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "z_9_10mtc_hidrografia_linia_pattern_rambla_13_lin",
+                "id": "vials_prioritaris_enllac_enllac_autopista_0_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_enllac_autovia_blau_cel_perfil_34_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_enllac_autovia_perfil_3_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_enllac_autopista_perfil_2_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_enllac_autovia_blau_cel_perfil_26_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_enllac_autovia_perfil_19_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_enllac_autopista_perfil_18_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_c_p_autovia_en_c_p_1_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_7mtc_vials_autovia_autovia_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_8mtc_vials_autovia_autovia_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_tunel_autovia_blau_cel_en_tunel_13_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_tunel_autovia_en_tunel_1_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_autovia_3_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_autovia_blau_cel_17_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_autovia_blau_cel_perfil_24_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_autovia_perfil_9_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_c_p_autopista_en_c_p_0_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_7mtc_vials_autopista_Autopista_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_7mtc_vials_autopista_tunel_autopista túnel_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_8mtc_vials_autopista_Autopista_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_8mtc_vials_autopista_tunel_autopista túnel_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_tunel_autopista_en_tunel_0_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_autopista_1_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_autopista_perfil_8_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_7mtc_vials_autopista_Autopista_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_7mtc_vials_autopista_tunel_autopista túnel_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_8mtc_vials_autopista_Autopista_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_8mtc_vials_autopista_tunel_autopista túnel_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_c_p_autovia_en_c_p_1_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_autovia_3_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_autovia_blau_cel_17_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_autovia_9_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_autovia_blau_cel_24_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_c_p_autopista_en_c_p_0_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_autopista_1_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_autopista_8_lin_3",
                 "color": "paint.line-color"
             }
         ]
@@ -1622,155 +970,767 @@ var group_styles = {
             }
         ]
     },
-    "ul_vials_blanc": {
-        "label": "COLOR FIX",
+    "ul_vials_altres": {
+        "label": "Carrers i altres vials",
         "elements": [
             {
-                "id": "vials_en_c_p_enllac_autovia_en_c_p_11_lin_2",
+                "id": "altres_vials_i_camins_prioritaris_vial_pavimentat_4_metres_prioritaris_0_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_en_c_p_enllac_autopista_en_c_p_10_lin_2",
+                "id": "altres_vials_i_camins_prioritaris_vial_pavimentat_entre_4_i_2_5_metres_prioritaris_1_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_enllac_enllac_autovia_1_lin_2",
+                "id": "altres_vials_i_camins_vial_o_cami_pavimentat_4_m_en_c_p_7_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_enllac_enllac_autovia_blau_cel_11_lin_2",
+                "id": "altres_vials_i_camins_vial_o_cami_pavimentat_4_m_en_tunel_8_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_sobre_enllac_x_basica_doble_calcada_28_lin_2",
+                "id": "altres_vials_i_camins_vial_pavimentat_2_5_metres_2_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_normal_enllac_autovia_blau_cel_26_lin_2",
+                "id": "altres_vials_i_camins_vial_pavimentat_4_metres_perfil_0_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_en_c_p_autovia_en_c_p_1_lin_2",
+                "id": "altres_vials_i_camins_vial_pavimentat_entre_4_i_2_5_metres_1_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_autovia_3_lin_2",
+                "id": "altres_vials_i_camins_vial_pavimentat_entre_4_i_2_5_metres_tunel_9_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_autovia_blau_cel_17_lin_2",
+                "id": "altres_vials_i_camins_prioritaris_vial_pavimentat_4_metres_prioritaris_0_lin_2",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_normal_autovia_9_lin_2",
+                "id": "altres_vials_i_camins_vial_o_cami_pavimentat_4_m_en_c_p_7_lin_2",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_normal_autovia_blau_cel_24_lin_2",
+                "id": "altres_vials_i_camins_vial_o_cami_pavimentat_4_m_en_tunel_8_lin_2",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_en_c_p_autopista_en_c_p_0_lin_2",
+                "id": "altres_vials_i_camins_vial_pavimentat_4_metres_0_lin_2",
+                "color": "paint.line-color"
+            }
+        ]
+    },
+    "ul_cami_cami": {
+        "label": "Camins",
+        "elements": [
+            {
+                "id": "altres_vials_i_camins_prioritaris_vial_o_cami_no_pavimentat_4_metres_prioritaris_2_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_autopista_1_lin_2",
+                "id": "altres_vials_i_camins_prioritaris_vial_o_cami_no_pavimentat_entre_4_i_2_5_metres_prioritaris_4_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_normal_autopista_8_lin_2",
+                "id": "altres_vials_i_camins_vial_o_cami_no_pavimentat_2_5_metres_5_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_en_c_p_xarxa_basica_doble_calcada_en_c_p_4_lin_2",
+                "id": "altres_vials_i_camins_vial_o_cami_no_pavimentat_4_metres_perfil_3_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_xarxa_basica_doble_calcada_8_lin_2",
+                "id": "altres_vials_i_camins_vial_o_cami_no_pavimentat_entre_4_i_2_5_m_tunel_6_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_normal_xarxa_basica_doble_calcada_12_lin_2",
+                "id": "altres_vials_i_camins_vial_o_cami_no_pavimentat_entre_4_i_2_5_metres_4_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_enllac_autovia_2on_nivell_14_lin_3",
+                "id": "altres_vials_i_camins_prioritaris_vial_o_cami_no_pavimentat_4_metres_prioritaris_2_lin_2",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_enllac_enllac_autopista_0_lin_3",
+                "id": "altres_vials_i_camins_vial_o_cami_no_pavimentat_4_metres_3_lin_2",
+                "color": "paint.line-color"
+            }
+        ]
+    },
+    "ul_ferrocata_ferrocata": {
+        "label": "Ferrocarrils",
+        "elements": [
+            {
+                "id": "xarxa_ferroviaria_altres_ferrocarrils_9_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_enllac_enllac_xarxa_basica_doble_calcada_8_lin_3",
+                "id": "xarxa_ferroviaria_altres_ferrocarrils_en_c_p_10_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_enllac_enllac_xarxa_comarcal_doble_calcada_9_lin_3",
+                "id": "xarxa_ferroviaria_altres_ferrocarrils_en_tunel_11_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_enllac_enllac_xarxa_local_doble_calcada_10_lin_3",
+                "id": "xarxa_ferroviaria_ferrocarril_de_la_generalitat_fgc_3_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_sobre_enllac_autovia_3_lin_3",
+                "id": "xarxa_ferroviaria_ferrocarril_de_la_generalitat_fgc_en_c_p_4_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_sobre_enllac_autovia_blau_cel_34_lin_3",
+                "id": "xarxa_ferroviaria_ferrocarril_de_la_generalitat_fgc_en_tunel_5_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_sobre_enllac_autopista_2_lin_3",
+                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_14_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_sobre_enllac_x_comarcal_doble_calcada_29_lin_3",
+                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_en_c_p_15_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_normal_enllac_autovia_19_lin_3",
+                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_en_tunel_16_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_normal_enllac_autopista_18_lin_3",
+                "id": "xarxa_ferroviaria_pati_de_vies_altres_ferrocarrils_17_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_normal_enllac_x_basica_doble_calcada_31_lin_3",
+                "id": "xarxa_ferroviaria_pati_de_vies_d_fgc_13_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_normal_enllac_x_comarcal_doble_calcada_32_lin_3",
+                "id": "xarxa_ferroviaria_pati_de_vies_de_renfe_12_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_normal_enllac_x_local_doble_calcada_33_lin_3",
+                "id": "xarxa_ferroviaria_prioritaris_altres_ferrocarrils_prioritari_3_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_en_c_p_via_preferent_doble_calcada_en_c_p_2_lin_3",
+                "id": "xarxa_ferroviaria_prioritaris_ferrocarril_de_la_generalitat_fgc_prioritari_1_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_en_c_p_xarxa_comarcal_doble_calcada_en_c_p_6_lin_3",
+                "id": "xarxa_ferroviaria_prioritaris_tren_de_gran_velocitat_prioritari_0_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_via_preferent_doble_calcada_5_lin_3",
+                "id": "xarxa_ferroviaria_prioritaris_xarxa_renfe_prioritari_2_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_prioritaris_xarxa_comarcal_doble_calcada_10_lin_3",
+                "id": "xarxa_ferroviaria_tramvia_18_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_normal_via_preferent_doble_calcada_10_lin_3",
+                "id": "xarxa_ferroviaria_tramvia_en_tunel_19_lin",
                 "color": "paint.line-color"
             },
             {
-                "id": "vials_sobre_i_normal_normal_xarxa_comarcal_doble_calcada_14_lin_3",
+                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_0_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_en_c_p_1_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_en_tunel_2_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_xarxa_renfe_6_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_xarxa_renfe_en_c_p_7_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_xarxa_renfe_en_tunel_8_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_7mtc_vials_tgv_TGV_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_8mtc_vials_ferrocarril_top_Ferrocarril_top_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_8mtc_vials_tgv_TGV_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_altres_ferrocarrils_en_tunel_11_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_14_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_en_c_p_15_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_en_tunel_16_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_prioritaris_tren_de_gran_velocitat_prioritari_0_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_tramvia_en_tunel_19_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_0_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_en_c_p_1_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_en_tunel_2_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_14_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_en_c_p_15_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_linia_dalta_velocitat_lav_en_tunel_16_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_prioritaris_tren_de_gran_velocitat_prioritari_0_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_0_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_en_c_p_1_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "xarxa_ferroviaria_tren_de_gran_velocitat_en_tunel_2_lin_3",
+                "color": "paint.line-color"
+            }
+        ]
+    },
+    "ul_usos_bosc": {
+        "label": "Boscos",
+        "elements": [
+            {
+                "id": "usos_aciculifolis",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "usos_caducifolis",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "usos_mixtos",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "usos_plantacions",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "usos_aiguamolls",
+                "color": "paint.fill-color"
+            }
+        ]
+    },
+    "ul_usos_conreu": {
+        "label": "Conreus",
+        "elements": [
+            {
+                "id": "usos_conreusreg",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "usos_conreusseca",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "usos_fruitersreg",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "usos_fruitersseca",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "usos_vinya",
+                "color": "paint.fill-color"
+            }
+        ]
+    },
+    "ul_usos_prat": {
+        "label": "Prats i matollars",
+        "elements": [
+            {
+                "id": "usos_bosquines",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "usos_molleresmunt",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "usos_prats",
+                "color": "paint.fill-color"
+            }
+        ]
+    },
+    "ul_usos_aigua": {
+        "label": "Aiguamolls i arrosars",
+        "elements": [
+            {
+                "id": "usos_arrossars",
+                "color": "paint.fill-color"
+            }
+        ]
+    },
+    "ul_usos_sorrals": {
+        "label": "Sorrals",
+        "elements": [
+            {
+                "id": "hidrografia_linia_pattern_rambla_13_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "litoral_linia_pattern_platja_7_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_10_11mtc_hidrografia_linia_pattern_rambla_13_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_9_10mtc_hidrografia_linia_pattern_rambla_13_lin",
+                "color": "paint.line-color"
+            }
+        ]
+    },
+    "ul_areaestract_areaestract": {
+        "label": "Pedreres i abocadors",
+        "elements": [
+            {
+                "id": "usos_i_cobertes_del_sol_linia_abocador_1_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "usos_i_cobertes_del_sol_linia_runes_mineres_2_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "usos_i_cobertes_del_sol_linia_abocador_1_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "usos_i_cobertes_del_sol_linia_abocador_1_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "usos_i_cobertes_del_sol_linia_runes_mineres_2_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "extraccions_1_pol",
+                "color": "paint.fill-color"
+            }
+        ]
+    },
+    "ul_construccio_verd": {
+        "label": "Recintes verds",
+        "elements": [
+            {
+                "id": "camp_o_zona_esportiva_golf_parc_jardi_7_pol",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "golf_banker_3_pol",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "golf_carrer_4_pol",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "golf_green_5_pol",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "golf_sortida_6_pol",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "z_10_11mtc_poblament_poligon_camp_o_zona_esportiva_7_pol",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "z_10_11mtc_poblament_poligon_golf_5_pol",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "z_10_11mtc_poblament_poligon_parc_jardi_8_pol",
+                "color": "paint.fill-color"
+            }
+        ]
+    },
+    "ul_limits_limits": {
+        "label": "Límits administratius",
+        "elements": [
+            {
+                "id": "limits_administratius_comarca_aprovat_2_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_administratius_comarca_en_proces_4_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_administratius_comarca_pendent_daprovacio_3_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_administratius_comunitat_autonoma_1_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_administratius_estat_administratius_0_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_administratius_municipi_aprovat_5_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_administratius_municipi_en_proces_7_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_administratius_municipi_pendent_daprovacio_6_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_7_8mtc_limits_linia_limit_autonomic_Límit_autonomic_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_7_8mtc_limits_linia_limit_estat_Límit_estat_lin",
+                "color": "paint.line-color"
+            }
+        ]
+    },
+    "ul_espaisnat_blau": {
+        "label": "Espais naturals aquatics",
+        "elements": [
+            {
+                "id": "limits_espais_naturals_protegits_pein_mari_4_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_espais_naturals_protegits_pn_mari_3_lin",
+                "color": "paint.line-color"
+            }
+        ]
+    },
+    "ul_espaisnat_verd": {
+        "label": "Espais naturals",
+        "elements": [
+            {
+                "id": "limits_espais_naturals_protegits_altres_parcs_5_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_espais_naturals_protegits_parc_nacional_6_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_espais_naturals_protegits_pein_1_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_espais_naturals_protegits_pn_0_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_espais_naturals_protegits_zona_exclosa_2_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_espais_naturals_protegits_zona_periferica_parc_nacional_7_lin",
+                "color": "paint.line-color"
+            }
+        ]
+    },
+    "ul_corbes_corbes": {
+        "label": "Corbes de nivell",
+        "elements": [
+            {
+                "id": "corbes_nivell_corba_de_nivell_mestra_0_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "corbes_nivell_corba_de_nivell_mestra_de_depressio_1_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "corbes_nivell_corba_de_nivell_mestra_en_gelera_2_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "corbes_nivell_corba_de_nivell_senzilla_3_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "corbes_nivell_corba_de_nivell_senzilla_de_depressio_4_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "corbes_nivell_corba_de_nivell_senzilla_en_gelera_5_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "corbes_nivell_desmunt_6_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "corbes_nivell_terraple_7_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "cota",
+                "color": "paint.text-color"
+            }
+        ]
+    },
+    "ul_altres_blau": {
+        "label": "Elements d'aigua",
+        "elements": [
+            {
+                "id": "hidrografia_linia_canal_damplada_igual_o_superior_a_3_metres_2_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "bassa_piscina_circular",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "bassa_piscina_rectangular",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "font_surgencia",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "bassa_o_diposit_descobert_piscina_a_escala_5_pol",
+                "color": "paint.fill-color"
+            }
+        ]
+    },
+    "ul_altres_energia": {
+        "label": "Elements d'energia",
+        "elements": [
+            {
+                "id": "energia_i_telecomunicacions_linia_centre_productor_i_transformador_d_energia_0_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "energia_i_telecomunicacions_linia_conduccio_de_combustible_3_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "energia_i_telecomunicacions_linia_linia_electrica_2_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "energia_i_telecomunicacions_linia_parc_eolic_1_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "receptor_emissor",
+                "color": "paint.text-color"
+            }
+        ]
+    },
+    "ul_altres_gris": {
+        "label": "Altres elements",
+        "elements": [
+            {
+                "id": "ajuntament",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "altres_extraccions",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "altres_extraccions_abandonades",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "arbre_destacat",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "area_descans",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "area_servei",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "astronomic",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "CAP",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "castell",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "cementiri",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "combustible_circular",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "combustible_rectangular",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "consell_comarcal",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "cova",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "diposit_cobert_circular",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "diposit_cobert_rectangular",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "diposit_sitja_cobert_circular",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "diposit_sitja_cobert_rectangular",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "edif_religiosa_aillada",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "estacio_fiducial",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "far",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "heliport",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "mareograf",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "mina",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "mina_abandonada",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "pedrera",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "pedrera_abandonada",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "pic",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "pk",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "punt_quilometric",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "refugi",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "restres_historicoarqueo",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "vertex",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "xemeneia",
+                "color": "paint.text-color"
+            },
+            {
+                "id": "aeroports_area_d_aterratge_1_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "aeroports_pista_d_aeroport_aerodrom_0_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "aeroports_pista_d_aeroport_detall_2_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_10_11mtc_poblament_linia_aeroports_2_lin",
                 "color": "paint.line-color"
             }
         ]
@@ -2173,116 +2133,156 @@ var group_styles = {
             }
         ]
     },
-    "ul_construccio_verd": {
-        "label": "Recintes verds",
+    "ul_vials_blanc": {
+        "label": "Color complementari",
         "elements": [
             {
-                "id": "camp_o_zona_esportiva_golf_parc_jardi_7_pol",
-                "color": "paint.fill-color"
+                "id": "vials_en_c_p_enllac_autovia_en_c_p_11_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "golf_banker_3_pol",
-                "color": "paint.fill-color"
+                "id": "vials_en_c_p_enllac_autopista_en_c_p_10_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "golf_carrer_4_pol",
-                "color": "paint.fill-color"
+                "id": "vials_prioritaris_enllac_enllac_autovia_1_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "golf_green_5_pol",
-                "color": "paint.fill-color"
+                "id": "vials_prioritaris_enllac_enllac_autovia_blau_cel_11_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "golf_sortida_6_pol",
-                "color": "paint.fill-color"
+                "id": "vials_sobre_i_normal_sobre_enllac_x_basica_doble_calcada_28_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "z_10_11mtc_poblament_poligon_camp_o_zona_esportiva_7_pol",
-                "color": "paint.fill-color"
+                "id": "vials_sobre_i_normal_normal_enllac_autovia_blau_cel_26_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "z_10_11mtc_poblament_poligon_golf_5_pol",
-                "color": "paint.fill-color"
+                "id": "vials_en_c_p_autovia_en_c_p_1_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "z_10_11mtc_poblament_poligon_parc_jardi_8_pol",
-                "color": "paint.fill-color"
-            }
-        ]
-    },
-    "ul_usos_bosc": {
-        "label": "Boscos",
-        "elements": [
-            {
-                "id": "usos_aciculifolis",
-                "color": "paint.fill-color"
+                "id": "vials_prioritaris_autovia_3_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "usos_aiguamolls",
-                "color": "paint.fill-color"
+                "id": "vials_prioritaris_autovia_blau_cel_17_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "usos_caducifolis",
-                "color": "paint.fill-color"
+                "id": "vials_sobre_i_normal_normal_autovia_9_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "usos_mixtos",
-                "color": "paint.fill-color"
+                "id": "vials_sobre_i_normal_normal_autovia_blau_cel_24_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "usos_plantacions",
-                "color": "paint.fill-color"
-            }
-        ]
-    },
-    "ul_usos_conreu": {
-        "label": "Conreus",
-        "elements": [
-            {
-                "id": "usos_conreusreg",
-                "color": "paint.fill-color"
+                "id": "vials_en_c_p_autopista_en_c_p_0_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "usos_conreusseca",
-                "color": "paint.fill-color"
+                "id": "vials_prioritaris_autopista_1_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "usos_fruitersreg",
-                "color": "paint.fill-color"
+                "id": "vials_sobre_i_normal_normal_autopista_8_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "usos_fruitersseca",
-                "color": "paint.fill-color"
+                "id": "vials_en_c_p_xarxa_basica_doble_calcada_en_c_p_4_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "usos_vinya",
-                "color": "paint.fill-color"
-            }
-        ]
-    },
-    "ul_usos_aigua": {
-        "label": "Humids",
-        "elements": [
-            {
-                "id": "usos_arrossars",
-                "color": "paint.fill-color"
-            }
-        ]
-    },
-    "ul_usos_prat": {
-        "label": "Prats",
-        "elements": [
-            {
-                "id": "usos_bosquines",
-                "color": "paint.fill-color"
+                "id": "vials_prioritaris_xarxa_basica_doble_calcada_8_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "usos_molleresmunt",
-                "color": "paint.fill-color"
+                "id": "vials_sobre_i_normal_normal_xarxa_basica_doble_calcada_12_lin_2",
+                "color": "paint.line-color"
             },
             {
-                "id": "usos_prats",
-                "color": "paint.fill-color"
+                "id": "vials_prioritaris_enllac_autovia_2on_nivell_14_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_enllac_enllac_autopista_0_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_enllac_enllac_xarxa_basica_doble_calcada_8_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_enllac_enllac_xarxa_comarcal_doble_calcada_9_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_enllac_enllac_xarxa_local_doble_calcada_10_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_enllac_autovia_3_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_enllac_autovia_blau_cel_34_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_enllac_autopista_2_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_enllac_x_comarcal_doble_calcada_29_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_enllac_autovia_19_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_enllac_autopista_18_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_enllac_x_basica_doble_calcada_31_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_enllac_x_comarcal_doble_calcada_32_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_enllac_x_local_doble_calcada_33_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_c_p_via_preferent_doble_calcada_en_c_p_2_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_c_p_xarxa_comarcal_doble_calcada_en_c_p_6_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_via_preferent_doble_calcada_5_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_xarxa_comarcal_doble_calcada_10_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_via_preferent_doble_calcada_10_lin_3",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_xarxa_comarcal_doble_calcada_14_lin_3",
+                "color": "paint.line-color"
             }
         ]
     }

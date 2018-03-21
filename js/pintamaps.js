@@ -121,7 +121,6 @@ function creaMapa(estil) {
         showInspectMap: true
     }));
     */
-    
 
 	var controldiv = document.getElementsByClassName("mapboxgl-ctrl-bottom-right")[0];
 	var zoom = document.createElement("div");
@@ -197,7 +196,15 @@ function addControlsExternFunctionality(){
 		});
     });   
 
+	jQuery('#bt_random').on('click',randomizeColor);
+
 	addDropFileOptions();
+}
+
+function randomizeColor() {
+	$('.colorpicker-element').each(function(){
+		$(this).colorpicker('setValue', chroma.random().css());
+	})
 }
 
 function addDropFileOptions() {
@@ -266,3 +273,4 @@ function addDropFileOptions() {
 		});
 	}
 }
+
