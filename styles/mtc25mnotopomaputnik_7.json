@@ -19,6 +19,14 @@
       ],
       "minzoom": 7,
       "maxzoom": 13
+    },
+    "normals": {
+      "type": "raster-dem",
+      "tiles": [
+          "https://tilemaps.icgc.cat/tileserver/tileserver.php/mapboxTerrain/{z}/{x}/{y}.png"
+      ],
+      "tileSize": 256,
+      "maxzoom": 15
     }
   },
   "sprite": "http://betaserver.icgc.cat/vectortiles/sprites/maki",
@@ -29,6 +37,15 @@
       "type": "background",
       "paint": {
         "background-color": "#F4F9F4"
+      }
+    },
+    {
+      "id": "normalMaps",
+      "type": "hillshade",
+      "source": "normals",
+      "maxzoom": 15,
+      "layout": {
+          "visibility": "visible"
       }
     },
     {

@@ -129,6 +129,13 @@ function creaMapa(estil) {
 	map.on('moveend', function() {
 		zoom.innerHTML = "ZL: " + map.getZoom().toFixed(1) + " | ";
 	});
+
+	map.on('style.load', function () {
+		ALTES_TOPOS_ID.map(function(element){
+			map.setLayoutProperty(element, 'visibility', 'none');
+		});
+	});
+
 	addControlsExternFunctionality();
 	updateBotonColors(estil, group_styles);
 }
@@ -159,13 +166,25 @@ function addControlsExternFunctionality(){
 		'<button id="bt_toponims" title="Toponims" class="mapboxgl-ctrl-icon glyphicon glyphicon-tag"></button>');
 
 	jQuery('#bt_toponims').on('click', function() {
-        var topomins_i = _.intersectionBy(mapStyle.layers, TOPO_FLOTANT, 'id');
-        if(topomins_i.length === 0){
-            mapStyle.layers = mapStyle.layers.concat(TOPO_FLOTANT);
-        }else{
-            _.pullAllBy(mapStyle.layers, TOPO_FLOTANT, 'id');
-        }
-        actualitzaMapa(mapStyle);
+		if(map.getLayer(TOPO_FLOTANT[0].id)){
+			console.log("quitar");
+			TOPO_FLOTANT.map(function(element){
+				map.removeLayer(element.id);
+			});
+
+			ALTES_TOPOS_ID.map(function(element){
+				map.setLayoutProperty(element, 'visibility', 'none');
+			});
+		}else{
+			console.log("poner");
+			TOPO_FLOTANT.map(function(element){
+				map.addLayer(element);
+			});
+			
+			ALTES_TOPOS_ID.map(function(element){
+				map.setLayoutProperty(element, 'visibility', 'visible');
+			});
+		}
 	});
 
 	jQuery('#bt_export').on('click', function() {

@@ -673,12 +673,185 @@ var group_styles = {
             {
                 "id": "vials_sobre_i_normal_normal_autopista_8_lin_3",
                 "color": "paint.line-color"
+            },
+            {
+                "id": "codi_vial_color_20",
+                "color": "paint.text-halo-color"
+            }
+        ]
+    },
+    "ul_vials_verdgroc": {
+        "label": "Vials secundaris",
+        "elements": [
+            {
+                "id": "codi_vial_color_21",
+                "color": "paint.text-halo-color"
+            },
+            {
+                "id": "codi_vial_color_25",
+                "color": "paint.text-halo-color"
+            },
+            {
+                "id": "codi_vial_color_28",
+                "color": "paint.text-halo-color"
+            },
+            {
+                "id": "vials_prioritaris_enllac_enllac_xarxa_comarcal_doble_calcada_9_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_enllac_enllac_xarxa_local_doble_calcada_10_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_enllac_x_comarcal_doble_calcada_perfil_29_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_enllac_x_local_doble_calcada_perfil_30_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_enllac_x_comarcal_doble_calcada_perfil_32_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_enllac_x_local_doble_calcada_perfil_33_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_tunel_xarxa_comarcal_doble_calcada_en_tunel_6_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_tunel_xarxa_comarcal_en_tunel_7_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_tunel_xarxa_local_doble_calcada_en_tunel_8_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_tunel_xarxa_local_en_tunel_9_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_8mtc_vials_ctra_comarcal_Ctra. comarcal_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_8mtc_vials_ctra_local_Ctra. local_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_c_p_enllac_xarxa_comarcal_en_c_p_14_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_c_p_enllac_xarxa_local_en_c_p_15_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_enllac_enllac_xarxa_comarcal_4_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_enllac_enllac_xarxa_local_5_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_enllac_xarxa_comarcal_6_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_enllac_xarxa_local_7_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_enllac_xarxa_comarcal_22_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_enllac_xarxa_local_23_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_c_p_xarxa_comarcal_doble_calcada_en_c_p_6_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_c_p_xarxa_comarcal_en_c_p_7_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_c_p_xarxa_local_doble_calcada_en_c_p_8_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_en_c_p_xarxa_local_en_c_p_9_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_xarxa_comarcal_11_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_xarxa_comarcal_doble_calcada_10_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_xarxa_local_13_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_prioritaris_xarxa_local_doble_calcada_12_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_xarxa_comarcal_15_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_xarxa_comarcal_doble_calcada_14_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_xarxa_local_17_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_normal_xarxa_local_doble_calcada_16_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_xarxa_comarcal_0_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_xarxa_local_1_lin_2",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "vials_sobre_i_normal_sobre_enllac_x_local_doble_calcada_30_lin_3",
+                "color": "paint.line-color"
             }
         ]
     },
     "ul_vials_vermello": {
         "label": "Vials principals",
         "elements": [
+            {
+                "id": "codi_vial_color_22",
+                "color": "paint.text-halo-color"
+            },
+            {
+                "id": "codi_vial_color_23",
+                "color": "paint.text-halo-color"
+            },
+            {
+                "id": "codi_vial_color_26",
+                "color": "paint.text-halo-color"
+            },
             {
                 "id": "vials_en_tunel_enllac_xarxa_basica_en_tunel_11_lin",
                 "color": "paint.line-color"
@@ -821,151 +994,6 @@ var group_styles = {
             },
             {
                 "id": "vials_sobre_i_normal_normal_xarxa_basica_doble_calcada_12_lin_3",
-                "color": "paint.line-color"
-            }
-        ]
-    },
-    "ul_vials_verdgroc": {
-        "label": "Vials secundaris",
-        "elements": [
-            {
-                "id": "vials_prioritaris_enllac_enllac_xarxa_comarcal_doble_calcada_9_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_enllac_enllac_xarxa_local_doble_calcada_10_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_sobre_enllac_x_comarcal_doble_calcada_perfil_29_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_sobre_enllac_x_local_doble_calcada_perfil_30_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_enllac_x_comarcal_doble_calcada_perfil_32_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_enllac_x_local_doble_calcada_perfil_33_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_tunel_xarxa_comarcal_doble_calcada_en_tunel_6_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_tunel_xarxa_comarcal_en_tunel_7_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_tunel_xarxa_local_doble_calcada_en_tunel_8_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_tunel_xarxa_local_en_tunel_9_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_8mtc_vials_ctra_comarcal_Ctra. comarcal_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "z_8mtc_vials_ctra_local_Ctra. local_lin",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_c_p_enllac_xarxa_comarcal_en_c_p_14_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_c_p_enllac_xarxa_local_en_c_p_15_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_enllac_enllac_xarxa_comarcal_4_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_enllac_enllac_xarxa_local_5_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_sobre_enllac_xarxa_comarcal_6_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_sobre_enllac_xarxa_local_7_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_enllac_xarxa_comarcal_22_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_enllac_xarxa_local_23_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_c_p_xarxa_comarcal_doble_calcada_en_c_p_6_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_c_p_xarxa_comarcal_en_c_p_7_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_c_p_xarxa_local_doble_calcada_en_c_p_8_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_en_c_p_xarxa_local_en_c_p_9_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_xarxa_comarcal_11_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_xarxa_comarcal_doble_calcada_10_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_xarxa_local_13_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_prioritaris_xarxa_local_doble_calcada_12_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_xarxa_comarcal_15_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_xarxa_comarcal_doble_calcada_14_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_xarxa_local_17_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_normal_xarxa_local_doble_calcada_16_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_sobre_xarxa_comarcal_0_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_sobre_xarxa_local_1_lin_2",
-                "color": "paint.line-color"
-            },
-            {
-                "id": "vials_sobre_i_normal_sobre_enllac_x_local_doble_calcada_30_lin_3",
                 "color": "paint.line-color"
             }
         ]
