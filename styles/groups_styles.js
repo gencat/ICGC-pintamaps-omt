@@ -1470,7 +1470,47 @@ var group_styles = {
             {
                 "id": "z_7_8mtc_limits_linia_limit_estat_Límit_estat_lin",
                 "color": "paint.line-color"
-            }
+            },
+            {
+                "id": "z_7_8mtc_limits_linia_banda_estat_Banda_estat_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_7_8mtc_limits_linia_banda_autonomic_Banda_autonomic_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_banda_comarcal_pendent_aprovacio_3_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_banda_comarcal_aprovat_2_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_banda_ccaa_1_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_banda_estat_banda_0_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_9_10_11mtc_banda_poligon_z_9_10_11_mtc_banda_poligon_0_pol",
+                "color": "paint.fill-color"
+            },
+            {
+                "id": "z_7_8mtc_limits_ban_banda_autonomic_Banda_autonomic_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "z_7_8mtc_limits_ban_banda_estat_Banda_estat_lin",
+                "color": "paint.line-color"
+            },
+            {
+                "id": "limits_banda_comarcal_en_proces_4_lin",
+                "color": "paint.line-color"
+            },
         ]
     },
     "ul_espaisnat_blau": {
