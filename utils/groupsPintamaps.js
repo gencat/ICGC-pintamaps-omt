@@ -1,9 +1,9 @@
 var fs = require('fs');
 var XLSX = require('xlsx');
 
-var xls_entrada = "data/estilPintamaps.xlsx";
-var XSLX_SHEET_line = "FINAL_ok";
-var estil_salida = "estil/pintamapsGroups.json";
+var xls_entrada = "data/PINTAMAPS_OMT.xlsx";
+var XSLX_SHEET_line = "OKOKOK";
+var estil_salida = "estil/pintamapsGroups_OMT.json";
 
 var workbook = XLSX.readFile(xls_entrada);
 var worksheet_line = workbook.Sheets[XSLX_SHEET_line];
@@ -17,7 +17,7 @@ json_entrada_line.forEach(element => {
     let id = "ul_" + element.GRUP + "_" + element.SUBGRUP;
     if (!(id in group_styles)){
         group_styles[id] = {
-            label: element.ETIQUETASUB,
+            label: element.ETIQUETA,
             elements: []
         };
     }

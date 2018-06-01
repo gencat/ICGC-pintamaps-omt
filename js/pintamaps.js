@@ -18,7 +18,7 @@ var aplicaZoom=false;
 var estil;
 
 jQuery(document).ready(function() {
-	estil = './styles/mtc25mnotopomaputnik_7.json';
+	estil = './styles/osm_bright.json';
 	processaEstil(estil, true);
 });
 // fi inici
@@ -131,9 +131,9 @@ function creaMapa(estil) {
 	});
 
 	map.on('style.load', function () {
-		ALTES_TOPOS_ID.map(function(element){
+		/*ALTES_TOPOS_ID.map(function(element){
 			map.setLayoutProperty(element, 'visibility', 'none');
-		});
+		});*/
 	});
 
 	addControlsExternFunctionality();
@@ -172,18 +172,18 @@ function addControlsExternFunctionality(){
 				map.removeLayer(element.id);
 			});
 
-			ALTES_TOPOS_ID.map(function(element){
+			/*ALTES_TOPOS_ID.map(function(element){
 				map.setLayoutProperty(element, 'visibility', 'none');
-			});
+			});*/
 		}else{
 			console.log("poner");
 			TOPO_FLOTANT.map(function(element){
 				map.addLayer(element);
 			});
 			
-			ALTES_TOPOS_ID.map(function(element){
+			/*ALTES_TOPOS_ID.map(function(element){
 				map.setLayoutProperty(element, 'visibility', 'visible');
-			});
+			});*/
 		}
 	});
 
