@@ -42,14 +42,14 @@
     "openmaptiles": {
       "type": "vector",
       "tiles": [
-        "http://betaserver.icgc.cat/tileserver/tileserver.php/rasdamanbasemap/{z}/{x}/{y}.pbf"
+        "http://betaserver.icgc.cat/tileserver3/tileserver.php/rasdamanbasemap/{z}/{x}/{y}.pbf"
       ],
       "minzoom": 7,
       "maxzoom": 14 
     }
   },
-  "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
-  "glyphs": "https://free.tilehosting.com/fonts/{fontstack}/{range}.pbf?key={key}",
+  "sprite": "https://tilemaps.icgc.cat/tileserver/sprites/sprite@1",
+  "glyphs": "https://tilemaps.icgc.cat/tileserver/glyphs/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
