@@ -18,7 +18,8 @@ var aplicaZoom=false;
 var estil;
 
 jQuery(document).ready(function() {
-	estil = './styles/osm_bright.json';
+	//estil = './styles/osm_bright.json';
+	estil = './styles/icgc_7.json';
 	processaEstil(estil, true);
 });
 // fi inici

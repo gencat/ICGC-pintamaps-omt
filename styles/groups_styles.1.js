@@ -8,6 +8,15 @@ var group_styles = {
             }
         ]
     },
+    "ul_park": {
+        "label": "Park",
+        "elements": [
+            {
+                "id": "park",
+                "color": "paint.fill-color"
+            }
+        ]
+    },
     "ul_VEGETACIO_VEGETACIO": {
         "label": "VEGETACIÓ i USOS DEL SÓL",
         "elements": [
@@ -57,10 +66,6 @@ var group_styles = {
             },
             {
                 "id": "landuse-school",
-                "color": "paint.fill-color"
-            },
-            {
-                "id": "park",
                 "color": "paint.fill-color"
             },
             {
