@@ -49,8 +49,8 @@
 			"url": "https://geoserveis.icgc.cat/stylesvector/basemap.json"
 		}
 	},
-	"sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
-	"glyphs": "https://free.tilehosting.com/fonts/{fontstack}/{range}.pbf?key=Og58UhhtiiTaLVlPtPgs",
+	"sprite": "https://geoserveis.icgc.cat/stylesvector/sprites/sprite@1",
+	"glyphs": "https://geoserveis.icgc.cat/stylesvector/glyphs/{fontstack}/{range}.pbf",
 	"layers": [{
 		"id": "background",
 		"type": "background",
@@ -155,10 +155,7 @@
 			"mapbox:group": "1444849388993.3071"
 		},
 		"source": "openmaptiles",
-		"source-layer": "park",
-		"filter": ["==",
-		"$type",
-		"Polygon"],
+		"source-layer": "park",		
 		"layout": {
 			"visibility": "visible"
 		},
@@ -3364,36 +3361,6 @@
 		},
 		"paint": {
 			
-		}
-	},
-	{
-		"id": "airport-label-major",
-		"type": "symbol",
-		"source": "openmaptiles",
-		"source-layer": "aerodrome_label",
-		"minzoom": 10,
-		"filter": ["all",
-		["has",
-		"iata"]],
-		"layout": {
-			"text-padding": 2,
-			"text-font": ["Noto Sans Regular"],
-			"text-anchor": "top",
-			"icon-image": "airport_11",
-			"text-field": "{name:latin}{name:nonlatin}",
-			"text-offset": [0,
-			0.6],
-			"text-size": 12,
-			"text-max-width": 9,
-			"visibility": "visible",
-			"icon-size": 1,
-			"text-optional": true
-		},
-		"paint": {
-			"text-halo-blur": 0.5,
-			"text-color": "#666",
-			"text-halo-width": 1,
-			"text-halo-color": "#ffffff"
 		}
 	},
 	{

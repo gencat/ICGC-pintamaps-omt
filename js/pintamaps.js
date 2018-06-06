@@ -16,10 +16,16 @@ var socInici = true;
 var pattern_map = false;
 var aplicaZoom=false;
 var estil;
+// Create a popup, but don't add it to the map yet.
+    var popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false
+    });
 
 jQuery(document).ready(function() {
 	//estil = './styles/osm_bright.json';
-	estil = './styles/icgc_7.json';
+	//estil = './styles/icgc_7.json';
+	estil = './styles/icgc_20180606.json';
 	processaEstil(estil, true);
 });
 // fi inici
@@ -117,8 +123,8 @@ function creaMapa(estil) {
 	});
 	var nav = new mapboxgl.NavigationControl();
     map.addControl(nav, 'top-right');
-    /*
-    map.addControl(new MapboxInspect({
+    
+  /*  map.addControl(new MapboxInspect({
         showInspectMap: true
     }));
     */
@@ -163,9 +169,17 @@ function addControlsExternFunctionality(){
 		});
 	});
 
-    jQuery('.mapboxgl-ctrl-top-right div:first').append(
-		'<button id="bt_toponims" title="Toponims" class="mapboxgl-ctrl-icon glyphicon glyphicon-tag"></button>');
+   /*jQuery('.mapboxgl-ctrl-top-right div:first').append(
+		'<button id="bt_toponims" title="Toponims" class="mapboxgl-ctrl-icon glyphicon glyphicon-tag"></button>');*/
 
+		jQuery('#bt_capture').on('click', function () {
+			$('#md_print').modal({
+			  show: true
+			});
+		  });
+	jQuery('#bt_inspect').on('click', function() {
+
+	});
 	jQuery('#bt_toponims').on('click', function() {
 		if(map.getLayer(TOPO_FLOTANT[0].id)){
 			console.log("quitar");

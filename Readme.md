@@ -1,10 +1,16 @@
 Pintamaps
 =========
 
-Pintamaps és una eina que us permet estilitzar la cartografia de l'ICGC amb els colors i les transparències que vosaltres seleccioneu.
+Tool that allows you to stylize the cartography of the ICGC and the world with the colors and transparencies that you select.
 
-Més informació a http://betaportal.icgc.cat/wordpress/pintamaps/
+Example: http://betaserver.icgc.cat/ICGC-pintamaps-omt/
 
-L'opció de carregar un arxiu fa ús del pintaservice https://github.com/geostarters/pintaservice
+This tool use a base map in vector tiles created by ICGC:
+https://geoserveis.icgc.cat/stylesvector/basemap.json
 
+And style created by ICGC:
+http://geoserveis.icgc.cat/styles/icgc/style.json
 
+License
+=========
+This library is provided under the MIT licence
