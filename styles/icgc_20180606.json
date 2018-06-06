@@ -3,12 +3,12 @@
   "name": "OSM Bright",
   "metadata": {},
   "center": [
-    8.542,
-    47.372
+    1.537786,
+    41.837539
   ],
-  "zoom": 11.6,
-  "bearing": 0,
-  "pitch": 0,
+  "zoom": 12,
+  "bearing": 26,
+  "pitch": 48,
   "sources": {
     "openmaptiles": {
       "type": "vector",
