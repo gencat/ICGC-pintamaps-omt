@@ -1,14 +1,13 @@
 Pintamaps
 =========
 
-Tool that allows you to stylize the cartography of the ICGC and the world with the colors and transparencies that you select.
-
+This tool displays map categories, corresponding to map layers as defined in the Open Map Tiles schema, along with the map data so that both color and transparency can be individually set for each layer in order to change the visual map style to suit your needs 
 Example: http://betaserver.icgc.cat/ICGC-pintamaps-omt/
 
-This tool use a base map in vector tiles created by ICGC:
+This tool uses a vector tiles base map created by ICGC:
 https://geoserveis.icgc.cat/stylesvector/basemap.json
 
-And style created by ICGC:
+with a style also created by ICGC:
 http://geoserveis.icgc.cat/styles/icgc/style.json
 
 License
