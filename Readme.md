@@ -9,7 +9,7 @@ This tool uses a vector tiles base map created by ICGC:
 https://geoserveis.icgc.cat/stylesvector/basemap.json
 
 with a style also created by ICGC:
-http://geoserveis.icgc.cat/styles/icgc/style.json
+http://geoserveis.icgc.cat/stylesvector/icgc.json
 
 License
 =========
