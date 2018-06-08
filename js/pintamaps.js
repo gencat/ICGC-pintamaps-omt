@@ -103,6 +103,7 @@ function processaEstil(estil, nouMapa) {
 			mapStyle = nou_estil;
 			creaMapa(mapStyle);
 			crearColorsButtons(group_styles, mapStyle);
+			addFooterToLlegenda();
 		} else {
 			mapStyle = nou_estil;
 			actualitzaMapa(mapStyle);
@@ -113,10 +114,32 @@ function processaEstil(estil, nouMapa) {
 	});
 }
 
+function addFooterToLlegenda(){
+	var html ='<br><br><div class="panel-footer" id="footer">'+
+				'<div class="panel-item-ull">'+
+					'<small>'+
+					'<p>Desenvolupada per:'+
+						'<a target="_blank" title="Institut Cartogràfic i Geològic de Catalunya" href="http://www.icgc.cat">ICGC</a> <a style="font-size:14px" href="http://betaportal.icgc.cat/" target="_blank">'+
+							'<i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i>'+
+						'</a>'+
+					'</p>'+
+					'<p>Altres prototips:'+
+						'<a target="_blank" title="Betaportal" href="http://betaportal.icgc.cat">Betaportal</a>'+						
+					'</p>'+
+					'<div class="div_github">'+
+						'<a style="color:white;"  href="https://github.com/gencat/ICGC-pintamaps-omt" target="_blank">GitHub <i style="font-size:18px" class="fa fa-github"></i></a>'+
+					'</div>'+				
+					'</small>'+
+				'</div>'+
+			'</div>';
+			$( html ).appendTo('#llegenda');
+			$('#social').appendTo('#footer');		
+}
+
 function creaMapa(estil) {
 	map = new mapboxgl.Map({
 		container : 'map',
-		minZoom : 7,
+		minZoom : 0,
 		maxZoom: 15.99,
 		hash : true,
 		style : estil
@@ -172,11 +195,24 @@ function addControlsExternFunctionality(){
    /*jQuery('.mapboxgl-ctrl-top-right div:first').append(
 		'<button id="bt_toponims" title="Toponims" class="mapboxgl-ctrl-icon glyphicon glyphicon-tag"></button>');*/
 
-		jQuery('#bt_capture').on('click', function () {
+	jQuery('#bt_capture').on('click', function () {
 			$('#md_print').modal({
 			  show: true
 			});
-		  });
+	 });
+
+	 jQuery('#bt_vincle').on('click', function () {
+		
+					
+			  var params = "#"+ map.getZoom().toFixed(0) + "/"+map.getCenter().lat.toFixed(6) + "/" + map.getCenter().lng.toFixed(6) ;//+ "/"+ map.getPitch().toFixed(1) + "/" + map.getBearing().toFixed(1) ;
+			  var currentURL = "http://" + $.url('hostname') + $.url('path') + params;
+		
+			  $('#urlMap').val(currentURL);
+			  var iframecode = '<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="' + currentURL + '" ></iframe>';
+			  $('#iframeMap').html(iframecode);
+			  $('#enllacamodal').modal('show');
+	});
+
 	jQuery('#bt_inspect').on('click', function() {
 
 	});

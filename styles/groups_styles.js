@@ -1034,14 +1034,26 @@ var group_styles = {
                 "id": "highway-name-path",
                 "color": "paint.text-color"
             },
+			{
+                "id": "highway-name-path-copy",
+                "color": "paint.text-color"
+            },
             {
                 "id": "highway-name-minor",
                 "color": "paint.text-color"
             },             
+			{
+                "id": "highway-name-minor-copy",
+                "color": "paint.text-color"
+            }, 
            {
                 "id": "highway-name-major",
                 "color": "paint.text-color"
-            },            
+            },  
+			{
+                "id": "highway-name-major-copy",
+                "color": "paint.text-color"
+            },  			
             {
                 "id": "highway-shield-blau",
                 "color": "paint.text-color"
@@ -1057,7 +1069,11 @@ var group_styles = {
             {
                 "id": "highway-shield-motorway-mtc25m",
                 "color": "paint.text-color"
-            },             
+            },
+			{
+                "id": "highway-shield-motorway-mtc25m-copy",
+                "color": "paint.text-color"
+            },			
             {
                 "id": "highway-shield-primary",
                 "color": "paint.text-color"
@@ -1129,35 +1145,11 @@ var group_styles = {
             {
                 "id": "place-country-3",
                 "color": "paint.text-color"
-            },           
-            {
-                "id": "place-country-3",
-                "color": "paint.text-color"
-            },           
-            {
-                "id": "place-country-3",
-                "color": "paint.text-color"
-            },            
+            },         
             {
                 "id": "place-country-2",
                 "color": "paint.text-color"
             },          
-            {
-                "id": "place-country-2",
-                "color": "paint.text-color"
-            },            
-            {
-                "id": "place-country-2",
-                "color": "paint.text-color"
-            },
-            {
-                "id": "place-country-1",
-                "color": "paint.text-color"
-            },            
-            {
-                "id": "place-country-1",
-                "color": "paint.text-color"
-            },           
             {
                 "id": "place-country-1",
                 "color": "paint.text-color"
@@ -1184,7 +1176,7 @@ var group_styles = {
             },
             {
                 "id": "place-other-burdeus",
-                "color": "paint.text-gris10m"
+                "color": "paint.text-color"
             },
             {
                 "id": "place-other-gris-italic",
@@ -1205,7 +1197,11 @@ var group_styles = {
             {
                 "id": "place-other-verd",
                 "color": "paint.text-color"
-            },    
+            }, 
+			{
+                "id": "place-other-gris10m",
+                "color": "paint.text-color"
+            }, 			
             {
                 "id": "place-town",
                 "color": "paint.text-color"
@@ -1233,7 +1229,19 @@ var group_styles = {
             {
                 "id": "water-name-lakeline-other",
                 "color": "paint.text-color"
-            }
+            },
+			{
+				"id": "water-name-ocean-copy",
+                "color": "paint.text-color"
+			},
+			{
+				"id": "water-name-other-copy",
+                "color": "paint.text-color"
+			},
+			{
+				"id": "airport-label-major-copy",
+                "color": "paint.text-color"
+			}
 
         ]
     }

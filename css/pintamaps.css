@@ -22,7 +22,7 @@ i {
 	border-radius: 4px;
 	bottom: 10px;
 	left: 10px;
-	max-height: 95%;
+	max-height: 640px;
 	opacity: 0.83;
 	overflow: auto;
 	padding: 10px;
@@ -111,12 +111,11 @@ bottom: 20%;
 #social{
 
 
-position: absolute;
+position: relative;
 	right: 8%;
-	top: 10px;
 	width: auto;
 	z-index: 100;
-	
+	float:right;
 	
 }	
 
@@ -143,12 +142,11 @@ position: absolute;
 #social{
 
 
-position: absolute;
-	right: 8%;
-	top: 10px;
+position: relative;
+	right: 8%;	
 	width: auto;
 	z-index: 100;
-	
+	float:right;
 	
 }	
 	
@@ -172,12 +170,11 @@ position: absolute;
 	#social{
 
 
-position: absolute;
-	right: 20%;
-	top: 10px;
+position: relative;
+	right: 20%;	
 	width: auto;
 	z-index: 100;
-	
+	float:right;
 	
 }	
 	
@@ -612,4 +609,17 @@ button:active{
     color: #1f436b !important;
     font-size: 90% !important;
     text-decoration: underline !important;
+}
+textarea.form-control {
+    height: auto !important;
+}
+
+.div_github{
+	width: 67px;
+    background-color: #333;
+    padding: 2px;
+    color: white !important;
+    border-radius: 4px;
+     float: left; 
+    cursor: pointer;
 }

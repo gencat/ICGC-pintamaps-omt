@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta charset='utf-8' />
-<title>PINTAMAPS PRO</title>
+<title>PINTAMAPS OMT</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <link rel="stylesheet" href="css/vendors/bootstrap.min.css">
 <link rel="stylesheet" href="css/vendors/bootstrap-select.min.css">
 <link rel="stylesheet" href="css/vendors/dropzone.min.css">
 <link rel="stylesheet" href="css/vendors/bootstrap-colorpicker.min.css">
-
+<link rel="stylesheet" href="css/vendors/font-awesome.min.css">
  <link href="http://allfont.net/allfont.css?fonts=open-sans,roboto-regular,merriweather,komika-hand" rel="stylesheet" type="text/css" />
 
 <!--
@@ -65,7 +65,8 @@
 	<div id='barraEines' class="mapboxgl-ctrl-group mapboxgl-ctrl">
 		<button id="bt_export"   title="Desar l'estil del mapa"  class="mapboxgl-ctrl-icon glyphicon glyphicon-cloud-download"></button>
 		<button id="bt_import"   title="Carregar l'estil al mapa"  class="mapboxgl-ctrl-icon glyphicon glyphicon-cloud-upload"></button>
-		<button id="bt_capture"  title="Capturar mapa"  class="mapboxgl-ctrl-icon glyphicon glyphicon-camera"></button>
+    <button id="bt_capture"  title="Capturar mapa"  class="mapboxgl-ctrl-icon glyphicon glyphicon-camera"></button>
+    <button id="bt_vincle" title="Enllaçar mapa" class="mapboxgl-ctrl-icon glyphicon glyphicon-link"></button>
 		<!--
 		<button id="bt_publish"  title="Publicar estil" class="mapboxgl-ctrl-icon glyphicon glyphicon-heart-empty"></button>
 
@@ -231,6 +232,34 @@
 	 </div>
     </div>
   </div>
+</div>
+
+<!-- Modal enllaçar -->
+<div id="enllacamodal" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h5 class="modal-title" id="myModalLabel">Enllaçar mapa</h5>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="urlMap">
+            <span lang="ca">Per enllaçar amb aquest mapa, copieu i enganxeu el següent text</span>:</label>
+          <input class="form-control" id="urlMap" type="text">
+        </div>
+        <div class="form-group">
+          <label for="iframeMap">
+            <span lang="ca">Per inserir aquest mapa al vostre web, copieu i enganxeu el següent text</span>:</label>
+          <textarea class="form-control" rows="3" id="iframeMap">&lt;iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://betaserver.icgc.cat/poblacio-catalunya?XYZPB=1.229300,41.124600,13,45.0,-17.6&amp;PROP=TOTAL&amp;ANY=2016&amp;COLORS=96ff11,0047ff&amp;FILTERS=0,2378&amp;" &gt;&lt;/iframe&gt;</textarea>
+        </div>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
 </div>
 
 <script type="text/javascript" src="js/vendors/canvas-toBlob.min.js"></script>
