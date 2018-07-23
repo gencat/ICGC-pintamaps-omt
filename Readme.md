@@ -6,10 +6,10 @@ This tool displays map categories, corresponding to map layers as defined in the
 Example: http://betaserver.icgc.cat/ICGC-pintamaps-omt/
 
 This tool uses a vector tiles base map created by ICGC:
-https://geoserveis.icgc.cat/stylesvector/basemap.json
+https://geoserveis.icgc.cat/contextmaps/basemap.json
 
 with a style also created by ICGC:
-http://geoserveis.icgc.cat/stylesvector/icgc.json
+http://geoserveis.icgc.cat/contextmaps/icgc.json
 
 License
 =========

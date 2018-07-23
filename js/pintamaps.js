@@ -25,7 +25,7 @@ var estil;
 jQuery(document).ready(function() {
 	//estil = './styles/osm_bright.json';
 	//estil = './styles/icgc_7.json';
-	estil = './styles/icgc_20180606.json';
+	estil = './styles/icgc.json';
 	processaEstil(estil, true);
 });
 // fi inici
@@ -85,6 +85,9 @@ function changeEstilColorGruop(id, color){
 		_.set(obj, element.color, color.toString());
 		var property = element.color.split(".").pop();
 		map.setPaintProperty(element.id, property, color.toString());
+		if (id=="ul_TOPONIM_TOPONIM" && (color.toRGB()).a==0){//transparència per filet dels topònims
+			map.setPaintProperty(element.id, 'text-halo-color', color.toString());
+		}
 	});
 }
 
@@ -115,13 +118,11 @@ function processaEstil(estil, nouMapa) {
 }
 
 function addFooterToLlegenda(){
-	var html ='<br><br><div class="panel-footer" id="footer">'+
+	var html ='<div class="panel-footer" id="footer" style="margin-top: 12px;">'+
 				'<div class="panel-item-ull">'+
 					'<small>'+
 					'<p>Desenvolupada per:'+
-						'<a target="_blank" title="Institut Cartogràfic i Geològic de Catalunya" href="http://www.icgc.cat">ICGC</a> <a style="font-size:14px" href="http://betaportal.icgc.cat/" target="_blank">'+
-							'<i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i>'+
-						'</a>'+
+						'<a target="_blank" title="Institut Cartogràfic i Geològic de Catalunya" href="http://www.icgc.cat">ICGC</a>'+ 
 					'</p>'+
 					'<p>Altres prototips:'+
 						'<a target="_blank" title="Betaportal" href="http://betaportal.icgc.cat">Betaportal</a>'+						
@@ -147,10 +148,10 @@ function creaMapa(estil) {
 	var nav = new mapboxgl.NavigationControl();
     map.addControl(nav, 'top-right');
     
-  /*  map.addControl(new MapboxInspect({
+    /*map.addControl(new MapboxInspect({
         showInspectMap: true
-    }));
-    */
+    }));*/
+    
 
 	var controldiv = document.getElementsByClassName("mapboxgl-ctrl-bottom-right")[0];
 	var zoom = document.createElement("div");
@@ -204,7 +205,7 @@ function addControlsExternFunctionality(){
 	 jQuery('#bt_vincle').on('click', function () {
 		
 					
-			  var params = "#"+ map.getZoom().toFixed(0) + "/"+map.getCenter().lat.toFixed(6) + "/" + map.getCenter().lng.toFixed(6) ;//+ "/"+ map.getPitch().toFixed(1) + "/" + map.getBearing().toFixed(1) ;
+			  var params = "#"+ map.getZoom().toFixed(0) + "/"+map.getCenter().lat.toFixed(6) + "/" + map.getCenter().lng.toFixed(6) +  "/" + map.getBearing().toFixed(1) +"/"+ map.getPitch().toFixed(1) ;
 			  var currentURL = "http://" + $.url('hostname') + $.url('path') + params;
 		
 			  $('#urlMap').val(currentURL);

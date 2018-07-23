@@ -46,11 +46,11 @@
 	"sources": {
 		"openmaptiles": {
 			"type": "vector",
-			"url": "https://geoserveis.icgc.cat/stylesvector/basemap.json"
+			"url": "https://geoserveis.icgc.cat/contextmaps/basemap.json"
 		}
 	},
-	"sprite": "https://geoserveis.icgc.cat/stylesvector/sprites/sprite@1",
-	"glyphs": "https://geoserveis.icgc.cat/stylesvector/glyphs/{fontstack}/{range}.pbf",
+	"sprite": "https://geoserveis.icgc.cat/contextmaps/sprites/sprite@1",
+	"glyphs": "https://geoserveis.icgc.cat/contextmaps/glyphs/{fontstack}/{range}.pbf",
 	"layers": [{
 		"id": "background",
 		"type": "background",

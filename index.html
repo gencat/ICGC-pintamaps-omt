@@ -25,8 +25,8 @@
 <script src="js/vendors/chroma.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
 
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
 
 
 <script src='http://mapbox-gl-inspect.lukasmartinelli.ch/dist/mapbox-gl-inspect.min.js'></script>
@@ -46,13 +46,18 @@
   </div>
 	
 	<div id="social" >
-	<a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="Pintamaps! El mapa amb el teu estil" data-via="geostarters" data-hashtags="pintamaps">Tweet</a>
+	<a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="Pintamaps! El mapa amb el teu estil" data-via="icgcgeostarters" data-hashtags="pintamaps">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 	</div>
 
 	<div id="llegenda">
 		<div class="cap_ll">
-			<div class="titol"><b>Editor d'estils</b></div>
+      <div class="titol"  style="margin-bottom: 10px;"><span style="font-size: 25px;"><b>Pintamaps</b></span>
+        <a style="font-size:14px" href="http://betaportal.icgc.cat/" target="_blank">
+          <i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i>
+        </a>
+        <h6>Fet amb <a target="blanc" href="https://openicgc.github.io/">ICGC Contextmaps</a></h6>
+      </div>
 			<div class="mapboxgl-ctrl-group" style="float:right;font-size:small">
 			<button id="bt_random"  title="Colors aleatoris"  class="mapboxgl-ctrl-icon glyphicon glyphicon-random"></button></div>
 		</div>
