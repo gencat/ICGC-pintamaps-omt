@@ -11,6 +11,12 @@ https://geoserveis.icgc.cat/contextmaps/basemap.json
 with a style also created by ICGC:
 http://geoserveis.icgc.cat/contextmaps/icgc.json
 
+
+More styles and vector resources 
+
+https://openicgc.github.io/
+
+
 License
 =========
 This library is provided under the MIT licence
